@@ -2,7 +2,7 @@
     <div class="home">
         <Marquee />
         <Headline
-            :content="articles[0]"
+            :content="headlines[0]"
             flipped
         />
         <NameDrop />
@@ -10,7 +10,14 @@
             :info="promos"
         />
         <Headline
-            :content="articles[1]"
+            :content="headlines[1]"
+        />
+        <Headline
+            :content="headlines[2]"
+            flipped
+        />
+        <Headline
+            :content="headlines[3]"
         />
     </div>
 </template>
@@ -32,7 +39,7 @@ export default {
     },
     data() {
         return {
-            articles: [
+            headlines: [
                 {
                     title: "News Content",
                     text: ["Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua."],
@@ -44,11 +51,16 @@ export default {
                     imageUrl: "",
                 },
                 {
-                    title: "News Content",
+                    title: "Better Together",
                     text: [
                         "Open-source technologies power incredible projects around the world, from Google's Chrome browser and Android OS to Twitter and a majority of the world's websites.",
-                        "Learn more how open-source makes the difference in our report.",
+                        "Learn more about how open-source makes the difference in our report.",
                     ],
+                    imageUrl: "",
+                },
+                {
+                    title: "From conversations to collaborations",
+                    text: ["Our first project starts here"],
                     imageUrl: "",
                 },
             ],

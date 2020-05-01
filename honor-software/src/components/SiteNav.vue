@@ -1,7 +1,9 @@
 <template>
     <nav class="global-nav row">
         <div class="col-12 flex">
-	        <img src="public/honor-logo.png" alt="Honor Software" />
+            <router-link to="/">
+                <img src="public/honor-logo.png" alt="Honor Software" />
+            </router-link>
             <ul>
 			    <li v-for="link in navLinks">
                     <router-link :to="link.path">

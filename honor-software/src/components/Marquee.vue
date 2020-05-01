@@ -1,5 +1,5 @@
 <template>
-    <header id="marquee">
+    <header class="marquee">
         <div class="col-12 col-md-4">
             <h1 class="display-4">Honor Software</h1>
             <p class="lead">Beautiful, usable software for the future.</p>
@@ -20,7 +20,7 @@ export default {
 </script>
 
 <style scoped lang="scss">
-    .alert {
-        margin-bottom: 5px;
+    .marquee {
+        margin-bottom: 40px;
     }
 </style>

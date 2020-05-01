@@ -2,8 +2,12 @@
     <div id="app">
         <Toast :info="toast" />
         <SiteNav :navLinks="navLinks" />
-        <router-view />
-        <Footer />
+        <router-view
+            class="page-content"
+        />
+        <Footer
+            class="footer"
+        />
     </div>
 </template>
 
@@ -38,6 +42,11 @@ export default {
 </script>
 
 <style lang="scss">
+$headerHeight: 60px;
+$footerHeight: 120px;
+$headerPlusFooterHeight: calc(#{$headerHeight} + #{$footerHeight});
+$routerViewMinHeight: calc(100vh - #{$headerPlusFooterHeight});
+
 #app {
     font-family: Avenir, Helvetica, Arial, sans-serif;
     -webkit-font-smoothing: antialiased;
@@ -52,9 +61,18 @@ export default {
         font-weight: bold;
         color: #2c3e50;
 
+        &:hover {
+            text-decoration: none;
+        }
+
         &.router-link-exact-active {
             color: #42b983;
         }
     }
+}
+
+.page-content {
+    padding-bottom: 120px;
+    min-height: $routerViewMinHeight;
 }
 </style>

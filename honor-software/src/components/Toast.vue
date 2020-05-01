@@ -23,6 +23,11 @@ export default {
 
 <style scoped lang="scss">
     .alert {
+        text-align: center;
         margin-bottom: 5px;
+
+        &:hover {
+            text-decoration: none;
+        }
     }
 </style>
