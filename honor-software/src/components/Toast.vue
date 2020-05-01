@@ -11,7 +11,7 @@
 
 <script>
 export default {
-    name: 'SiteNav',
+    name: 'Toast',
     props: {
         info: {
             type: Object,
