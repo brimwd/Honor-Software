@@ -1,12 +1,13 @@
 <template>
     <nav class="global-nav row">
+
         <div class="col-12">
-	        <img src="img/honor-logo.png" alt="Honor Software" />
+	        <img src="public/honor-logo.png" alt="Honor Software" />
             <ul>
-			    <li v-for="link in links">
-                    <a :href="link.path">
+			    <li v-for="link in navLinks">
+                    <router-link :to="link.path">
                         {{ link.label }}
-                    </a>
+                    </router-link>
                 </li>
             </ul>
     	</div>
@@ -17,7 +18,7 @@
 export default {
     name: 'SiteNav',
     props: {
-        links: {
+        navLinks: {
             type: Array,
             required: true,
         }
@@ -26,18 +27,5 @@ export default {
 </script>
 
 <style scoped lang="scss">
-h3 {
-    margin: 40px 0 0;
-}
-ul {
-    list-style-type: none;
-    padding: 0;
-}
-li {
-    display: inline-block;
-    margin: 0 10px;
-}
-a {
-    color: #42b983;
-}
+
 </style>
