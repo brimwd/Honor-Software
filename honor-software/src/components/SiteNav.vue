@@ -1,7 +1,6 @@
 <template>
     <nav class="global-nav row">
-
-        <div class="col-12">
+        <div class="col-12 flex">
 	        <img src="public/honor-logo.png" alt="Honor Software" />
             <ul>
 			    <li v-for="link in navLinks">
@@ -27,5 +26,15 @@ export default {
 </script>
 
 <style scoped lang="scss">
+.flex {
+    display: flex;
+}
+ul {
+    display: flex;
 
+    li {
+        margin-left: 20px;
+        list-style-type: none;
+    }
+}
 </style>
