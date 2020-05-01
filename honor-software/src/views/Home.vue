@@ -1,7 +1,7 @@
 <template>
     <div class="home">
         <Marquee />
-        <Headliner
+        <Headline
             :content="articles[0]"
             flipped
         />
@@ -9,7 +9,7 @@
         <PromoBar
             :info="promos"
         />
-        <Headliner
+        <Headline
             :content="articles[1]"
         />
     </div>
@@ -17,7 +17,7 @@
 
 <script>
 // @ is an alias to /src
-import Headliner from '@/components/Headliner.vue'
+import Headline from '@/components/Headline.vue'
 import Marquee from '@/components/Marquee.vue'
 import NameDrop from '@/components/NameDrop.vue'
 import PromoBar from '@/components/PromoBar.vue'
@@ -25,7 +25,7 @@ import PromoBar from '@/components/PromoBar.vue'
 export default {
     name: 'Home',
     components: {
-        Headliner,
+        Headline,
         Marquee,
         NameDrop,
         PromoBar,

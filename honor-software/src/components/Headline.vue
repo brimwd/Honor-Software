@@ -27,7 +27,7 @@
 
 <script>
 export default {
-    name: 'Headliner',
+    name: 'Headline',
     props: {
         content: {
             type: Object,
