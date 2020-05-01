@@ -22,5 +22,7 @@ export default {
 </script>
 
 <style scoped lang="scss">
-
+    .alert {
+        margin-bottom: 5px;
+    }
 </style>

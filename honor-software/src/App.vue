@@ -1,17 +1,20 @@
 <template>
     <div id="app">
-        <Toast :info="toast"/>
-        <SiteNav :navLinks="navLinks"/>
-        <router-view/>
+        <Toast :info="toast" />
+        <SiteNav :navLinks="navLinks" />
+        <router-view />
+        <Footer />
     </div>
 </template>
 
 <script>
+import Footer from '@/components/Footer.vue'
 import SiteNav from '@/components/SiteNav.vue'
 import Toast from '@/components/Toast.vue'
 
 export default {
     components: {
+        Footer,
         SiteNav,
         Toast,
     },
@@ -39,7 +42,6 @@ export default {
     font-family: Avenir, Helvetica, Arial, sans-serif;
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale;
-    text-align: center;
     color: #2c3e50;
 }
 

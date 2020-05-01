@@ -1,0 +1,47 @@
+<template>
+    <section class="row name-drop">
+        <div class="col-12">
+			<h5>Our team has worked with</h5>
+			<div class="row row-cols-1 row-cols-sm-2 row-cols-md-3 row-cols-lg-4">
+				<div
+                    v-for="partnerName in partners"
+                    class="partner col"
+                >
+                    {{ partnerName }}
+                </div>
+				<div class="partner col col-sm-6 col-md col-lg-6">Bob Books</div>
+				<div class="partner col col-sm-6 col-md col-lg-6"><a href="/contact/">Work With Us</a></div>
+			</div>
+		</div>
+	</section>
+</template>
+
+<script>
+export default {
+    name: 'NameDrop',
+    data() {
+        return {
+            partners: [
+                "U.S. Government",
+                "Amazon",
+                "Apple",
+                "Bluetooth",
+                "Microsoft",
+                "Walmart",
+                "T-Mobile",
+                "Seattle Pride",
+            ]
+        };
+    },
+}
+</script>
+
+<style scoped lang="scss">
+    .name-drop {
+        margin: 80px 0;
+
+        .partner {
+            margin: 10px 0;
+        }
+    }
+</style>

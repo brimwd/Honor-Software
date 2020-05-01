@@ -28,7 +28,9 @@ export default {
 <style scoped lang="scss">
 .flex {
     display: flex;
+    margin: 10px 20px;
 }
+
 ul {
     display: flex;
 
