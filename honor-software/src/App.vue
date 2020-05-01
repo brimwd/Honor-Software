@@ -3,7 +3,7 @@
         <Toast :info="toast" />
         <SiteNav :navLinks="navLinks" />
         <router-view
-            class="page-content"
+            class="container-fluid page-content"
         />
         <Footer
             class="footer"

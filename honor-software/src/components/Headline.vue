@@ -1,5 +1,5 @@
 <template>
-    <section class="row" id="news-featured">
+    <section class="row feature">
 		<div
             v-if="flipped"
             class="col-12 col-md-6"
@@ -42,6 +42,11 @@ export default {
 </script>
 
 <style scoped lang="scss">
+.feature {
+    margin-right: 0;
+    margin-left: 0;
+}
+
 .cta-btn {
 
 }

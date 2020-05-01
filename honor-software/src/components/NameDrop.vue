@@ -9,7 +9,6 @@
                 >
                     {{ partnerName }}
                 </div>
-				<div class="partner col col-sm-6 col-md col-lg-6">Bob Books</div>
 				<div class="partner col col-sm-6 col-md col-lg-6"><a href="/contact/">Work With Us</a></div>
 			</div>
 		</div>
@@ -30,6 +29,8 @@ export default {
                 "Walmart",
                 "T-Mobile",
                 "Seattle Pride",
+                "Bob Books",
+                "",
             ]
         };
     },
