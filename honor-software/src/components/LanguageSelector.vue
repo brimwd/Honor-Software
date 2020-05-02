@@ -34,11 +34,5 @@ export default {
 </script>
 
 <style scoped lang="scss">
-    .name-drop {
-        margin: 80px 0;
 
-        .partner {
-            margin: 10px 0;
-        }
-    }
 </style>

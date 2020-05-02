@@ -34,13 +34,13 @@
 		<div class="form-group">
 			<label for="phoneInput">Phone</label>
 			<input
-                type="email"
+                type="tel"
                 class="form-control"
                 id="phoneInput"
                 autocomplete="mobile tel">
 		</div>
 		<button
-            class="btn btn-primary"
+            class="send-btn btn btn-primary"
             type="submit"
         >
             Send
@@ -50,33 +50,16 @@
 </template>
 
 <script>
-import ContactForm from '@/components/ContactForm.vue'
 
 export default {
-    name: 'ContactSection',
-    components: {
-        ContactForm,
-    },
-    props: {
-        content: {
-            type: Object,
-            required: true,
-        },
-        flipped: {
-            type: Boolean,
-            default: false,
-        }
-    },
+    name: 'ContactForm',
+    // props: {
+    // },
 }
 </script>
 
 <style scoped lang="scss">
-.feature {
-    margin-right: 0;
-    margin-left: 0;
-}
-
-.cta-btn {
-
+.send-btn {
+    height: 38px;
 }
 </style>

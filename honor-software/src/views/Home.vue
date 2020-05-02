@@ -16,14 +16,13 @@
             :content="headlines[2]"
             flipped
         />
-        <Headline
-            :content="headlines[3]"
-        />
+        <ContactSection />
     </div>
 </template>
 
 <script>
 // @ is an alias to /src
+import ContactSection from '@/components/ContactSection.vue'
 import Headline from '@/components/Headline.vue'
 import Marquee from '@/components/Marquee.vue'
 import NameDrop from '@/components/NameDrop.vue'
@@ -32,6 +31,7 @@ import PromoBar from '@/components/PromoBar.vue'
 export default {
     name: 'Home',
     components: {
+        ContactSection,
         Headline,
         Marquee,
         NameDrop,

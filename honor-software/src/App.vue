@@ -5,9 +5,7 @@
         <router-view
             class="container-fluid page-content"
         />
-        <Footer
-            class="footer"
-        />
+        <Footer class="footer" />
     </div>
 </template>
 
