@@ -1,5 +1,21 @@
 <template>
-  <div class="contact-page honor-page">
-    <h1>This page makes it easy to contact us</h1>
-  </div>
+    <div class="contact-page honor-page">
+        <ContactSection />
+    </div>
 </template>
+
+<script>
+import ContactSection from '@/components/ContactSection.vue'
+
+export default {
+    name: 'SiteNav',
+    components: {
+        ContactSection,
+    },
+}
+
+</script>
+
+<style scoped lang="scss">
+
+</style>
