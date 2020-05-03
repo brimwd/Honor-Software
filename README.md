@@ -1,4 +1,5 @@
-# honor-software
+# Honor-Software
+Honor Software website -- http://honor.software
 
 ## Project setup
 ```
@@ -13,6 +14,11 @@ npm run serve
 ### Compiles and minifies for production
 ```
 npm run build
+```
+
+### Deploys the app to gh-pages
+```
+npm run deploy
 ```
 
 ### Run your tests
