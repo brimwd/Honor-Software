@@ -1,5 +1,5 @@
-# Honor-Software
-Honor Software website -- http://honor.software
+# Honor.Software
+Honor.Software website -- http://honor.software
 
 ## Project setup
 ```

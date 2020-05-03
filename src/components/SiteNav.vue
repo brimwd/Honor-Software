@@ -2,7 +2,6 @@
     <nav class="global-nav row">
         <div class="col-12 flex">
             <router-link to="/">
-                <img src="public/honor-logo.png" alt="Honor Software" />
             </router-link>
             <ul>
 			    <li v-for="link in navLinks">
@@ -13,6 +12,7 @@
             </ul>
     	</div>
     </nav>
+      <img src="public/honor-logo.png" alt="Honor.Software" />
 </template>
 
 <script>
