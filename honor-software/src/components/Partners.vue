@@ -1,5 +1,5 @@
 <template>
-    <section class="row name-drop">
+    <section class="row partners-box">
         <div class="col-12">
 			<h5>Our team has worked with</h5>
 			<div class="row row-cols-1 row-cols-sm-2 row-cols-md-3 row-cols-lg-4">
@@ -17,7 +17,7 @@
 
 <script>
 export default {
-    name: 'NameDrop',
+    name: 'Partners',
     data() {
         return {
             partners: [
@@ -38,7 +38,7 @@ export default {
 </script>
 
 <style scoped lang="scss">
-    .name-drop {
+    .partners-box {
         margin: 80px 0;
 
         .partner {

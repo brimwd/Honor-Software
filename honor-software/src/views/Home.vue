@@ -5,7 +5,7 @@
             :content="headlines[0]"
             flipped
         />
-        <NameDrop />
+        <Partners />
         <PromoBar
             :info="promos"
         />
@@ -25,7 +25,7 @@
 import ContactSection from '@/components/ContactSection.vue'
 import Headline from '@/components/Headline.vue'
 import Marquee from '@/components/Marquee.vue'
-import NameDrop from '@/components/NameDrop.vue'
+import Partners from '@/components/Partners.vue'
 import PromoBar from '@/components/PromoBar.vue'
 
 export default {
@@ -34,7 +34,7 @@ export default {
         ContactSection,
         Headline,
         Marquee,
-        NameDrop,
+        Partners,
         PromoBar,
     },
     data() {
