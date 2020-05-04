@@ -14,14 +14,14 @@
 export default {
   name: 'PromoBar',
   props: {
-    info: {
+    content: {
       type: Array,
       required: true,
     }
   },
   computed: {
     promos() {
-      return this.info.slice(0, 4);
+      return this.content.slice(0, 4);
     }
   },
 }

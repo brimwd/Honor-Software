@@ -7,7 +7,7 @@
         />
         <Partners />
         <PromoBar
-            :info="promos"
+            :content="promos"
         />
         <Headline
             :content="headlines[1]"

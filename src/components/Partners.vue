@@ -9,7 +9,9 @@
       {{ partnerName }}
     </div>
 
-    <div class="partner col col-sm-6 col-md col-lg-6"><a href="/contact/">Work With Us</a></div>
+    <div class="partner col col-sm-6 col-md col-lg-6">
+        <router-link to="/contact/">Work With Us</router-link>
+    </div>
   </div>
 </div></section>
 </template>
