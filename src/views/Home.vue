@@ -1,6 +1,6 @@
 <template>
     <div class="home">
-        <Marquee />
+        <Marquee class="jumbotron"/>
         <Headline
             :content="headlines[0]"
             flipped
@@ -87,3 +87,9 @@ export default {
     },
 }
 </script>
+
+<style type="scss" scoped>
+.jumbotron {
+    margin: 120px inherit;
+}
+</style>

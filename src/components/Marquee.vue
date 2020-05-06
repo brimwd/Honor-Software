@@ -21,6 +21,6 @@ export default {
 
 <style scoped lang="scss">
 .marquee {
-  margin-bottom: 40px;
+
 }
 </style>
