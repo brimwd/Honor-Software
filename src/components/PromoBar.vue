@@ -1,7 +1,8 @@
 <template>
 <section class="row promo-bar"><div class="col-12">
   <router-link
-    v-for="promo in promos"
+    v-for="(promo, index) in promos"
+    :key="promo+index"
     class="col-12 col-md-3"
     :to="promo.path"
   >
