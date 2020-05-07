@@ -18,14 +18,6 @@ export default {
     ContactForm,
   },
   props: {
-    content: {
-      type: Object,
-      required: true,
-    },
-    flipped: {
-      type: Boolean,
-      default: false,
-    }
   },
 }
 </script>

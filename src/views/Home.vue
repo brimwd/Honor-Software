@@ -1,13 +1,13 @@
 <template>
     <div class="home">
-        <Marquee />
+        <Marquee class="jumbotron"/>
         <Headline
             :content="headlines[0]"
             flipped
         />
         <Partners />
         <PromoBar
-            :info="promos"
+            :content="promos"
         />
         <Headline
             :content="headlines[1]"
@@ -87,3 +87,9 @@ export default {
     },
 }
 </script>
+
+<style type="scss" scoped>
+.jumbotron {
+    margin: 120px inherit;
+}
+</style>

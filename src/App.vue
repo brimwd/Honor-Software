@@ -1,6 +1,6 @@
 <template>
     <div id="app" class="container-fluid">
-        <Toast :info="toast" />
+        <Toast :content="toast" />
         <SiteNav :navLinks="navLinks" />
         <router-view
             class="container-fluid page-content"

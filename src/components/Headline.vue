@@ -4,7 +4,10 @@
     class="col-12 col-md-6">
 
     <h3>{{ content.title }}</h3>
-    <p v-for="paragraph in content.text">{{ paragraph }}</p>
+    <p
+        v-for="paragraph in content.text"
+        :key="paragraph.slice(0,20)"
+    >{{ paragraph }}</p>
     <router-link
       class="cta-btn"
       to="/news/"

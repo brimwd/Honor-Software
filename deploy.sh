@@ -2,12 +2,16 @@ set -e
 
 npm run build
 
+cp -f deploy.txt dist/.gitignore
+cp -f CNAME dist/CNAME
+
 cd dist
 
 git init
+git remote add origin https://github.com/brimwd/Honor-Software.git
 git add -A
-git commit -m 'deploy'
+git commit -am 'deploy'
 
-git push -f git@github.com:brimwd/Honor-Software.git master:gh-pages
+git push -f origin master:gh-pages
 
 cd -
