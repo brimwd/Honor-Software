@@ -2,12 +2,13 @@ set -e
 
 npm run build
 
+cp -f deploy.txt dist/.gitignore
 cd dist
 
 git init
 git add -A
-git commit -m 'deploy'
+git commit -am 'deploy'
 
-git push -f git@github.com:brimwd/Honor-Software.git master:gh-pages
+git push -f https://github.com/brimwd/Honor-Software.git gh-pages
 
 cd -
