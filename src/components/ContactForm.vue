@@ -27,7 +27,7 @@
       autocomplete="work email"
       aria-describedby="emailHelp"
     >
-    <small id="emailHelp" class="form-text text-muted">
+    <small id="emailHelp" class="form-text">
       We'll never share your email with anyone else.
     </small>
   </div>
@@ -40,11 +40,11 @@
       autocomplete="mobile tel">
   </div>
   <button
-    class="send-btn btn btn-primary"
+    class="send-btn btn btn-lg btn-outline-light mt-2"
     type="submit"
   >
     Send
-    <i class="fas fa-paper-plane ml-2" aria-hidden="true" />
+    <i class="fas fa-paper-plane ml-1 d-inline-block" aria-hidden="true" />
   </button>
 </form>
 </template>
@@ -59,7 +59,14 @@ export default {
 </script>
 
 <style scoped lang="scss">
-.send-btn {
-  height: 38px;
+label {
+  font-weight:bold;
+}
+.send-btn {font-weight:bold;}
+.send-btn i {
+  @include FA;
+  font-weight:bold;
+  font-style:unset;
+  &::before {content:'\f1d8';}
 }
 </style>
