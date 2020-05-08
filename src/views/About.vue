@@ -82,7 +82,7 @@ export default {
 }
 </script>
 
-<style type="scss" scoped>
+<style lang="scss" scoped>
 .purpose {
     text-align: center;
 }

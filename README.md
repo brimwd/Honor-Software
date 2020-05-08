@@ -21,12 +21,12 @@ npm run deploy
 npm run build
 ```
 
-### Run your TESTS
+### Run your tests
 ```
 npm run test
 ```
 
-### LINT & FIX files
+### Lints and fixes files
 ```
 npm run lint
 ```

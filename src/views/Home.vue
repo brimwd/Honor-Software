@@ -88,7 +88,7 @@ export default {
 }
 </script>
 
-<style type="scss" scoped>
+<style lang="scss" scoped>
 .jumbotron {
     margin: 120px inherit;
 }
