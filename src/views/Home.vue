@@ -1,6 +1,5 @@
 <!-- <template>
   <div class="home">
-    <Marquee class="jumbotron"/>
     <Headline
       :content="headlines[0]"
       flipped
@@ -21,13 +20,8 @@
 </template> -->
 
 <template>
-  <div>
-  <header id="marquee" class="row jumbotron mb-0">
-    <div class="col-12">
-      <h1 id="honor" class="display-4">Honor.Software</h1>
-      <p class="lead">Beautiful, usable software for the future.</p>
-    </div>
-  </header>
+  <div class="home">
+  <MainTitle />
   <section class="row py-5" id="news-featured">
     <div class="col-12 col-md-6">
       <!-- background graphic -->
@@ -127,7 +121,7 @@
 // @ is an alias to /src
 import ContactSection from '@/components/ContactSection.vue'
 import Headline from '@/components/Headline.vue'
-import Marquee from '@/components/Marquee.vue'
+import MainTitle from '@/components/MainTitle.vue'
 import Partners from '@/components/Partners.vue'
 import PromoBar from '@/components/PromoBar.vue'
 
@@ -136,7 +130,7 @@ export default {
   components: {
     ContactSection,
     Headline,
-    Marquee,
+    MainTitle,
     Partners,
     PromoBar,
   },
@@ -192,48 +186,5 @@ export default {
 </script>
 
 <style lang="scss" scoped>
-#honor {
-text-transform:uppercase;
-font-family: 'Amiri', serif;
-font-family: 'BioRhyme', serif;
-font-family: 'Bitter', serif;
-font-family: 'Coustard', serif;
-font-family: 'Eczar', serif;
-font-family: 'Kadwa', serif;
-font-family: 'Marcellus', serif;
-font-family: 'Martel', serif;
-font-family: 'Merriweather', serif;
-font-family: 'Nova Square', cursive;
-font-family: 'Patua One', cursive;
-font-family: 'Playfair Display SC', serif;
-font-family: 'Rhodium Libre', serif;
-font-family: 'Roboto Slab', serif;
-font-family: 'Sree Krushnadevaraya', serif;
-font-family: 'Voces', cursive;
-font-family: 'Volkhov', serif;
-}
-.jumbotron {
-  @include pseudo;
 
-  background-image:$bg-l-2;
-  box-shadow:$shadow;
-  @media($dark){background-image:$bg-d-2;}
-
-  overflow:hidden;
-  &::before {
-    background:url(../../images/bg/ring.svg) center no-repeat;
-    background-size:240%;
-    content:'';
-    display:block;
-    opacity:.3;
-
-    transform:rotate(24deg);
-    width:50%;
-
-    position:absolute;
-    top:-35%;
-    right:-22%;
-    bottom:-70%;
-  }
-}
 </style>

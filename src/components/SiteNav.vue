@@ -31,7 +31,15 @@ export default {
 nav {
   padding: 1em 0;
 }
-a {color:var(--text);}
+
+a {
+    color:var(--text);
+    text-decoration: none;
+
+    &.router-link-exact-active {
+        color: #3366aa;
+    }
+}
 
 ul {
   margin:0;
