@@ -1,8 +1,8 @@
 <template>
 <section class="row justify-content-around">
   <div class="col-12 col-md-6">
-    <h1>From conversation to collaboration</h1>
-    <h3>Our first project starts here</h3>
+    <h2>From conversation to collaboration</h2>
+    <h4>Our first project starts here</h4>
   </div>
 
   <ContactForm />
@@ -30,6 +30,6 @@ section {
   padding:6em 15px 4em;
   @media($dark){background-color:var(--bg-soft);color:var(--text)}
 }
-h1 {margin-top:.5em;}
-h3 {margin-top:1em;font-weight:normal;}
+h2 {margin-top:.5em;}
+h4 {margin:1em 0 2em;font-weight:normal;}
 </style>

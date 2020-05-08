@@ -11,7 +11,7 @@
     </div>
 
     <!-- Hide controls if only one quote -->
-    <div class="controls col-12">
+    <div class="controls col-12 d-flex d-md-block">
       <i class="control prev" aria-label="previous testimonial"></i>
       <div class="indicator">
         <i class="fas fa-quote-left"></i>
@@ -60,6 +60,8 @@ section {
   }
 
   .controls {
+    align-items: center;
+    justify-content:space-evenly;
     position:unset;
     text-align:center;
   }
@@ -74,12 +76,15 @@ section {
     font-weight:lighter;
     letter-spacing:-1px;
     line-height:1em;
+    text-align: center;
     transition:all .15s;
-    position:absolute;
-    top:53%;
     &:hover {
       box-shadow:$shadow;
       color:var(--text);
+    }
+    @media($md) {
+      position:absolute;
+      top:53%;
     }
 
     &.prev {
