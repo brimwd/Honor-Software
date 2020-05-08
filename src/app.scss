@@ -1,20 +1,92 @@
-$sux-blue: #33aaee;
-$sux-h2-font-size: 24px;
-$sux-header-height: 48px;
+/* MEDIA QUERIES */
+$dark: 'prefers-color-scheme:dark';
 
+/* BACKGROUNDS */
+/* LIGHT */
+$bg-l-1: url('../../images/bg/light/brickwall_@2X.png');
+	$bg-l-1s: url('../../images/bg/light/brickwall.png');
+/* match */ $bg-l-2: url('../../images/bg/light/so-white.png');
+$bg-l-3: url('../../images/bg/light/cheap_diagonal_fabric.png');
+$bg-l-4: url('../../images/bg/light/concrete_seamless.png');
+$bg-l-5: url('../../images/bg/light/dot-grid.png');
+$bg-l-6: url('../../images/bg/light/gravel.png');
+/* match */ $bg-l-7: url('../../images/bg/light/hotel-wallpaper.png');
+$bg-l-8: url('../../images/bg/light/interlaced.png');
+$bg-l-9: url('../../images/bg/light/old_moon_@2X.jpg');
+	$bg-l-9s: url('../../images/bg/light/old_moon.png');
+$bg-l-10: url('../../images/bg/light/papyrus.png');
+$bg-l-11: url('../../images/bg/light/positive.png');
+$bg-l-12: url('../../images/bg/light/tic-tac-toe.png');
+$bg-l-13: url('../../images/bg/light/topography.png');
+$bg-l-14: url('../../images/bg/light/wet_snow_@2X.png');
+	$bg-l-14s: url('../../images/bg/light/wet_snow.png');
 
+/* DARK */
+$bg-d-1: url('../../images/bg/dark/debut_dark_@2X.png');
+	$bg-d-1s: url('../../images/bg/dark/debut_dark.png');
+/* match */ $bg-d-2: url('../../images/bg/dark/ep_naturalblack.png');
+$bg-d-3: url('../../images/bg/dark/stardust_@2X.png');
+	$bg-d-3s: url('../../images/bg/dark/stardust.png');
+$bg-d-4: url('../../images/bg/dark/navy_blue_@2X.png');
+	$bg-d-4s: url('../../images/bg/dark/navy_blue.png');
+$bg-d-5: url('../../images/bg/dark/dot-grid-dark.png');
+$bg-d-6: url('../../images/bg/dark/prism.png');
+/* match */ $bg-d-7: url('../../images/bg/dark/hotel-wallpaper-black.png');
+$bg-d-8: url('../../images/bg/dark/webb-dark.png');
+$bg-d-9: url('../../images/bg/dark/y-so-serious.png');
+$bg-d-10: url('../../images/bg/dark/oriental-tiles.png');
+/* END BACKGROUNDS */
 
+/* HONOR FONTS */
+$f1: "'Amiri', serif";
+$f2: "'BioRhyme', serif";
+$f3: "'Bitter', serif";
+$f4: "'Coustard', serif";
+$f5: "'Eczar', serif";
+$f6: "'Kadwa', serif";
+$f7: "'Marcellus', serif";
+$f8: "'Martel', serif";
+$f9: "'Merriweather', serif";
+$f10: "'Nova Square', cursive";
+$f11: "'Patua One', cursive";
+$f12: "'Playfair Display SC', serif";
+$f13: "'Rhodium Libre', serif";
+$f14: "'Roboto Slab', serif";
+$f15: "'Sree Krushnadevaraya', serif";
+$f16: "'Voces', cursive";
+$f17: "'Volkhov', serif";
+
+$shadow: 0 4px 20px -7px rgba(0,0,0,0.4);
+
+/* MIXINS */
+@mixin pseudo {
+	position:relative;
+}
+@mixin FA {
+	font-family:'Font Awesome 5 Pro';
+	font-style:normal;
+	display:inline-block;
+}
+
+/* CSS VARIABLES */
 :root {
 	--text:#333;
-	--bg:#eee;
+	--bg:#fff;
+	--bg-soft:#eee;
+	--bg-invert:#333;
+	--mid-gray:#888;
 }
-body {background-color:var(--bg);color:var(--text);}
-
-
-@media (prefers-color-scheme:dark){
+@media ($dark){
 /*DARK MODE STYLES*/
 :root {
 	--text:#eee;
 	--bg:#000;
-	--soft-bg:#2b2b2b;
+	--bg-soft:#333;
+	--bg-invert:#eee;
 }}
+
+body {
+	background-color:var(--bg);
+	color:var(--text);
+	font-family: Avenir, Helvetica, Arial, sans-serif;
+}
