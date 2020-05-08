@@ -120,17 +120,6 @@
       <!-- background graphic -->
     </div>
   </section>
-  <footer id="global-footer" class="row row-cols-1 row-cols-sm-2 row-cols-md-3">
-    <div class="col">
-      <a href="">Contact</a>
-      <a href="">Honor News</a>
-      <a href="">Careers</a>
-      <a href="">Terms of Service</a>
-      <a href="">Privacy</a>
-      <a id="language"><span>English</span><i class="far fa-angle-down" aria-label="language selector"></i></a>
-    </div>
-    <div class="alert">Honor.Software &copy;2020 – All rights reserved</div>
-  </footer>
   </div>
 </template>
 
