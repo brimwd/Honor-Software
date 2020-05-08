@@ -1,8 +1,8 @@
 <template>
-<section class="row">
+<section class="row justify-content-around">
   <div class="col-12 col-md-6">
-    <h3>From conversations to collaborations,</h3>
-    <p>Our first project starts here</p>
+    <h1>From conversation to collaboration</h1>
+    <h3>Our first project starts here</h3>
   </div>
 
   <ContactForm />
@@ -23,7 +23,13 @@ export default {
 </script>
 
 <style scoped lang="scss">
-.row {
-  margin-top: 40px;
+section {
+  background-color:var(--mid-gray);
+  color:var(--bg);
+  margin:0 -30px;
+  padding:6em 15px 4em;
+  @media($dark){background-color:var(--bg-soft);color:var(--text)}
 }
+h1 {margin-top:.5em;}
+h3 {margin-top:1em;font-weight:normal;}
 </style>
