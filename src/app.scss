@@ -1,4 +1,20 @@
 $sux-blue: #33aaee;
 $sux-h2-font-size: 24px;
-
 $sux-header-height: 48px;
+
+
+
+:root {
+	--text:#333;
+	--bg:#eee;
+}
+body {background-color:var(--bg);color:var(--text);}
+
+
+@media (prefers-color-scheme:dark){
+/*DARK MODE STYLES*/
+:root {
+	--text:#eee;
+	--bg:#000;
+	--soft-bg:#2b2b2b;
+}}
