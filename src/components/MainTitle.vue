@@ -21,7 +21,24 @@ export default {
 
 <style scoped lang="scss">
 #jumbotron {
-  text-transform: uppercase;
+    text-transform: uppercase;
+    font-family: Amiri,serif;
+    font-family: BioRhyme,serif;
+    font-family: Bitter,serif;
+    font-family: Coustard,serif;
+    font-family: Eczar,serif;
+    font-family: Kadwa,serif;
+    font-family: Marcellus,serif;
+    font-family: Martel,serif;
+    font-family: Merriweather,serif;
+    font-family: Nova Square,cursive;
+    font-family: Patua One,cursive;
+    font-family: Playfair Display SC,serif;
+    font-family: Rhodium Libre,serif;
+    font-family: Roboto Slab,serif;
+    font-family: Sree Krushnadevaraya,serif;
+    font-family: Voces,cursive;
+    font-family: Volkhov,serif;
 }
 
 .jumbotron {
@@ -29,7 +46,7 @@ export default {
 
   background-image: $bg-l-2;
   box-shadow: $shadow;
-  
+
   overflow: hidden;
 
   @media($dark){
