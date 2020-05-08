@@ -1,6 +1,6 @@
 <template>
 <nav class="global-nav row">
-  <div class="col-12 flex">
+  <div class="col-12 d-flex justify-content-between">
     <router-link to="/">
       <img src="public/honor-logo.png" alt="Honor.Software" />
     </router-link>
@@ -31,10 +31,7 @@ export default {
 nav {
   padding: 1em 0;
 }
-.flex {
-  display: flex;
-  justify-content: space-between;
-}
+a {color:var(--text);}
 
 ul {
   margin:0;
