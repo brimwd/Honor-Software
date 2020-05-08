@@ -46,10 +46,8 @@ $headerPlusFooterHeight: calc(#{$headerHeight} + #{$footerHeight});
 $routerViewMinHeight: calc(100vh - #{$headerPlusFooterHeight});
 
 #app {
-    font-family: Avenir, Helvetica, Arial, sans-serif;
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale;
-    color: #2c3e50;
 }
 
 #nav {
@@ -70,7 +68,6 @@ $routerViewMinHeight: calc(100vh - #{$headerPlusFooterHeight});
 }
 
 .page-content {
-    padding-bottom: 120px;
     min-height: $routerViewMinHeight;
 }
 </style>
