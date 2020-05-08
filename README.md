@@ -1,32 +1,32 @@
 # Honor.Software
 Honor.Software website -- http://honor.software
 
-## Project setup
+## INSTALL DEPENDENCIES - Project setup
 ```
 npm install
 ```
 
-### Compiles and hot-reloads for development
+### DEVELOPMENT SERVER - Compiles and hot-reloads for development
 ```
 npm run serve
 ```
 
-### Compiles and minifies for production
-```
-npm run build
-```
-
-### Deploys the app to gh-pages
+### BUILD & DEPLOY - runs 'deploy.sh', copies prod config files from root to 'dist/' and then deploys '/dist/' contents to gh-pages branch
 ```
 npm run deploy
 ```
 
-### Run your tests
+### BUILD only - Compiles and minifies for production
+```
+npm run build
+```
+
+### Run your TESTS
 ```
 npm run test
 ```
 
-### Lints and fixes files
+### LINT & FIX files
 ```
 npm run lint
 ```
