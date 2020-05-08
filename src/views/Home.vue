@@ -1,22 +1,26 @@
+<!-- <template>
+  <div class="home">
+    <Marquee class="jumbotron"/>
+    <Headline
+      :content="headlines[0]"
+      flipped
+    />
+    <Partners />
+    <PromoBar
+      :content="promos"
+    />
+    <Headline
+      :content="headlines[1]"
+    />
+    <Headline
+      :content="headlines[2]"
+      flipped
+    />
+    <ContactSection />
+  </div>
+</template> -->
+
 <template>
-    <div class="home">
-        <Marquee class="jumbotron"/>
-        <Headline
-            :content="headlines[0]"
-            flipped
-        />
-        <Partners />
-        <PromoBar
-            :content="promos"
-        />
-        <Headline
-            :content="headlines[1]"
-        />
-        <Headline
-            :content="headlines[2]"
-            flipped
-        />
-        <ContactSection />
     </div>
 </template>
 
