@@ -41,9 +41,23 @@ section {
   @media($dark){background:$bg-d-5;}
   background-position:center;
   margin: 0 -30px;
+  overflow:hidden;
   padding-top:5em;
   padding-bottom:3.5em;
   position:relative;
+
+  &::before { // shadow
+    box-shadow: 0px 0 500px 65px rgba(0, 0, 0, 0.15);
+    content:'';
+    display:block;
+
+    position:absolute;
+    right:0;
+    bottom:0;
+    left:0;
+    z-index:0;
+    @media($dark){box-shadow: 0px 0 500px 65px rgba(255, 255, 255, 0.15);}
+  }
 
   .controls {
     position:unset;
