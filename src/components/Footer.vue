@@ -47,20 +47,6 @@ export default {
   components: {
     LanguageSelector,
   },
-  // data() {
-  //     return {
-  //         partners: [
-  //             "U.S. Government",
-  //             "Amazon",
-  //             "Apple",
-  //             "Bluetooth",
-  //             "Microsoft",
-  //             "Walmart",
-  //             "T-Mobile",
-  //             "Seattle Pride",
-  //         ]
-  //     };
-  // },
 }
 </script>
 
