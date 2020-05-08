@@ -202,8 +202,29 @@ export default {
 }
 </script>
 
-<style type="scss" scoped>
+<style lang="scss" scoped>
 .jumbotron {
-    margin: 120px inherit;
+  @include pseudo;
+
+  background-image:$bg-l-2;
+  box-shadow:$shadow;
+  @media($dark){background-image:$bg-d-2;}
+
+  overflow:hidden;
+  &::before {
+    background:url(../../images/bg/ring.svg) center no-repeat;
+    background-size:240%;
+    content:'';
+    display:block;
+    opacity:.3;
+
+    transform:rotate(24deg);
+    width:50%;
+
+    position:absolute;
+    top:-35%;
+    right:-22%;
+    bottom:-70%;
+  }
 }
 </style>
