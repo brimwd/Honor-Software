@@ -1,8 +1,12 @@
 set -e
 
+# Build for production
 npm run build
 
+# Custom .gitignore file to banish .DS_store
 cp -f deploy.txt dist/.gitignore
+
+# To use custom domain
 cp -f CNAME dist/CNAME
 
 cd dist
@@ -12,6 +16,7 @@ git remote add origin https://github.com/brimwd/Honor-Software.git
 git add -A
 git commit -am 'deploy'
 
+# connect to gh-pages branch, commit contents of '/dist/', and force push
 git push -f origin master:gh-pages
 
 cd -
