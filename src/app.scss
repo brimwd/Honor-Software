@@ -74,19 +74,22 @@ $shadow: 0 4px 20px -7px rgba(0,0,0,0.4);
 
 /* CSS VARIABLES */
 :root {
-	--text:#333;
-	--bg:#fff;
-	--bg-soft:#eee;
-	--bg-invert:#333;
-	--mid-gray:#888;
+	--text: #333;
+    --link-hover: #555;
+	--bg: #fff;
+	--bg-soft: #eee;
+	--bg-invert: #333;
+	--mid-gray: #888;
 }
+
 @media ($dark){
 /*DARK MODE STYLES*/
 :root {
-	--text:#eee;
-	--bg:#000;
-	--bg-soft:#333;
-	--bg-invert:#eee;
+	--text: #eee;
+    --link-hover: #ccc;
+	--bg: #000;
+	--bg-soft: #333;
+	--bg-invert: #eee;
 }}
 
 body {

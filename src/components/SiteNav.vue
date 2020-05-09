@@ -33,11 +33,15 @@ nav {
 }
 
 a {
-    color:var(--text);
-    text-decoration: none;
+    color: var(--text);
+
+    &:hover {
+        text-decoration: none;
+        color: var(--link-hover);
+    }
 
     &.router-link-exact-active {
-        color: #3366aa;
+        color: #0056b3;
     }
 }
 
