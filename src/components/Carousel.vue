@@ -3,22 +3,34 @@
     <div class="quote-container col-12">
       <div class="text-center">
         <h2>What our customers are saying</h2>
-        <p>We like to think our work speaks for itself</p>
+        <p>(Although we like to think our work speaks for itself)</p>
       </div>
 
-      <Quote />
+      <Quote :content="slides[currentSlide]" />
 
     </div>
 
-    <!-- Hide controls if only one quote -->
-    <div class="controls col-12 d-flex d-md-block">
-      <i class="control prev" aria-label="previous testimonial"></i>
-      <div class="indicator">
-        <i class="fas fa-quote-left"></i>
-        <i class="fas fa-quote-left active"></i>
-        <i class="fas fa-quote-left"></i>
-      </div>
-      <i class="control next" aria-label="next testimonial"></i>
+    <div
+        v-if="showControls"
+        class="controls col-12 d-flex d-md-block"
+    >
+        <i
+            class="control prev"
+            aria-label="previous testimonial"
+            @click="changeSlide(-1)"
+        />
+        <div class="indicator">
+            <i
+                v-for="(slide, index) in slides"
+                class="fas fa-quote-left"
+                :class="{'active': index === currentSlide}"
+            />
+        </div>
+        <i
+            class="control next"
+            aria-label="next testimonial"
+            @click="changeSlide(1)"
+        />
     </div>
   </section>
 </template>
@@ -27,10 +39,38 @@
 import Quote from '@/components/Quote.vue'
 
 export default {
-  name: 'Carousel',
-  components: {
-    Quote,
-  },
+    name: 'Carousel',
+    components: {
+        Quote,
+    },
+    data() {
+        return {
+            currentSlide: 0,
+            slides: [
+                {
+                    // author: "NAME",
+                    // company: "WORKPLACE",
+                    quote: "",
+                },
+            ],
+        };
+    },
+    computed: {
+        showControls() {
+            return this.slidesText.length > 1;
+        },
+    },
+    methods: {
+        changeSlide(summand) {
+            let sum = this.currentSlide + summand;
+            let max = this.slides.length - 1;
+            if (sum > max) {
+                this.currentSlide = 0;
+            }
+            if (sum < 0)
+                this.currentSlide = max;
+            }
+            this.currentSlide = sum;
 }
 </script>
 
