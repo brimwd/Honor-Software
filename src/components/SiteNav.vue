@@ -1,7 +1,7 @@
 <template>
 <nav class="global-nav row">
   <div class="col-12 d-flex justify-content-between">
-    <router-link to="/">
+    <router-link to="/" type="logo">
       <img src="public/honor-logo.png" alt="Honor.Software" />
     </router-link>
     <ul>
@@ -31,6 +31,11 @@ export default {
 nav {
   padding: 1em 0;
 }
+
+.router-link-exact-active[type="logo"] {
+  visibility:hidden;
+}
+
 a {color:var(--text);}
 
 ul {
