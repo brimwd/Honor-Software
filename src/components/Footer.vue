@@ -18,13 +18,13 @@
     </div>
     <div class="col-6 col-md-4 col-lg-3">
       <router-link to="/news/">
-        News
+        Honor News
       </router-link>
       <router-link to="/customers/">
         Customers
       </router-link>
       <router-link to="/about/">
-        About
+        About Us
       </router-link>
     </div>
   </div>
