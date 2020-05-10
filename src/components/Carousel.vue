@@ -11,26 +11,26 @@
     </div>
 
     <div
-        v-if="showControls"
-        class="controls col-12 d-flex d-md-block"
+      v-if="showControls"
+      class="controls col-12 d-flex d-md-block"
     >
+      <i
+        class="control prev"
+        aria-label="previous testimonial"
+        @click="changeSlide(-1)"
+      />
+      <div class="indicator">
         <i
-            class="control prev"
-            aria-label="previous testimonial"
-            @click="changeSlide(-1)"
+          v-for="(slide, index) in slides"
+          class="fas fa-quote-left"
+          :class="{'active': index === currentSlide}"
         />
-        <div class="indicator">
-            <i
-                v-for="(slide, index) in slides"
-                class="fas fa-quote-left"
-                :class="{'active': index === currentSlide}"
-            />
-        </div>
-        <i
-            class="control next"
-            aria-label="next testimonial"
-            @click="changeSlide(1)"
-        />
+      </div>
+      <i
+        class="control next"
+        aria-label="next testimonial"
+        @click="changeSlide(1)"
+      />
     </div>
   </section>
 </template>
@@ -39,40 +39,41 @@
 import Quote from '@/components/Quote.vue'
 
 export default {
-    name: 'Carousel',
-    components: {
-        Quote,
-    },
-    data() {
-        return {
-            currentSlide: 0,
-            slides: [
                 {
                     // author: "NAME",
                     // company: "WORKPLACE",
                     quote: "",
                 },
-            ],
-        };
-    },
-    computed: {
-        showControls() {
-            return this.slidesText.length > 1;
+  name: 'Carousel',
+  components: {
+    Quote,
+  },
+  data() {
+    return {
+      currentSlide: 0,
+      slides: [
         },
+      ],
+    };
+  },
+  computed: {
+    showControls() {
+      return this.slidesText.length > 1;
     },
-    methods: {
-        changeSlide(summand) {
-            let sum = this.currentSlide + summand;
-            let max = this.slides.length - 1;
-            if (sum > max) {
-                this.currentSlide = 0;
-            }
-            if (sum < 0) {
-                this.currentSlide = max;
-            }
-            this.currentSlide = sum;
-        }
+  },
+  methods: {
+    changeSlide(summand) {
+      let sum = this.currentSlide + summand;
+      let max = this.slides.length - 1;
+      if (sum > max) {
+        this.currentSlide = 0;
+      }
+      if (sum < 0) {
+        this.currentSlide = max;
+      }
+      this.currentSlide = sum;
     }
+  }
 }
 </script>
 
