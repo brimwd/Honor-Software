@@ -30,9 +30,9 @@
   </div>
 
 
-      <LanguageSelector :activeLanguage="activeLanguage" />
   <div class="row justify-content-between align-content-center mt-4">
     <div class="col-12 col-sm-auto">
+      <!-- <LanguageSelector :activeLanguage="activeLanguage" /> -->
     </div>
     <p class="col-12 col-sm-auto copyright order-sm-first">&copy;2020 – All rights reserved</p>
   </div>
