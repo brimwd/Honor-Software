@@ -67,10 +67,12 @@ export default {
             if (sum > max) {
                 this.currentSlide = 0;
             }
-            if (sum < 0)
+            if (sum < 0) {
                 this.currentSlide = max;
             }
             this.currentSlide = sum;
+        }
+    }
 }
 </script>
 
