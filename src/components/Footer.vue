@@ -30,11 +30,11 @@
   </div>
 
 
-  <div class="row justify-content-between mt-4">
-    <div class="col-12 col-sm-auto order-md-last">
       <LanguageSelector :activeLanguage="activeLanguage" />
+  <div class="row justify-content-between align-content-center mt-4">
+    <div class="col-12 col-sm-auto">
     </div>
-    <p class="col-12 col-sm-auto copyright">&copy;2020 – All rights reserved</p>
+    <p class="col-12 col-sm-auto copyright order-sm-first">&copy;2020 – All rights reserved</p>
   </div>
 </footer>
 </template>

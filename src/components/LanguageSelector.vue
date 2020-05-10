@@ -1,6 +1,6 @@
 <template>
   <div
-    class="dropdown mb-4 mb-md-0"
+    class="dropdown mb-4 mb-sm-0"
     v-on="{ 'click' : toggleExpand }"
     :class="{ 'open' : isExpanded }"
     id="language"
@@ -71,7 +71,9 @@ a {
   border:1px solid var(--mid-gray);
   border-radius:4px;
   cursor:pointer;
+  min-width:12em;
   padding:.5em .75em;
+  position:relative;
   line-height:2em;
   transition:background .15s;
 
@@ -79,21 +81,28 @@ a {
   .expand-string {display:none;}
   .collapse-string {display:none;}
   &:hover {
+    background-color:var(--bg-soft);
     .language {display:none;}
     .expand-string {display:inline;}
   }
   .open & {
     border-radius:0 0 4px 4px;
     .language {display:none;}
-    .expand-string {display:none;}
-    .collapse-string {display:inline;}
+    .expand-string {display:inline;visibility:hidden;}
+    .collapse-string {
+      display:inline;
+      position:absolute;
+      top:.5em;
+      left:.75em;
+    }
   }
 
 
 
   @media($md) {
     border-color:transparent;
-    &:hover {border-color:var(--mid-gray)}
+    min-width:unset;
+    &:hover, .open & {border-color:var(--mid-gray)}
   }
 
   i {
