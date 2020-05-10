@@ -39,11 +39,6 @@
 import Quote from '@/components/Quote.vue'
 
 export default {
-                {
-                    // author: "NAME",
-                    // company: "WORKPLACE",
-                    quote: "",
-                },
   name: 'Carousel',
   components: {
     Quote,
@@ -52,6 +47,13 @@ export default {
     return {
       currentSlide: 0,
       slides: [
+        {
+          lorem: [
+            "Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
+            "Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.",
+          ],
+          author: 'Some Latin-major',
+          company: 'A real business'
         },
       ],
     };
