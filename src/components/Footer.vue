@@ -45,7 +45,12 @@ import LanguageSelector from '@/components/LanguageSelector.vue'
 export default {
   name: 'Footer',
   components: {
-    LanguageSelector,
+    LanguageSelector
+  },
+  data() {
+    return {
+      activeLanguage: 'English',
+    };
   },
 }
 </script>

@@ -3,32 +3,60 @@
     class="dropdown"
     id="language"
   >
-    <span>English</span>
-    <!-- <span>中文</span> -->
-    <i class="far fa-fw fa-angle-down" aria-label="language selector" />
+    <ul>
+      <li data-language="English">English</li>
+      <li data-language="中文">中文</li>
+    </ul>
+    <a class="d-flex justify-content-between">
+      <span class="language">{{ activeLanguage }}</span>
+      <span>Close</span>
+      <i class="far fa-fw fa-angle-down" aria-label="language selector" />
+    </a>
   </div>
 </template>
 
 <script>
-import LanguageSelector from '@/components/LanguageSelector.vue'
-
 export default {
-  name: 'Footer',
-  components: {
-    LanguageSelector,
+  name: 'LanguageSelector',
+  props: {
+    activeLanguage: {
+      type: String,
+      required: true,
+    },
   },
 }
 </script>
 
 <style scoped lang="scss">
-.dropdown {
-  border:1px solid transparent;
+.dropdown ul {
+  border:1px solid var(--mid-gray);
+  border-bottom:none;
+  list-style:none;
+  margin:0;
+  padding:0;
+  li {
+    border-bottom:1px solid var(--mid-gray);
+    &:last-child {border:none;}
+  }
+}
+.dropdown a {
+  border:1px solid var(--mid-gray);
   border-radius:4px;
   cursor:pointer;
   padding:.5em .75em;
-  transition:all .15s;
+  transition:background .15s;
 
-  &:hover {border-color:var(--mid-gray)}
+  .open & {border-radius:0 0 4px 4px;}
+
+  span {
+    display:none;
+    &.language {display:inline-block;}
+  }
+
+  @media($md) {
+    border-color:transparent;
+    &:hover {border-color:var(--mid-gray)}
+  }
 
   i {
     @include FA;
