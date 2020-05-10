@@ -31,10 +31,10 @@
 
 
   <div class="row justify-content-between mt-4">
-    <p class="col-12 col-sm-auto copyright">&copy;2020 – All rights reserved</p>
-    <div class="col-12 col-sm-auto">
-      <LanguageSelector />
+    <div class="col-12 col-sm-auto order-md-last">
+      <LanguageSelector :activeLanguage="activeLanguage" />
     </div>
+    <p class="col-12 col-sm-auto copyright">&copy;2020 – All rights reserved</p>
   </div>
 </footer>
 </template>
@@ -49,7 +49,11 @@ export default {
   },
   data() {
     return {
-      activeLanguage: 'English',
+      activeLanguage: {
+        name: 'English',
+        expand: 'Select Language',
+        collapse: 'Dismiss',
+      },
     };
   },
 }
