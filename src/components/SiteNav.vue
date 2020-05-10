@@ -40,6 +40,7 @@ a {color:var(--text);}
 
 ul {
   margin:0;
+  padding:0;
   justify-self:flex-end;
 
   li {
