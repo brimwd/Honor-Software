@@ -24,7 +24,7 @@
   <div class="container-fluid">
   <header id="marquee" class="row jumbotron">
     <div class="col-12">
-      <h1 id="honor" class="display-4">Honor.Software</h1>
+      <h1 id="honor" class="display-4">Honor.<br/>Software</h1>
       <p class="lead">Beautiful, usable software for the future.</p>
     </div>
   </header>
