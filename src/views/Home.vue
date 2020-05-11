@@ -212,20 +212,28 @@ export default {
   }
 
   &::before {
-    background:url(../../images/bg/ring.svg) center no-repeat;
-    background-size:240%;
+    background:url('../../images/bg/ring-gold.png') center no-repeat;
+    background-position:30% 50%;
+    background-size:contain;
     content:'';
     display:block;
     opacity:.3;
 
     transform:rotate(24deg);
-    width:50%;
+    width:90%;
 
     position:absolute;
-    top:-35%;
-    right:-22%;
-    bottom:-70%;
+    top:-1%;
+    right:-36vw;
+    bottom:-30%;
+    // if un-cropped
+    // top:-1vw;
+    // left:50vw;
+    // bottom:-8vw;
+    @media($sm) {opacity:.7;}
+    @media($md) {opacity:unset;}
   }
+
   @media($md) {h1 br {display:none;}}
 }
 .headline {
