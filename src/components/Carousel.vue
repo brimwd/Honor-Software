@@ -79,7 +79,7 @@ section {
     text-align: center;
     transition:all .15s;
     &:hover {
-      box-shadow:$shadow;
+      @include shadow;
       color:var(--text);
     }
     @media($md) {
