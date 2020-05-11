@@ -172,7 +172,7 @@ export default {
       promos: [
         {
           text: "Latest Updates",
-          path: "/news/",
+          path: "/news",
           isHeader: true,
         },
         {
@@ -181,12 +181,12 @@ export default {
           path: "/stories/scheduleux.html",
         },
         {
-          text: "Learn how",
-          path: "/news/",
+          label: "Learn how",
+          path: "/news",
         },
         {
-          text: "Customer Story: Hyperdrive Engineering",
-          path: "/news/",
+          label: "Customer Story: Hyperdrive Engineering",
+          path: "/news",
         }
       ],
       promos2: [

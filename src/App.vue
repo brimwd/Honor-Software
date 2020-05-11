@@ -24,13 +24,13 @@ export default {
     return {
       toast: {
         message: "Our response to Covid-19",
-        path: "news/covid-19.html",
+        path: "/news/covid-19",
       },
       navLinks: [
-        { label: "News", path: "/news/", },
-        { label: "Customers", path: "/customers/", },
-        { label: "Contact", path: "/contact/", },
-        { label: "About", path: "/about/", },
+        { label: "News", path: "/news", },
+        { label: "Customers", path: "/customers", },
+        { label: "Contact", path: "/contact", },
+        { label: "About", path: "/about", },
         // { label: "Products", path: "/products/", },
         // { label: "Services", path: "/services/", },
         // { label: "Resources", path: "/resources/", },

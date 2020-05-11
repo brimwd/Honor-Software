@@ -11,34 +11,34 @@
 
     <div class="col-6 col-md-4 col-lg-3">
       <p>
-          <router-link to="/contact/">
+        <router-link to="/contact">
           Contact
         </router-link>
       </p>
       <p>
-          <router-link to="/legal/privacy/">
+        <router-link to="/legal/privacy">
           Privacy
         </router-link>
       </p>
       <p>
-          <router-link to="/legal/tos/">
+        <router-link to="/legal/tos">
           Terms of Service
         </router-link>
       </p>
     </div>
     <div class="col-6 col-md-4 col-lg-3">
       <p>
-          <router-link to="/news/">
+        <router-link to="/news">
           Honor News
         </router-link>
       </p>
       <p>
-          <router-link to="/customers/">
+        <router-link to="/customers">
           Customers
         </router-link>
       </p>
       <p>
-          <router-link to="/about/">
+        <router-link to="/about">
           About Us
         </router-link>
       </p>
