@@ -137,5 +137,7 @@ $bg-d-10: url('../images/bg/dark/oriental-tiles.png');
 
 .page-content {
   min-height:$routerViewMinHeight;
+  position:relative;
+  z-index:1;
 }
 </style>
