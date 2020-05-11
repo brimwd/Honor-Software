@@ -61,6 +61,7 @@ export default {
 
 <style scoped lang="scss">
 footer {
+  background:var(--bg);
   border-top:6px solid var(--bg-invert);
   margin:0 -15px;
   overflow:hidden;
