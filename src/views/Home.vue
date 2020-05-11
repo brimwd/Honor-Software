@@ -208,7 +208,7 @@ export default {
 
   @media($sm) {
     border-radius:.3rem;
-    margin:3vw 1vw 8vw;
+    margin:3vw 0 8vw;
   }
 
   &::before {
