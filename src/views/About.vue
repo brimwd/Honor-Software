@@ -11,6 +11,7 @@
         <ServiceOverview
             class="col-4"
             v-for="service in threeServices"
+            :key="service.title"
             :service="service"
         />
     </div>
@@ -18,6 +19,7 @@
         <ServiceOverview
             class="col-3"
             v-for="associate in fourAssociates"
+            :key="associate.title"
             :service="associate"
         />
     </div>
