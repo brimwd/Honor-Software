@@ -39,7 +39,7 @@ const routes = [
         component: News
     },
     {
-        path: '/privacy',
+        path: '/legal/privacy',
         name: 'Privacy',
         component: Privacy
     },
@@ -54,7 +54,7 @@ const routes = [
         component: Resources
     },
     {
-        path: '/terms',
+        path: '/legal/tos',
         name: 'Terms',
         component: Terms
     },

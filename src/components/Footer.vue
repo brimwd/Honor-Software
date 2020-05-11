@@ -9,10 +9,10 @@
       <router-link to="/contact/">
         Contact
       </router-link>
-      <router-link to="/legal/privacy.html">
+      <router-link to="/legal/privacy/">
         Privacy
       </router-link>
-      <router-link to="/legal/tos.html">
+      <router-link to="/legal/tos/">
         Terms of Service
       </router-link>
     </div>
