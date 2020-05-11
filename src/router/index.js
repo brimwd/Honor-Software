@@ -6,8 +6,6 @@ import Contact from '../views/Contact.vue'
 import Customers from '../views/Customers.vue'
 import News from '../views/News.vue'
 import Privacy from '../views/Privacy.vue'
-import Product from '../views/Product.vue'
-import Resources from '../views/Resources.vue'
 import Terms from '../views/Terms.vue'
 
 Vue.use(VueRouter)
@@ -42,16 +40,6 @@ const routes = [
         path: '/legal/privacy',
         name: 'Privacy',
         component: Privacy
-    },
-    {
-        path: '/product',
-        name: 'Product',
-        component: Product
-    },
-    {
-        path: '/resources',
-        name: 'Resources',
-        component: Resources
     },
     {
         path: '/legal/tos',

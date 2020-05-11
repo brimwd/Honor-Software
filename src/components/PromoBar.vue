@@ -1,35 +1,46 @@
 <template>
-<section class="row promo-bar"><div class="col-12">
-  <router-link
-    v-for="(promo, index) in promos"
-    :key="promo+index"
-    class="col-12 col-md-3"
-    :to="promo.path"
-  >
-    <h5>{{ promo.label }}</h5>
-  </router-link>
-</div></section>
+<section class="row promo-bar py-5">
+    <div
+        v-for="(promo, index) in promosSliced"
+        class="col-3 col-med-6"
+    >
+      <router-link
+        :key="promo+index"
+        :to="promo.path"
+      >
+        <strong
+            v-if="promo.strong"
+            v-text="promo.strong"
+        />
+        <span :class="{'h5': promo.isHeader}"> {{ promo.text }}</span>
+      </router-link>
+    </div>
+</section>
 </template>
 
 <script>
 export default {
   name: 'PromoBar',
   props: {
-    content: {
+    promos: {
       type: Array,
       required: true,
     }
   },
   computed: {
-    promos() {
-      return this.content.slice(0, 4);
+    promosSliced() {
+      return this.promos.slice(0, 4);
     }
   },
 }
 </script>
 
 <style scoped lang="scss">
-.promo-bar {
-  margin: 80px 0;
+.h5 {
+    font-size: 1.25rem;
+    margin-bottom: .5rem;
+    font-weight: 500;
+    line-height: 1.2;
+    padding-left: 15px;
 }
 </style>

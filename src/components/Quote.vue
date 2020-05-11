@@ -1,10 +1,9 @@
 <template>
   <blockquote>
-    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
-    <p>Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
+    <p v-for="paragraph in quote">{{ paragraph }}</p>
     <h5>
-      <strong>Name Name</strong>,
-      <b>Company</b>
+      <strong>{{ content.author || "Industry Expert" }}</strong>,
+      <b>{{ content.company || "Tech Consulting Firm" }}</b>
     </h5>
   </blockquote>
 </template>
@@ -12,12 +11,31 @@
 <script>
 export default {
   name: 'Quote',
-  // props: {
-  //     headline: {
-  //         type: String,
-  //         required: true,
-  //     }
-  // }
+  props: {
+      content: {
+          type: Object,
+          required: true,
+      }
+  },
+  data() {
+      return {
+          lorem: [
+              "Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
+              "Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.",
+          ],
+          author: 'Some Latin-major',
+          company: 'A real business'
+      };
+  },
+  computed: {
+      quote() {
+          if (!this.content.quote || !this.content.quote.length) {
+              return this.lorem;
+          }
+          // [].concat returns an array whether supplied arg is a string or an array
+          return [].concat(this.content.quote);
+      },
+  },
 }
 </script>
 

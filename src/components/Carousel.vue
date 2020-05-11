@@ -3,22 +3,35 @@
     <div class="quote-container col-12">
       <div class="text-center">
         <h2>What our customers are saying</h2>
-        <p>We like to think our work speaks for itself</p>
+        <p>(Even though we think our work speaks for itself)</p>
       </div>
 
-      <Quote />
+      <Quote :content="slides[currentSlide]" />
 
     </div>
 
-    <!-- Hide controls if only one quote -->
-    <div class="controls col-12 d-flex d-md-block mt-4 mt-md-5">
-      <i class="control prev" aria-label="previous testimonial"></i>
+    <div
+      v-if="showControls"
+      class="controls col-12 d-flex d-md-block"
+    >
+      <i
+        class="control prev"
+        aria-label="previous testimonial"
+        @click="changeSlide(-1)"
+      />
       <div class="indicator">
-        <i class="fas fa-quote-left"></i>
-        <i class="fas fa-quote-left active"></i>
-        <i class="fas fa-quote-left"></i>
+        <i
+          v-for="(slide, index) in slides"
+          class="fas fa-quote-left"
+          :class="{'active': index === currentSlide}"
+          @click="currentSlide = index"
+        />
       </div>
-      <i class="control next" aria-label="next testimonial"></i>
+      <i
+        class="control next"
+        aria-label="next testimonial"
+        @click="changeSlide(1)"
+      />
     </div>
   </section>
 </template>
@@ -31,6 +44,57 @@ export default {
   components: {
     Quote,
   },
+  data() {
+    return {
+      currentSlide: 0,
+      slides: [
+        {
+          quote: [
+            "Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
+            "Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.",
+          ],
+          author: 'Some Latin-major',
+          company: 'A real business'
+        },
+        {
+          quote: [
+            "HEYYY ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
+            "Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.",
+          ],
+          author: 'Some Latin-major',
+          company: 'A real business'
+        },
+        {
+          quote: [
+            "HI ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
+            "Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.",
+          ],
+          author: 'Some Latin-major',
+          company: 'A real business'
+        },
+      ],
+    };
+  },
+  computed: {
+    showControls() {
+      return this.slides.length > 1;
+    },
+  },
+  methods: {
+    changeSlide(addend) {
+      let sum = this.currentSlide + addend;
+      let max = this.slides.length - 1;
+      if (sum < 0) {
+          this.currentSlide = max;
+          return;
+      }
+      if (sum > max) {
+        this.currentSlide = 0;
+        return;
+      }
+      this.currentSlide = sum;
+    }
+  }
 }
 </script>
 
@@ -110,7 +174,8 @@ section {
         transition:all .15s;
       }
       &.active {
-        font-weight:bold;
+        font-weight: bold;
+        color: var(--text);
       }
 
       &::before {content:'\f111';}
