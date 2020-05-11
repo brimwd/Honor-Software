@@ -3,24 +3,20 @@
     <div class="col-12">
         <router-link
             :to="content.path"
-            class="toast-link"
+            class="toast-link alert"
+            :class="{'alert-dismissible': content.dismissable}"
+            role="alert"
         >
-            <div
-                class="alert alert-success fade show"
-                :class="{'alert-dismissible': content.dismissable}"
-                role="alert"
+            {{ content.message }}
+            <button
+                v-if="content.dismissable"
+                type="button"
+                class="close"
+                data-dismiss="alert"
+                aria-label="Close"
             >
-                {{ content.message }}
-                <button
-                    v-if="content.dismissable"
-                    type="button"
-                    class="close"
-                    data-dismiss="alert"
-                    aria-label="Close"
-                >
-                    <span aria-hidden="true">&times;</span>
-                </button>
-            </div>
+                <span aria-hidden="true">&times;</span>
+            </button>
         </router-link>
     </div>
 </div>
@@ -42,14 +38,7 @@ export default {
 .col-12 {
   padding: 0;
 }
-
-.alert {
-  border-radius: 0;
-  margin-bottom: 0;
-  text-align: center;
-
-  .toast-link:hover {
-    text-decoration: none;
-  }
+.toast-link:hover {
+  text-decoration:none;
 }
 </style>
