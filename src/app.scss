@@ -44,7 +44,14 @@ $bg-d-10: url('../../images/bg/dark/oriental-tiles.png');
 /* HONOR FONTS */
 $f7: "'Marcellus', serif";
 
-$shadow: 0 4px 20px -7px rgba(0,0,0,0.4);
+$shadow-gold:0 12px 36px -6px #d69e00;
+
+@mixin shadow {
+	box-shadow:0 12px 36px -6px #906a00;
+	@media ($dark){
+		box-shadow:0 12px 36px -6px #000;
+	}
+}
 
 /* MIXINS */
 @mixin pseudo {
