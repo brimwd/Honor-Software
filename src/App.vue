@@ -119,23 +119,23 @@ $bg-d-10: url('../images/bg/dark/oriental-tiles.png');
 }
 
 #nav {
-    padding: 30px;
+  padding:30px;
 
-    a {
-        font-weight: bold;
-        color: #2c3e50;
+  a {
+    font-weight:bold;
+    color:#2c3e50;
 
-        &:hover {
-            text-decoration: none;
-        }
-
-        &.router-link-exact-active {
-            color: #42b983;
-        }
+    &:hover {
+      text-decoration:none;
     }
+
+    &.router-link-exact-active {
+      color:#42b983;
+    }
+  }
 }
 
 .page-content {
-    min-height: $routerViewMinHeight;
+  min-height:$routerViewMinHeight;
 }
 </style>
