@@ -45,7 +45,7 @@ export default {
   @include pseudo;
 
   background-image: $bg-l-2;
-  box-shadow: $shadow;
+  box-shadow: $shadow-gold;
 
   overflow: hidden;
 
