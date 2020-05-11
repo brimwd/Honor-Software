@@ -6,26 +6,38 @@
 
 
     <div class="col-6 col-md-4 col-lg-3">
-      <router-link to="/contact/">
-        Contact
-      </router-link>
-      <router-link to="/legal/privacy/">
-        Privacy
-      </router-link>
-      <router-link to="/legal/tos/">
-        Terms of Service
-      </router-link>
+      <p>
+          <router-link to="/contact/">
+          Contact
+        </router-link>
+      </p>
+      <p>
+          <router-link to="/legal/privacy/">
+          Privacy
+        </router-link>
+      </p>
+      <p>
+          <router-link to="/legal/tos/">
+          Terms of Service
+        </router-link>
+      </p>
     </div>
     <div class="col-6 col-md-4 col-lg-3">
-      <router-link to="/news/">
-        Honor News
-      </router-link>
-      <router-link to="/customers/">
-        Customers
-      </router-link>
-      <router-link to="/about/">
-        About Us
-      </router-link>
+      <p>
+          <router-link to="/news/">
+          Honor News
+        </router-link>
+      </p>
+      <p>
+          <router-link to="/customers/">
+          Customers
+        </router-link>
+      </p>
+      <p>
+          <router-link to="/about/">
+          About Us
+        </router-link>
+      </p>
     </div>
   </div>
 
@@ -62,7 +74,7 @@ export default {
 <style scoped lang="scss">
 footer {
   background:var(--bg);
-  border-top:6px solid var(--bg-invert);
+  border-top:6px solid var(--bg-text);
   margin:0 -15px;
   overflow:hidden;
   padding:5em 30px 2em;
@@ -84,10 +96,11 @@ footer {
     @media($dark){opacity:.15;}
   }
 }
-a[href] {
-  color:var(--text);
-  display:block;
+p {
+  margin:1.5em 0 0;
+  @media($md) {margin:.5em 0;}
 }
+a[href] {color:var(--text);}
 .copyright {
   align-self:center;
   margin-bottom:0;
