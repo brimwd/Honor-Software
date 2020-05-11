@@ -1,6 +1,10 @@
 <template>
 <footer id="global-footer">
-    <h4>Honor.Software</h4>
+    <h4>
+      <router-link to="/">
+        Honor.Software
+      </router-link>
+    </h4>
   <div class="row">
 
 
@@ -100,7 +104,9 @@ p {
   margin:1.5em 0 0;
   @media($md) {margin:.5em 0;}
 }
-a[href] {color:var(--text);}
+a[href] {
+  color:var(--text);
+}
 .copyright {
   align-self:center;
   margin-bottom:0;
