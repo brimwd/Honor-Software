@@ -1,7 +1,7 @@
 <template>
-<nav class="global-nav row d-none d-sm-flex">
-  <div class="col-12 d-flex justify-content-between">
-    <router-link to="/" type="logo">
+<nav class="global-nav row">
+  <div class="col-12 d-none d-sm-flex justify-content-between">
+    <router-link to="/" type="logo" class="d-none d-sm-inline-block">
       <img src="public/honor-logo.png" alt="Honor.Software" />
     </router-link>
     <ul>
@@ -13,12 +13,17 @@
       </li>
     </ul>
   </div>
+  <SpeedDial :navLinks="navLinks" />
 </nav>
 </template>
 
 <script>
+import SpeedDial from '@/components/SpeedDial.vue'
 export default {
   name: 'SiteNav',
+  components: {
+    SpeedDial,
+  },
   props: {
     navLinks: {
       type: Array,
