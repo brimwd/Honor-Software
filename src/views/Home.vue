@@ -170,7 +170,7 @@ export default {
       promos: [
         {
           label: "Latest Updates",
-          path: "/news/",
+          path: "/news",
         },
         {
 
@@ -179,11 +179,11 @@ export default {
         },
         {
           label: "Learn how",
-          path: "/news/",
+          path: "/news",
         },
         {
           label: "Customer Story: Hyperdrive Engineering",
-          path: "/news/",
+          path: "/news",
         }
       ],
     };
