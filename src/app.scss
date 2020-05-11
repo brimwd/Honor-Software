@@ -85,3 +85,14 @@ body {
 	color:var(--text);
 	font-family: Avenir, Helvetica, Arial, sans-serif;
 }
+
+.btn-gold {
+	background:linear-gradient(170deg, #efe3bc, #d4b43f);
+	border-color:#6d4c00;
+	color:#332100;
+	&:hover {
+		background:linear-gradient(170deg, #efe3bc, #d4b43f);
+		border-color:black;
+		color:black;
+	}
+}

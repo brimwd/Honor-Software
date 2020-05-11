@@ -35,7 +35,7 @@
     <div class="col-12 col-md-6">
       <h3>News Content</h3>
       <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
-      <a class="btn btn-primary" href="">Read the article</a>
+      <a class="btn btn-gold" href="">Read the article</a>
     </div>
   </section>
   <section class="row py-5">
@@ -43,7 +43,7 @@
       <h3>Why Honor.Software?</h3>
       <p>Honor provides software solutions to help people work smart and achieve more.</p>
       <p>By automating redundant work and menial tasks, we free your employees to focus on the things that need their attention most.</p>
-      <a class="btn btn-primary" href="/services/#process">Our Process</a>
+      <a class="btn btn-gold" href="/services/#process">Our Process</a>
     </div>
     <div class="col-12 col-md-6">
       <!-- background graphic -->
@@ -106,7 +106,7 @@
       <h3>Better Together</h3>
       <p>Open-source technologies power incredible projects around the world, from Google's Chrome browser and Android OS to Twitter and a majority of the world's websites.</p>
       <p>Learn more how open-source makes the difference in our report.</p>
-      <a class="btn btn-primary" href="">Read the report</a>
+      <a class="btn btn-gold" href="">Read the report</a>
     </div>
   </section>
   <section class="row py-5">
