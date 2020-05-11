@@ -86,7 +86,7 @@ $bg-d-10: url('../images/bg/dark/oriental-tiles.png');
   overflow-x:hidden;
   position:relative;
 
-  &::before {
+  &::before, &::after {
     background-attachment:auto, fixed;
     background-image:linear-gradient(110deg, #f5e9d300, #d4be96), $bg-l-2;
     background-color:#fff8d6;
@@ -115,6 +115,19 @@ $bg-d-10: url('../images/bg/dark/oriental-tiles.png');
     @media($md) {top:-60vw;}
     @media($lg) {top:-70vw;}
     @media($xl) {top:-90vw;}
+  }
+  &::after {
+    border-radius:92vw;
+    transform:rotate(66deg);
+    width:100vw;
+    height:100vw;
+    max-width:500px;
+    top:unset;
+    right:20vw;
+    bottom:430px;
+    left:unset;
+    z-index:-1;
+    @media($md) {bottom:0;}
   }
 }
 
