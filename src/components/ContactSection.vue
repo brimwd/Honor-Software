@@ -24,11 +24,14 @@ export default {
 
 <style scoped lang="scss">
 section {
-  background-color:var(--mid-gray);
+  // background-color:var(--mid-gray);
   color:var(--bg);
   margin:0 -30px;
   padding:6em 15px 4em;
-  @media($dark){background-color:var(--bg-soft);color:var(--text)}
+  @media($dark){
+      // background-color:var(--bg-soft);
+      color:var(--text)
+  }
 }
 h2 {margin-top:.5em;}
 h4 {margin:1em 0 2em;font-weight:normal;}

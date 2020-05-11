@@ -24,6 +24,7 @@
           v-for="(slide, index) in slides"
           class="fas fa-quote-left"
           :class="{'active': index === currentSlide}"
+          @click="currentSlide = index"
         />
       </div>
       <i
@@ -48,8 +49,24 @@ export default {
       currentSlide: 0,
       slides: [
         {
-          lorem: [
+          quote: [
             "Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
+            "Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.",
+          ],
+          author: 'Some Latin-major',
+          company: 'A real business'
+        },
+        {
+          quote: [
+            "HEYYY ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
+            "Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.",
+          ],
+          author: 'Some Latin-major',
+          company: 'A real business'
+        },
+        {
+          quote: [
+            "HI ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
             "Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.",
           ],
           author: 'Some Latin-major',
@@ -69,9 +86,11 @@ export default {
       let max = this.slides.length - 1;
       if (sum < 0) {
           this.currentSlide = max;
+          return;
       }
       if (sum > max) {
         this.currentSlide = 0;
+        return;
       }
       this.currentSlide = sum;
     }
@@ -155,7 +174,7 @@ section {
         transition:all .15s;
       }
       &.active {
-        font-weight:bold;
+        font-weight: bold;
       }
 
       &::before {content:'\f111';}
