@@ -8,7 +8,7 @@ $xl: 'min-width:1200px';
 /* BACKGROUNDS */
 /* LIGHT */
 $bg-l-1: url('../../images/bg/light/brickwall_@2X.png');
-	$bg-l-1s: url('../../images/bg/light/brickwall.png');
+    $bg-l-1s: url('../../images/bg/light/brickwall.png');
 /* match */ $bg-l-2: url('../../images/bg/light/so-white.png');
 $bg-l-3: url('../../images/bg/light/cheap_diagonal_fabric.png');
 $bg-l-4: url('../../images/bg/light/concrete_seamless.png');
@@ -17,22 +17,22 @@ $bg-l-6: url('../../images/bg/light/gravel.png');
 /* match */ $bg-l-7: url('../../images/bg/light/hotel-wallpaper.png');
 $bg-l-8: url('../../images/bg/light/interlaced.png');
 $bg-l-9: url('../../images/bg/light/old_moon_@2X.jpg');
-	$bg-l-9s: url('../../images/bg/light/old_moon.png');
+    $bg-l-9s: url('../../images/bg/light/old_moon.png');
 $bg-l-10: url('../../images/bg/light/papyrus.png');
 $bg-l-11: url('../../images/bg/light/positive.png');
 $bg-l-12: url('../../images/bg/light/tic-tac-toe.png');
 $bg-l-13: url('../../images/bg/light/topography.png');
 $bg-l-14: url('../../images/bg/light/wet_snow_@2X.png');
-	$bg-l-14s: url('../../images/bg/light/wet_snow.png');
+    $bg-l-14s: url('../../images/bg/light/wet_snow.png');
 
 /* DARK */
 $bg-d-1: url('../../images/bg/dark/debut_dark_@2X.png');
-	$bg-d-1s: url('../../images/bg/dark/debut_dark.png');
+    $bg-d-1s: url('../../images/bg/dark/debut_dark.png');
 /* match */ $bg-d-2: url('../../images/bg/dark/ep_naturalblack.png');
 $bg-d-3: url('../../images/bg/dark/stardust_@2X.png');
-	$bg-d-3s: url('../../images/bg/dark/stardust.png');
+    $bg-d-3s: url('../../images/bg/dark/stardust.png');
 $bg-d-4: url('../../images/bg/dark/navy_blue_@2X.png');
-	$bg-d-4s: url('../../images/bg/dark/navy_blue.png');
+    $bg-d-4s: url('../../images/bg/dark/navy_blue.png');
 $bg-d-5: url('../../images/bg/dark/dot-grid-dark.png');
 $bg-d-6: url('../../images/bg/dark/prism.png');
 /* match */ $bg-d-7: url('../../images/bg/dark/hotel-wallpaper-black.png');
@@ -42,25 +42,16 @@ $bg-d-10: url('../../images/bg/dark/oriental-tiles.png');
 /* END BACKGROUNDS */
 
 /* HONOR FONTS */
-$f1: "'Amiri', serif";
-$f2: "'BioRhyme', serif";
-$f3: "'Bitter', serif";
-$f4: "'Coustard', serif";
-$f5: "'Eczar', serif";
-$f6: "'Kadwa', serif";
 $f7: "'Marcellus', serif";
-$f8: "'Martel', serif";
-$f9: "'Merriweather', serif";
-$f10: "'Nova Square', cursive";
-$f11: "'Patua One', cursive";
-$f12: "'Playfair Display SC', serif";
-$f13: "'Rhodium Libre', serif";
-$f14: "'Roboto Slab', serif";
-$f15: "'Sree Krushnadevaraya', serif";
-$f16: "'Voces', cursive";
-$f17: "'Volkhov', serif";
 
-$shadow: 0 4px 20px -7px rgba(0,0,0,0.4);
+$shadow-gold:0 12px 36px -6px #d69e00;
+
+@mixin shadow {
+	box-shadow:0 12px 36px -6px #906a00;
+	@media ($dark){
+		box-shadow:0 12px 36px -6px #000;
+	}
+}
 
 /* MIXINS */
 @mixin pseudo {
@@ -75,22 +66,58 @@ $shadow: 0 4px 20px -7px rgba(0,0,0,0.4);
 /* CSS VARIABLES */
 :root {
 	--text:#333;
+    --link-hover: #555;
 	--bg:#fff;
-	--bg-soft:#eee;
-	--bg-invert:#333;
+	--bg-intense:#000;
+	--bg-soft:#f9f8f5;
+	--bg-text:#333;
+	--gold-light:#C0BBB5;
 	--mid-gray:#888;
 }
+
 @media ($dark){
 /*DARK MODE STYLES*/
 :root {
-	--text:#eee;
-	--bg:#000;
+	--text: #eee;
+    --link-hover: #ccc;
+	--bg: #000;
+    --bg-intense:#fff;
 	--bg-soft:#333;
-	--bg-invert:#eee;
+	--bg-text:#eee;
 }}
 
 body {
 	background-color:var(--bg);
 	color:var(--text);
 	font-family: Avenir, Helvetica, Arial, sans-serif;
+}
+
+.btn-gold {
+	background:linear-gradient(170deg, #efe3bc, #d4b43f);
+	border-color:#6d4c00;
+	color:#332100;
+	&:hover {
+		background:linear-gradient(170deg, #efe3bc, #d4b43f);
+		border-color:black;
+		color:black;
+	}
+}
+
+.alert {
+	background-color:var(--bg-text);
+	border:none;
+  	border-radius:0;
+	display:block;
+  	margin-bottom:0;
+  	text-align:center;
+
+	color:var(--bg-soft)!important;
+	&:hover {color:var(--bg)!important;}
+}
+
+a {
+	color:var(--text);
+	font-weight:bolder;
+	&:hover {color:#F92472;}
+	&.btn {font-weight:normal;}
 }

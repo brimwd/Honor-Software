@@ -1,5 +1,5 @@
 <template>
-<section class="row feature">
+<section class="row feature py-5">
   <div :class="{'order-last' : flipped}"
     class="col-12 col-md-6">
 
@@ -9,10 +9,10 @@
         :key="paragraph.slice(0,20)"
     >{{ paragraph }}</p>
     <router-link
-      class="cta-btn"
+      class="btn btn-primary"
       to="/news/"
     >
-      {{ content.cta || "Read the article" }}
+      {{ content.buttonText || "Read the article" }}
     </router-link>
 
   </div>
@@ -24,7 +24,7 @@
 
 <script>
 export default {
-  name: 'Headline',
+  name: 'ArticleBlurb',
   props: {
     content: {
       type: Object,
@@ -39,12 +39,8 @@ export default {
 </script>
 
 <style scoped lang="scss">
-.feature {
-  margin-right: 0;
-  margin-left: 0;
-}
-
-.cta-btn {
-
+section {
+  margin-right:0;
+  margin-left:0;
 }
 </style>

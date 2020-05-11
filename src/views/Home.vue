@@ -1,49 +1,47 @@
-<!-- <template>
-  <div class="home">
-    <Marquee class="jumbotron"/>
-    <Headline
-      :content="headlines[0]"
-      flipped
-    />
-    <Partners />
-    <PromoBar
-      :content="promos"
-    />
-    <Headline
-      :content="headlines[1]"
-    />
-    <Headline
-      :content="headlines[2]"
-      flipped
-    />
-    <ContactSection />
-  </div>
-</template> -->
-
 <template>
-  <div>
-  <header id="marquee" class="row jumbotron mb-0">
+  <!-- <div class="home">
+  <MainTitle />
+  <ArticleBlurb
+    id="news-featured"
+    :content="blurbs[0]"
+    flipped
+  />
+  <ArticleBlurb
+    :content="blurbs[1]"
+  />
+  <PromoBar :promos="promos"/>
+
+  <Partners />
+
+  <ArticleBlurb
+    :content="blurbs[2]"
+    flipped
+  />
+  <PromoBar :promos="promos2"/> -->
+
+  <div class="container-fluid">
+  <header id="marquee" class="row jumbotron">
     <div class="col-12">
-      <h1 id="honor" class="display-4">Honor.Software</h1>
+      <h1 id="honor" class="display-4">Honor.<br/>Software</h1>
       <p class="lead">Beautiful, usable software for the future.</p>
     </div>
   </header>
-  <section class="row py-5" id="news-featured">
+  <section class="headline row py-5" id="news-featured">
     <div class="col-12 col-md-6">
       <!-- background graphic -->
     </div>
     <div class="col-12 col-md-6">
       <h3>News Content</h3>
       <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
-      <a class="btn btn-primary" href="">Read the article</a>
+      <a class="btn btn-gold" href="">Read the article</a>
     </div>
   </section>
-  <section class="row py-5">
+  <section class="headline row py-5">
     <div class="col-12 col-md-6">
       <h3>Why Honor.Software?</h3>
       <p>Honor provides software solutions to help people work smart and achieve more.</p>
       <p>By automating redundant work and menial tasks, we free your employees to focus on the things that need their attention most.</p>
-      <a class="btn btn-primary" href="/services/#process">Our Process</a>
+      <a class="btn btn-gold" href="/services/#process">Our Process</a>
     </div>
     <div class="col-12 col-md-6">
       <!-- background graphic -->
@@ -98,7 +96,7 @@
       <span>detail</span>
     </a>
   </section>
-  <section class="row">
+  <section class="headline row">
     <div class="col-12 col-md-6">
       <!-- background graphic -->
     </div>
@@ -106,10 +104,10 @@
       <h3>Better Together</h3>
       <p>Open-source technologies power incredible projects around the world, from Google's Chrome browser and Android OS to Twitter and a majority of the world's websites.</p>
       <p>Learn more how open-source makes the difference in our report.</p>
-      <a class="btn btn-primary" href="">Read the report</a>
+      <a class="btn btn-gold" href="">Read the report</a>
     </div>
   </section>
-  <section class="row py-5">
+  <section class="headline row py-5">
     <div class="col-12 col-md-6">
       <h3>Accelerate your business</h3>
       <p>Honor specializes in building  websites, software services, and apps.</p>
@@ -126,8 +124,8 @@
 <script>
 // @ is an alias to /src
 import ContactSection from '@/components/ContactSection.vue'
-import Headline from '@/components/Headline.vue'
-import Marquee from '@/components/Marquee.vue'
+import ArticleBlurb from '@/components/ArticleBlurb.vue'
+import MainTitle from '@/components/MainTitle.vue'
 import Partners from '@/components/Partners.vue'
 import PromoBar from '@/components/PromoBar.vue'
 
@@ -135,55 +133,83 @@ export default {
   name: 'Home',
   components: {
     ContactSection,
-    Headline,
-    Marquee,
+    ArticleBlurb,
+    MainTitle,
     Partners,
     PromoBar,
   },
   data() {
     return {
-      headlines: [
+      blurbs: [
         {
-          title: "News Content",
-          text: ["Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua."],
-          imageUrl: "",
+            buttonText: "Get to know us",
+            imageUrl: "",
+            url: "/about/",
+            text: [
+                "Honor provides software solutions to help people work smart and achieve more.",
+                "By automating redundant work and menial tasks, we free your employees to focus on the things that need their attention most."
+            ],
+            title: "Why Honor.Software?",
         },
         {
-          title: "Accelerate your business",
-          text: ["Automating workflows Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam..."],
-          imageUrl: "",
+            buttonText: "See the outcome",
+            imageUrl: "",
+            url: "/stories/scheduleux.html",
+            text: ["We worked with ScheduleUX to take their complicated user flow and turn it into a web application with a delightful and intuitive user experience."],
+            title: "Mastering User Flow with ScheduleUX",
         },
         {
-          title: "Better Together",
-          text: [
-            "Open-source technologies power incredible projects around the world, from Google's Chrome browser and Android OS to Twitter and a majority of the world's websites.",
-            "Learn more about how open-source makes the difference in our report.",
-          ],
-          imageUrl: "",
-        },
-        {
-          title: "From conversations to collaborations",
-          text: ["Our first project starts here"],
-          imageUrl: "",
+            buttonText: "Read the report",
+            url: "/contact/",
+            imageUrl: "",
+            text: [
+                "Open-source technologies power incredible projects around the world, from Google's Chrome browser and Android OS to Twitter and a majority of the world's websites.",
+                "Learn more about how open-source makes the difference in our report.",
+            ],
+            title: "Better Together",
         },
       ],
       promos: [
         {
-          label: "Latest Updates",
+          text: "Latest Updates",
           path: "/news/",
+          isHeader: true,
         },
         {
 
-          label: "Transforming software research",
+          text: "Transforming software research",
           path: "/stories/scheduleux.html",
         },
         {
-          label: "Learn how",
+          text: "Learn how",
           path: "/news/",
         },
         {
-          label: "Customer Story: Hyperdrive Engineering",
+          text: "Customer Story: Hyperdrive Engineering",
           path: "/news/",
+        }
+      ],
+      promos2: [
+        {
+          text: "detail",
+          path: "/",
+          strong: "##%",
+        },
+        {
+
+          text: "detail",
+          path: "/",
+          strong: "##%",
+        },
+        {
+          text: "detail",
+          path: "/",
+          strong: "##%",
+        },
+        {
+          text: "detail",
+          path: "/",
+          strong: "##%",
         }
       ],
     };
@@ -193,47 +219,67 @@ export default {
 
 <style lang="scss" scoped>
 #honor {
-text-transform:uppercase;
-font-family: 'Amiri', serif;
-font-family: 'BioRhyme', serif;
-font-family: 'Bitter', serif;
-font-family: 'Coustard', serif;
-font-family: 'Eczar', serif;
-font-family: 'Kadwa', serif;
-font-family: 'Marcellus', serif;
-font-family: 'Martel', serif;
-font-family: 'Merriweather', serif;
-font-family: 'Nova Square', cursive;
-font-family: 'Patua One', cursive;
-font-family: 'Playfair Display SC', serif;
-font-family: 'Rhodium Libre', serif;
-font-family: 'Roboto Slab', serif;
-font-family: 'Sree Krushnadevaraya', serif;
-font-family: 'Voces', cursive;
-font-family: 'Volkhov', serif;
+  text-transform:uppercase;
+  font-family:'Marcellus', serif;
 }
 .jumbotron {
   @include pseudo;
+  @include shadow;
 
-  background-image:$bg-l-2;
-  box-shadow:$shadow;
-  @media($dark){background-image:$bg-d-2;}
-
+  background:var(--bg);
+  border-radius:unset;
+  margin:0 -30px 8vw;
+  padding:4rem 80px 4rem 2rem;
   overflow:hidden;
+
+  @media($sm) {
+    border-radius:.3rem;
+    margin:3vw 0 8vw;
+  }
+
   &::before {
-    background:url(../../images/bg/ring.svg) center no-repeat;
-    background-size:240%;
+    background:url('../../images/bg/ring-gold-tilted.png') center no-repeat;
+    background-position:100% 50%;
+    background-size:contain;
     content:'';
     display:block;
     opacity:.3;
 
-    transform:rotate(24deg);
-    width:50%;
+    width:100%;
+    height:120%;
 
     position:absolute;
-    top:-35%;
-    right:-22%;
-    bottom:-70%;
+    top:-10%;
+    right:-3vw;
+    // if un-cropped
+    // top:-1vw;
+    // left:50vw;
+    // bottom:-8vw;
+    @media($sm) {opacity:.7;}
+    @media($md) {
+      opacity:unset;
+      top:-30px;
+      right:3vw;
+      width:260px;
+      height:320px;
+  }
+  }
+
+  @media($md) {
+    overflow:unset;
+    h1 br {display:none;}
   }
 }
+.headline {
+  margin-right:0;
+  margin-left:0;
+}
+
+#honor-powered {
+  font-size:1.3rem;
+  font-weight:bold;
+  padding:4rem 0;
+  @media($sm) {padding:4rem 15px;}
+}
+
 </style>
