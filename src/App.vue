@@ -24,7 +24,7 @@ export default {
     return {
       toast: {
         message: "Our response to Covid-19",
-        path: "news/covid-19.html",
+        path: "/news/covid-19",
       },
       navLinks: [
         { label: "News", path: "/news/", },
