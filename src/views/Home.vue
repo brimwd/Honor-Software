@@ -1,21 +1,3 @@
-<!-- <template>
-  <div class="home">
-    <ArticleBlurb
-      :content="blurbs[0]"
-      flipped
-    />
-    <Partners />
-    <ArticleBlurb
-      :content="blurbs[1]"
-    />
-    <ArticleBlurb
-      :content="blurbs[2]"
-      flipped
-    />
-    <ContactSection />
-  </div>
-</template> -->
-
 <template>
   <div class="home">
   <MainTitle />

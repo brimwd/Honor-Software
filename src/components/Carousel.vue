@@ -60,18 +60,18 @@ export default {
   },
   computed: {
     showControls() {
-      return this.slidesText.length > 1;
+      return this.slides.length > 1;
     },
   },
   methods: {
-    changeSlide(summand) {
-      let sum = this.currentSlide + summand;
+    changeSlide(addend) {
+      let sum = this.currentSlide + addend;
       let max = this.slides.length - 1;
+      if (sum < 0) {
+          this.currentSlide = max;
+      }
       if (sum > max) {
         this.currentSlide = 0;
-      }
-      if (sum < 0) {
-        this.currentSlide = max;
       }
       this.currentSlide = sum;
     }
