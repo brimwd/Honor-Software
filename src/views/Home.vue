@@ -248,4 +248,12 @@ export default {
   margin-right:0;
   margin-left:0;
 }
+
+#honor-powered {
+  font-size:1.3rem;
+  font-weight:bold;
+  padding:4rem 0;
+  @media($sm) {padding:4rem 15px;}
+}
+
 </style>
