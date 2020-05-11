@@ -41,11 +41,12 @@ export default {
 
 <style scoped lang="scss">
 blockquote {
+  @include shadow;
+
   align-self:center;
   background-color:var(--bg);
   border:1px solid #ced4db;
   border-radius:5px;
-  box-shadow:$shadow;
   display:block;
 
   max-width:85vw;

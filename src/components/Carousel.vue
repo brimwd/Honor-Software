@@ -82,13 +82,13 @@ export default {
 
 <style scoped lang="scss">
 section {
-  background:$bg-l-5; // 5, 10, 12
-  @media($dark){background:$bg-d-5;}
+  // background:$bg-l-5; // 5, 10, 12
+  // @media($dark){background:$bg-d-5;}
   background-position:center;
   margin: 0 -30px;
   overflow:hidden;
-  padding-top:5em;
-  padding-bottom:3.5em;
+  padding-top:3em;
+  padding-bottom:3em;
   position:relative;
 
   &::before { // shadow
@@ -115,7 +115,7 @@ section {
     background-color:var(--bg);
     border-radius:50px; // arbitrary
     box-shadow:0 0 0 0 rgba(0,0,0,0);
-    color:var(--mid-gray);
+    color:var(--gold-light);
     cursor:pointer;
     font-size:42px;
     font-weight:lighter;
@@ -124,7 +124,7 @@ section {
     text-align: center;
     transition:all .15s;
     &:hover {
-      box-shadow:$shadow;
+      @include shadow;
       color:var(--text);
     }
     @media($md) {
@@ -143,7 +143,7 @@ section {
   }
 
   .indicator {
-    color:var(--mid-gray);
+    color:var(--gold-light);
     cursor:pointer;
 
     i {

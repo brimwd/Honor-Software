@@ -1,31 +1,47 @@
 <template>
 <footer id="global-footer">
-    <h4>Honor.Software</h4>
+    <h4>
+      <router-link to="/">
+        Honor.Software
+      </router-link>
+    </h4>
   <div class="row">
 
 
 
     <div class="col-6 col-md-4 col-lg-3">
-      <router-link to="/contact/">
-        Contact
-      </router-link>
-      <router-link to="/legal/privacy.html">
-        Privacy
-      </router-link>
-      <router-link to="/legal/tos.html">
-        Terms of Service
-      </router-link>
+      <p>
+          <router-link to="/contact/">
+          Contact
+        </router-link>
+      </p>
+      <p>
+          <router-link to="/legal/privacy/">
+          Privacy
+        </router-link>
+      </p>
+      <p>
+          <router-link to="/legal/tos/">
+          Terms of Service
+        </router-link>
+      </p>
     </div>
     <div class="col-6 col-md-4 col-lg-3">
-      <router-link to="/news/">
-        Honor News
-      </router-link>
-      <router-link to="/customers/">
-        Customers
-      </router-link>
-      <router-link to="/about/">
-        About Us
-      </router-link>
+      <p>
+          <router-link to="/news/">
+          Honor News
+        </router-link>
+      </p>
+      <p>
+          <router-link to="/customers/">
+          Customers
+        </router-link>
+      </p>
+      <p>
+          <router-link to="/about/">
+          About Us
+        </router-link>
+      </p>
     </div>
   </div>
 
@@ -61,13 +77,35 @@ export default {
 
 <style scoped lang="scss">
 footer {
-  border-top:6px solid var(--bg-invert);
+  background:var(--bg);
+  border-top:6px solid var(--bg-text);
   margin:0 -15px;
+  overflow:hidden;
   padding:5em 30px 2em;
+  position:relative;
+
+  &::before {
+    background: url(../../images/bg/ring.svg) center no-repeat;
+    background-position: 30% 50%;
+    background-size: 240vw;
+    content: '';
+    display: block;
+    opacity: .08;
+    transform: rotate(24deg);
+    width: 90%;
+    position: absolute;
+    top: -20vw;
+    right: -22vw;
+    bottom: -70%;
+    @media($dark){opacity:.15;}
+  }
+}
+p {
+  margin:1.5em 0 0;
+  @media($md) {margin:.5em 0;}
 }
 a[href] {
   color:var(--text);
-  display:block;
 }
 .copyright {
   align-self:center;

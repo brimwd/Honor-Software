@@ -9,7 +9,7 @@
       <li data-language="English">English</li>
       <li data-language="中文">中文</li>
     </ul>
-    <a class="d-flex justify-content-between">
+    <a class="d-flex justify-content-between align-content-center">
       <span class="language">{{ activeLanguage.name }}</span>
       <span class="expand-string">{{ activeLanguage.expand }}</span>
       <span class="collapse-string">{{ activeLanguage.collapse }}</span>
@@ -86,6 +86,7 @@ a {
     .expand-string {display:inline;}
   }
   .open & {
+    background-color:var(--bg-soft);
     border-radius:0 0 4px 4px;
     .language {display:none;}
     .expand-string {display:inline;visibility:hidden;}
@@ -107,9 +108,11 @@ a {
 
   i {
     @include FA;
-    text-align:center;
-    min-width:1.2em;
+    font-size:22px;
+    line-height:2rem;
     margin-left:.75em;
+    min-width:1.2em;
+    text-align:center;
     &::before {content:'\f0ac';}
   }
   &:hover i::before {content:'\f106';}
