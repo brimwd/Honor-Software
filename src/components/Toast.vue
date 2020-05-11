@@ -1,23 +1,30 @@
 <template>
 <div class="row">
     <div class="col-12">
-        <router-link
+        <div
             :to="content.path"
-            class="toast-link alert"
-            :class="{'alert-dismissible': content.dismissable}"
+            class="toggle-toast alert"
+            :class="{'alert-dismissible': content.dismissable,
+                     'expanded': expanded}"
             role="alert"
+            @click="toggleMessage"
         >
-            {{ content.message }}
-            <button
-                v-if="content.dismissable"
-                type="button"
-                class="close"
-                data-dismiss="alert"
-                aria-label="Close"
-            >
-                <span aria-hidden="true">&times;</span>
-            </button>
-        </router-link>
+            {{ expanded ? content.message : content.headline }}
+            <!-- <p
+              v-if="expanded"
+              v-text="content.message"
+            /> -->
+            <!-- class="pre-formatted" -->
+        </div>
+        <button
+            v-if="content.dismissable"
+            type="button"
+            class="close"
+            :data-dismiss="alert"
+            aria-label="Close"
+        >
+            <span aria-hidden="true">&times;</span>
+        </button>
     </div>
 </div>
 </template>
@@ -29,8 +36,18 @@ export default {
     content: {
       type: Object,
       required: true,
-    }
-  }
+    },
+  },
+  data() {
+      return {
+          expanded: false,
+      };
+  },
+  methods: {
+    toggleMessage() {
+      this.expanded = !this.expanded;
+    },
+  },
 }
 </script>
 
@@ -38,7 +55,27 @@ export default {
 .col-12 {
   padding: 0;
 }
-.toast-link:hover {
-  text-decoration:none;
+
+.toggle-toast {
+	background-color:var(--bg-text);
+	border:none;
+  	border-radius:0;
+	display:block;
+  	margin-bottom:0;
+  	text-align:center;
+
+	color: var(--bg-soft);
+
+    &:hover {
+        cursor: pointer;
+        color:var(--bg);
+    }
+
+    &.expanded {
+    }
+}
+.close {
+    position: absolute;
+    right: 15px;
 }
 </style>

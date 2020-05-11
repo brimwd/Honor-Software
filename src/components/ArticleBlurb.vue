@@ -9,7 +9,7 @@
         :key="paragraph.slice(0,20)"
     >{{ paragraph }}</p>
     <router-link
-      class="btn btn-primary"
+      class="btn btn-gold"
       to="/news/"
     >
       {{ content.buttonText || "Read the article" }}
@@ -39,7 +39,7 @@ export default {
 </script>
 
 <style scoped lang="scss">
-section {
+.feature {
   margin-right:0;
   margin-left:0;
 }

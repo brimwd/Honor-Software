@@ -36,14 +36,11 @@ export default {
 </script>
 
 <style scoped lang="scss">
-.promo-bar {
-    margin: 80px 0;
-
-    .h5 {
-        font-size: 1.25rem;
-        margin-bottom: .5rem;
-        font-weight: 500;
-        line-height: 1.2;
-    }
+.h5 {
+    font-size: 1.25rem;
+    margin-bottom: .5rem;
+    font-weight: 500;
+    line-height: 1.2;
+    padding-left: 15px;
 }
 </style>

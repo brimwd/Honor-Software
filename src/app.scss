@@ -103,21 +103,15 @@ body {
 	}
 }
 
-.alert {
-	background-color:var(--bg-text);
-	border:none;
-  	border-radius:0;
-	display:block;
-  	margin-bottom:0;
-  	text-align:center;
-
-	color:var(--bg-soft)!important;
-	&:hover {color:var(--bg)!important;}
-}
-
-a {
+a, .link {
 	color:var(--text);
 	font-weight:bolder;
-	&:hover {color:#F92472;}
-	&.btn {font-weight:normal;}
+
+	&:hover {
+        color:#F92472;
+    }
+
+    &.btn {
+        font-weight:normal;
+    }
 }

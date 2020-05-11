@@ -17,8 +17,16 @@
     </div>
     <div class="row">
         <ServiceOverview
-            class="col-3"
-            v-for="associate in fourAssociates"
+            class="col-4"
+            v-for="associate in threeLeaders"
+            :key="associate.title"
+            :service="associate"
+        />
+    </div>
+    <div class="row">
+        <ServiceOverview
+            class="col-4"
+            v-for="associate in threeAdvisors"
             :key="associate.title"
             :service="associate"
         />
@@ -59,30 +67,44 @@ export default {
                     title: "Mac Native Apps",
                 },
             ],
-            fourAssociates: [
+            threeAdvisors: [
+                {
+                    imageAlt: "Picture of Advisor",
+                    imageUrl: "",
+                    text: "Investment and public relations",
+                    title: "Jessie Wang",
+                },
+                {
+                    imageAlt: "Picture of Advisor",
+                    imageUrl: "",
+                    text: "Legal Counsel (US)",
+                    title: "Hindley & Henderson Law Offices",
+                },
+                {
+                    imageAlt: "Picture of Advisor",
+                    imageUrl: "",
+                    text: "Legal Counsel (China)",
+                    title: "Zhen Zhang (Jingshi Law Offices)",
+                },
+            ],
+            threeLeaders: [
                 {
                     imageAlt: "Picture of Brian Donahue",
                     imageUrl: "",
-                    text: "Approved text",
+                    text: '"I believe that technology can change the world, but only well-designed technology will make it better. At Honor.Software we believe we can harness technology to solve problems and make the world better – one project at a time."',
                     title: "Brian Donahue",
                 },
                 {
                     imageAlt: "Picture of Victoria Cai",
                     imageUrl: "",
-                    text: "Approved text",
+                    text: '"Honor.Software is more than a product or a timeline -- this company represents not-only the opportunity to make an impact at a global scale, but also the possibility of reaching individuals - making lives easier in a real and tangible way."',
                     title: "Victoria Cai",
                 },
                 {
                     imageAlt: "Picture of Cameron Donahue",
                     imageUrl: "",
-                    text: "Approved text",
+                    text: '"Leading Technology for Honor.Software is a relentless challenge and non-stop personally rewarding. Under Brian\'s leadership we continuously strive to balance building unparalleled experiences with uncompromising engineering."',
                     title: "Cameron Donahue",
-                },
-                {
-                    imageAlt: "Picture of Advisor",
-                    imageUrl: "",
-                    text: "Approved text",
-                    title: "Advisor",
                 },
             ],
         };
