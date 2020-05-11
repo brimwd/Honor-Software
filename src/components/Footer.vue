@@ -63,7 +63,25 @@ export default {
 footer {
   border-top:6px solid var(--bg-invert);
   margin:0 -15px;
+  overflow:hidden;
   padding:5em 30px 2em;
+  position:relative;
+
+  &::before {
+    background: url(../../images/bg/ring.svg) center no-repeat;
+    background-position: 30% 50%;
+    background-size: 240vw;
+    content: '';
+    display: block;
+    opacity: .08;
+    transform: rotate(24deg);
+    width: 90%;
+    position: absolute;
+    top: -20vw;
+    right: -22vw;
+    bottom: -70%;
+    @media($dark){opacity:.15;}
+  }
 }
 a[href] {
   color:var(--text);
