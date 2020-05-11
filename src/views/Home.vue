@@ -193,24 +193,8 @@ export default {
 
 <style lang="scss" scoped>
 #honor {
-text-transform:uppercase;
-font-family: 'Amiri', serif;
-font-family: 'BioRhyme', serif;
-font-family: 'Bitter', serif;
-font-family: 'Coustard', serif;
-font-family: 'Eczar', serif;
-font-family: 'Kadwa', serif;
-font-family: 'Marcellus', serif;
-font-family: 'Martel', serif;
-font-family: 'Merriweather', serif;
-font-family: 'Nova Square', cursive;
-font-family: 'Patua One', cursive;
-font-family: 'Playfair Display SC', serif;
-font-family: 'Rhodium Libre', serif;
-font-family: 'Roboto Slab', serif;
-font-family: 'Sree Krushnadevaraya', serif;
-font-family: 'Voces', cursive;
-font-family: 'Volkhov', serif;
+  text-transform:uppercase;
+  font-family:'Marcellus', serif;
 }
 .jumbotron {
   @include pseudo;
