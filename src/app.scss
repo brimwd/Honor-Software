@@ -109,3 +109,9 @@ body {
 	&:hover {color:var(--bg)!important;}
 }
 
+a {
+	color:var(--text);
+	font-weight:bolder;
+	&:hover {color:#F92472;}
+	&.btn {font-weight:normal;}
+}
