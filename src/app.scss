@@ -67,9 +67,10 @@ $shadow-gold:0 12px 36px -6px #d69e00;
 :root {
 	--text:#333;
 	--bg:#fff;
+	--bg-intense:#000;
 	--bg-soft:#f9f8f5;
+	--bg-text:#333;
 	--gold-light:#C0BBB5;
-	--bg-invert:#333;
 	--mid-gray:#888;
 }
 @media ($dark){
@@ -77,8 +78,9 @@ $shadow-gold:0 12px 36px -6px #d69e00;
 :root {
 	--text:#eee;
 	--bg:#000;
+	--bg-intense:#fff;
 	--bg-soft:#333;
-	--bg-invert:#eee;
+	--bg-text:#eee;
 }}
 
 body {
@@ -99,7 +101,7 @@ body {
 }
 
 .alert {
-	background-color:var(--bg-invert);
+	background-color:var(--bg-text);
 	border:none;
   	border-radius:0;
 	display:block;
