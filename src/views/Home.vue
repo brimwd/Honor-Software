@@ -21,14 +21,14 @@
 </template> -->
 
 <template>
-  <div>
-  <header id="marquee" class="row jumbotron mb-0">
+  <div class="container-fluid">
+  <header id="marquee" class="row jumbotron">
     <div class="col-12">
       <h1 id="honor" class="display-4">Honor.Software</h1>
       <p class="lead">Beautiful, usable software for the future.</p>
     </div>
   </header>
-  <section class="row py-5" id="news-featured">
+  <section class="headline row py-5" id="news-featured">
     <div class="col-12 col-md-6">
       <!-- background graphic -->
     </div>
@@ -38,7 +38,7 @@
       <a class="btn btn-gold" href="">Read the article</a>
     </div>
   </section>
-  <section class="row py-5">
+  <section class="headline row py-5">
     <div class="col-12 col-md-6">
       <h3>Why Honor.Software?</h3>
       <p>Honor provides software solutions to help people work smart and achieve more.</p>
@@ -98,7 +98,7 @@
       <span>detail</span>
     </a>
   </section>
-  <section class="row">
+  <section class="headline row">
     <div class="col-12 col-md-6">
       <!-- background graphic -->
     </div>
@@ -109,7 +109,7 @@
       <a class="btn btn-gold" href="">Read the report</a>
     </div>
   </section>
-  <section class="row py-5">
+  <section class="headline row py-5">
     <div class="col-12 col-md-6">
       <h3>Accelerate your business</h3>
       <p>Honor specializes in building  websites, software services, and apps.</p>
@@ -214,12 +214,19 @@ font-family: 'Volkhov', serif;
 }
 .jumbotron {
   @include pseudo;
+  @include shadow;
 
-  background-image:$bg-l-2;
-  box-shadow:$shadow;
-  @media($dark){background-image:$bg-d-2;}
-
+  background:var(--bg);
+  border-radius:unset;
+  margin:0 -30px 8vw;
+  padding:4rem 80px 4rem 2rem;
   overflow:hidden;
+
+  @media($sm) {
+    border-radius:.3rem;
+    margin:3vw 1vw 8vw;
+  }
+
   &::before {
     background:url(../../images/bg/ring.svg) center no-repeat;
     background-size:240%;
@@ -235,5 +242,10 @@ font-family: 'Volkhov', serif;
     right:-22%;
     bottom:-70%;
   }
+  @media($md) {h1 br {display:none;}}
+}
+.headline {
+  margin-right:0;
+  margin-left:0;
 }
 </style>
