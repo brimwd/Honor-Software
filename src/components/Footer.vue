@@ -18,23 +18,23 @@
     </div>
     <div class="col-6 col-md-4 col-lg-3">
       <router-link to="/news/">
-        News
+        Honor News
       </router-link>
       <router-link to="/customers/">
         Customers
       </router-link>
       <router-link to="/about/">
-        About
+        About Us
       </router-link>
     </div>
   </div>
 
 
-  <div class="row justify-content-between mt-4">
-    <p class="col-12 col-sm-auto copyright">&copy;2020 – All rights reserved</p>
+  <div class="row justify-content-between align-content-center mt-4">
     <div class="col-12 col-sm-auto">
-      <LanguageSelector />
+      <!-- <LanguageSelector :activeLanguage="activeLanguage" /> -->
     </div>
+    <p class="col-12 col-sm-auto copyright order-sm-first">&copy;2020 – All rights reserved</p>
   </div>
 </footer>
 </template>
@@ -45,7 +45,16 @@ import LanguageSelector from '@/components/LanguageSelector.vue'
 export default {
   name: 'Footer',
   components: {
-    LanguageSelector,
+    LanguageSelector
+  },
+  data() {
+    return {
+      activeLanguage: {
+        name: 'English',
+        expand: 'Select Language',
+        collapse: 'Dismiss',
+      },
+    };
   },
 }
 </script>

@@ -3,7 +3,7 @@
         <Toast :content="toast" />
         <SiteNav :navLinks="navLinks" />
         <router-view
-            class="container-fluid page-content"
+            class="page-content"
         />
         <Footer class="footer" />
     </div>
@@ -27,12 +27,13 @@ export default {
                 path: "news/covid-19.html",
             },
             navLinks: [
-                { label: "Why Honor", path: "/about/", },
-                { label: "Product", path: "/product/", },
-                { label: "Services", path: "/services/", },
+                { label: "News", path: "/news/", },
                 { label: "Customers", path: "/customers/", },
-                { label: "Resources", path: "/resources/", },
-                { label: "Contact Us", path: "/contact/", },
+                { label: "Contact", path: "/contact/", },
+                { label: "About", path: "/about/", },
+                // { label: "Products", path: "/products/", },
+                // { label: "Services", path: "/services/", },
+                // { label: "Resources", path: "/resources/", },
             ]
         };
     },

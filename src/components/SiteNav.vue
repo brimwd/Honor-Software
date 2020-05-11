@@ -1,7 +1,7 @@
 <template>
 <nav class="global-nav row">
   <div class="col-12 d-flex justify-content-between">
-    <router-link to="/">
+    <router-link to="/" type="logo">
       <img src="public/honor-logo.png" alt="Honor.Software" />
     </router-link>
     <ul>
@@ -33,20 +33,25 @@ nav {
 }
 
 a {
-    color: var(--text);
+  color: var(--text);
 
-    &:hover {
-        text-decoration: none;
-        color: var(--link-hover);
-    }
+  &:hover {
+    text-decoration: none;
+    color: var(--link-hover);
+  }
 
-    &.router-link-exact-active {
-        color: #0056b3;
-    }
+  &.router-link-exact-active {
+    color: #0056b3;
+  }
+}
+
+.router-link-exact-active[type="logo"] {
+  visibility:hidden;
 }
 
 ul {
   margin:0;
+  padding:0;
   justify-self:flex-end;
 
   li {
