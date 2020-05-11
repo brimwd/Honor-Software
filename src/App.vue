@@ -81,8 +81,41 @@ $bg-d-9: url('../images/bg/dark/y-so-serious.png');
 $bg-d-10: url('../images/bg/dark/oriental-tiles.png');
 
 #app {
-    -webkit-font-smoothing: antialiased;
-    -moz-osx-font-smoothing: grayscale;
+  -webkit-font-smoothing:antialiased;
+  -moz-osx-font-smoothing:grayscale;
+  overflow-x:hidden;
+  position:relative;
+
+  &::before {
+    background-attachment:auto, fixed;
+    background-image:linear-gradient(110deg, #f5e9d300, #d4be96), $bg-l-2;
+    background-color:#fff8d6;
+    background-blend-mode:multiply;
+    border-right:13px solid #ceae74;
+    border-bottom:4px solid #bb9b61;
+    @media($dark){
+      background-image:linear-gradient(110deg, #f5e9d300, #d4be96), $bg-d-2;
+      background-blend-mode:hard-light;
+    }
+
+    border-radius:30vw;
+    content:'';
+    display:block;
+
+    transform:rotate(25deg);
+    width:130vw;
+    height:130vw;
+
+    position:absolute;
+    top:-50vw;
+    left:-10vw;
+    z-index:0;
+    transition:top 250ms;
+    // transition:top .4s;
+    @media($md) {top:-60vw;}
+    @media($lg) {top:-70vw;}
+    @media($xl) {top:-90vw;}
+  }
 }
 
 #nav {
