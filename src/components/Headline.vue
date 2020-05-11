@@ -39,9 +39,9 @@ export default {
 </script>
 
 <style scoped lang="scss">
-.feature {
-  margin-right: 0;
-  margin-left: 0;
+section {
+  margin-right:0;
+  margin-left:0;
 }
 
 .cta-btn {
