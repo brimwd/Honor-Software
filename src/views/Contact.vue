@@ -1,8 +1,8 @@
 <template>
 	<section class="contact-page honor-page">
-    <Carousel />
+        <Carousel />
 
-		<ContactSection />
+        <ContactSection />
 	</section>
 </template>
 

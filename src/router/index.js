@@ -6,8 +6,6 @@ import Contact from '../views/Contact.vue'
 import Customers from '../views/Customers.vue'
 import News from '../views/News.vue'
 import Privacy from '../views/Privacy.vue'
-import Product from '../views/Product.vue'
-import Resources from '../views/Resources.vue'
 import Terms from '../views/Terms.vue'
 
 Vue.use(VueRouter)
@@ -44,16 +42,6 @@ const routes = [
         component: Privacy
     },
     {
-        path: '/product',
-        name: 'Product',
-        component: Product
-    },
-    {
-        path: '/resources',
-        name: 'Resources',
-        component: Resources
-    },
-    {
         path: '/legal/tos',
         name: 'Terms',
         component: Terms
@@ -62,7 +50,14 @@ const routes = [
 
 const router = new VueRouter({
   mode: 'history',
-  routes
+  routes,
+  scrollBehavior (to, from, savedPosition) {
+    if (savedPosition) {
+      return savedPosition
+    } else {
+      return { x: 0, y: 0 }
+    }
+  }
 })
 
 export default router

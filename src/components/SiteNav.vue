@@ -43,11 +43,22 @@ nav {
   }
 }
 
+a {
+  color: var(--text);
+
+  &:hover {
+    text-decoration: none;
+    color: var(--link-hover);
+  }
+
+  &.router-link-exact-active {
+    color: #0056b3;
+  }
+}
+
 .router-link-exact-active[type="logo"] {
   visibility:hidden;
 }
-
-a {color:var(--text);}
 
 ul {
   justify-self:flex-end;
