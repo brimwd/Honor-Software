@@ -134,17 +134,18 @@ section {
     background-color:var(--bg);
     border-radius:50px; // arbitrary
     box-shadow:0 0 0 0 rgba(0,0,0,0);
-    color:var(--gold-light);
+    color:var(--text);
     cursor:pointer;
     font-size:42px;
-    font-weight:lighter;
-    letter-spacing:-1px;
+    font-weight:500;
     line-height:1em;
+    width:1em;
     text-align: center;
     transition:all .15s;
     &:hover {
       @include shadow;
-      color:var(--text);
+      background-color:var(--text);
+      color:var(--bg);
     }
     @media($md) {
       position:absolute;
@@ -153,11 +154,19 @@ section {
 
     &.prev {
       left:5.5vw;
-      &::before {content:'\f137';}
+      &::before {
+        content:'\f104';
+        position:relative;
+        left:-.05em;
+      }
     }
     &.next {
       right:5.5vw;
-      &::before {content:'\f138';}
+      &::before {
+        content:'\f105';
+        position:relative;
+        right:-.05em;
+      }
     }
   }
 
