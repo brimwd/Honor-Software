@@ -21,6 +21,9 @@
           :content="blurbs[2]"
           flipped
       />
+      <ArticleBlurb
+          :content="blurbs[3]"
+      />
 
   <!-- <section class="headline row">
     <div class="col-12 col-md-6">
@@ -33,17 +36,6 @@
       <a class="btn btn-gold" href="">Read the report</a>
     </div>
 </section> -->
-  <section class="headline row py-5">
-    <div class="col-12 col-md-6">
-      <h3>Accelerate your business</h3>
-      <p>Honor specializes in building  websites, software services, and apps.</p>
-      <p>We take pride in modernizing workflows, producing documentation, and our expert consultations.</p>
-      <p>Find out how we can help you. <a class="" href="/contact/">Get in touch</a></p>
-    </div>
-    <div class="col-12 col-md-6">
-      <!-- // background graphic -->
-    </div>
-  </section>
   </div>
 </template>
 
@@ -72,17 +64,23 @@ export default {
             imageUrl: "",
             url: "/about/",
             text: [
-                "Honor provides software solutions to help people work smart and achieve more.",
-                "By automating redundant work and menial tasks, we free your employees to focus on the things that need their attention most."
+                "At Honor.Software we create solutions to help people work smarter and achieve more.",
+                "By automating redundant work and menial tasks, we can free your employees to focus on the things that need their attention most."
             ],
-            title: "Why Honor.Software?",
+            title: "Why Honor?",
         },
         {
             buttonText: "See the outcome",
             imageUrl: "",
             url: "/stories/scheduleux.html",
-            text: ["We worked with ScheduleUX to take their scheduling service's complicated user flow and turn it into a delightful and intuitive user experience."],
-            title: "Mastering User Flow with ScheduleUX",
+            text: [
+              // "We worked with ScheduleUX to take their scheduling service's complicated user flow and turn it into a delightful and intuitive user experience."
+              "From scrappy beginnings, ScheduleUX has matured into a robust tool for scheduling sessions, managing participants, and (newly as of last month) coordinating remote interviews and follow-ups over videoconferencing services.",
+              "We're proud to announce that we've recently launched a new dashboard to support the ScheduleUX Team in managing their growing user-base."
+            ],
+            title: "ScheduleUX Hits Another Milestone"
+              // "Mastering User Flow with ScheduleUX"
+            ,
         },
         {
             buttonText: "Read the report",
@@ -93,6 +91,17 @@ export default {
                 "Learn more about how open-source makes the difference in our report.",
             ],
             title: "Better Together",
+        },
+        {
+            buttonText: "Get in touch",
+            url: "/contact/",
+            imageUrl: "",
+            text: [
+                "Honor specializes in building  websites, software services, and apps.",
+                "We take pride in modernizing workflows, producing documentation, and our expert consultations.",
+                "Find out how we can help you.",
+            ],
+            title: "Accelerate your business",
         },
       ],
       promos: [
