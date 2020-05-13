@@ -6,7 +6,7 @@
     <div class="col my-5 pb-5">
       <p class="px-3">
         <time datetime="2020-04-23 12:00">April 23, 2020</time>
-        <routerLink to="https://docs.google.com/document/d/1PAuoQwJsO4380lxl_nMJns1_GSVoQi-SPTLb9rUltuM/edit?usp=sharing" v-text="'Transforming software research'"/>
+        <a href="https://docs.google.com/document/d/1PAuoQwJsO4380lxl_nMJns1_GSVoQi-SPTLb9rUltuM/edit?usp=sharing" target="_blank" v-text="'Transforming software research'"/>
       </p>
       <p class="px-3">
         <time datetime="2020-03-06 12:00">March 6, 2020</time>
@@ -14,7 +14,7 @@
       </p>
       <p class="px-3">
         <time datetime="2020-03-06 12:00">December 17, 2019</time>
-        <routerLink to="https://docs.google.com/document/d/1N7s2jN-DZ1iKp2mxtCFzixithrfwI2EFZ2mKkj0X9Lw/edit?usp=sharing" v-text="'Learn about 7 Myths on Alpha and Beta Testing'"/>
+        <a href="https://docs.google.com/document/d/1N7s2jN-DZ1iKp2mxtCFzixithrfwI2EFZ2mKkj0X9Lw/edit?usp=sharing" target="_blank" v-text="'Learn about 7 Myths on Alpha and Beta Testing'"/>
       </p>
     </div>
   </div>
