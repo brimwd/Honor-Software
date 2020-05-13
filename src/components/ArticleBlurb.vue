@@ -1,5 +1,5 @@
 <template>
-<section class="row feature py-5">
+<section class="row feature py-3 mb-3">
   <div :class="{'order-last' : flipped}"
     class="col-12 col-md-6">
 
