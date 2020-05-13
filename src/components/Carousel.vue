@@ -14,7 +14,9 @@
       />
     </div>
     <div class="col-8"> <!-- only 'col-8' if="showControls" -->
-      <Quote :content="slides[currentSlide]" />
+          <Quote
+            :content="slides[currentSlide]"
+          />
     </div>
     <div class="col-2 d-none d-lg-block" v-if="showControls">
       <i
@@ -93,6 +95,7 @@ export default {
     showControls() {
       return this.slides.length > 1;
     },
+
   },
   methods: {
     changeSlide(addend) {
