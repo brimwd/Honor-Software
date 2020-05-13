@@ -1,7 +1,7 @@
 <template>
-  <header id="jumbotron" class="row jumbotron mb-0">
+  <header id="marquee" class="row jumbotron">
     <div class="col-12">
-      <h1 id="honor" class="display-4">Honor.Software</h1>
+      <h1 id="honor" class="display-4">Honor.<br/>Software</h1>
       <p class="lead">Beautiful, usable software for the future.</p>
     </div>
   </header>
@@ -20,54 +20,56 @@ export default {
 </script>
 
 <style scoped lang="scss">
-#jumbotron {
-    text-transform: uppercase;
-    font-family: Amiri,serif;
-    font-family: BioRhyme,serif;
-    font-family: Bitter,serif;
-    font-family: Coustard,serif;
-    font-family: Eczar,serif;
-    font-family: Kadwa,serif;
-    font-family: Marcellus,serif;
-    font-family: Martel,serif;
-    font-family: Merriweather,serif;
-    font-family: Nova Square,cursive;
-    font-family: Patua One,cursive;
-    font-family: Playfair Display SC,serif;
-    font-family: Rhodium Libre,serif;
-    font-family: Roboto Slab,serif;
-    font-family: Sree Krushnadevaraya,serif;
-    font-family: Voces,cursive;
-    font-family: Volkhov,serif;
+#honor {
+  text-transform:uppercase;
+  font-family:'Marcellus', serif;
 }
-
 .jumbotron {
   @include pseudo;
+  @include shadow;
 
-  background-image: $bg-l-2;
-  box-shadow: $shadow-gold;
+  background:var(--bg);
+  border-radius:unset;
+  margin:0 -30px 8vw;
+  padding:4rem 80px 4rem 2rem;
+  overflow:hidden;
 
-  overflow: hidden;
-
-  @media($dark){
-      background-image: $bg-d-2;
+  @media($sm) {
+    border-radius:.3rem;
+    margin:3vw 0 8vw;
   }
 
   &::before {
-    background: url(../../images/bg/ring.svg) center no-repeat;
-    background-size: 240%;
-    content: '';
-    display: block;
-    opacity: .3;
+    background:url('../../images/bg/ring-gold-tilted.png') center no-repeat;
+    background-position:100% 50%;
+    background-size:contain;
+    content:'';
+    display:block;
+    opacity:.3;
 
-    transform: rotate(24deg);
-    width: 50%;
+    width:100%;
+    height:120%;
 
-    position: absolute;
+    position:absolute;
+    top:-10%;
+    right:-3vw;
+    // if un-cropped
+    // top:-1vw;
+    // left:50vw;
+    // bottom:-8vw;
+    @media($sm) {opacity:.7;}
+    @media($md) {
+      opacity:unset;
+      top:-30px;
+      right:3vw;
+      width:260px;
+      height:320px;
+  }
+  }
 
-    top: -35%;
-    right: -22%;
-    bottom: -70%;
+  @media($md) {
+    overflow:unset;
+    h1 br {display:none;}
   }
 }
 </style>

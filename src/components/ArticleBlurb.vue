@@ -9,15 +9,15 @@
         :key="paragraph.slice(0,20)"
     >{{ paragraph }}</p>
     <router-link
-      class="btn btn-primary"
-      to="/news/"
+      class="btn btn-gold"
+      :to="content.url"
     >
       {{ content.buttonText || "Read the article" }}
     </router-link>
 
   </div>
   <div class="col-12 col-md-6">
-    <!-- {{ info.imageUrl }} -->
+    <!-- {{ content.imageUrl }} -->
   </div>
 </section>
 </template>
@@ -39,7 +39,7 @@ export default {
 </script>
 
 <style scoped lang="scss">
-section {
+.feature {
   margin-right:0;
   margin-left:0;
 }

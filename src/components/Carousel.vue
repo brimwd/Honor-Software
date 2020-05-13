@@ -3,11 +3,25 @@
     <div class="quote-container col-12">
       <div class="text-center">
         <h2>What our customers are saying</h2>
-        <p>(Although we like to think our work speaks for itself)</p>
+        <p>(Even though we think our work speaks for itself)</p>
       </div>
-
+    </div>
+    <div class="col-2 d-none d-lg-block" v-if="showControls">
+      <i
+        class="control prev"
+        aria-label="previous testimonial"
+        @click="changeSlide(-1)"
+      />
+    </div>
+    <div class="col-8"> <!-- only 'col-8' if="showControls" -->
       <Quote :content="slides[currentSlide]" />
-
+    </div>
+    <div class="col-2 d-none d-lg-block" v-if="showControls">
+      <i
+        class="control next"
+        aria-label="next testimonial"
+        @click="changeSlide(1)"
+      />
     </div>
 
     <div
@@ -15,7 +29,7 @@
       class="controls col-12 d-flex d-md-block"
     >
       <i
-        class="control prev"
+        class="control prev d-lg-none"
         aria-label="previous testimonial"
         @click="changeSlide(-1)"
       />
@@ -24,10 +38,11 @@
           v-for="(slide, index) in slides"
           class="fas fa-quote-left"
           :class="{'active': index === currentSlide}"
+          @click="currentSlide = index"
         />
       </div>
       <i
-        class="control next"
+        class="control next d-lg-none"
         aria-label="next testimonial"
         @click="changeSlide(1)"
       />
@@ -48,8 +63,24 @@ export default {
       currentSlide: 0,
       slides: [
         {
-          lorem: [
+          quote: [
             "Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
+            "Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.",
+          ],
+          author: 'Some Latin-major',
+          company: 'A real business'
+        },
+        {
+          quote: [
+            "HEYYY ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
+            "Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.",
+          ],
+          author: 'Some Latin-major',
+          company: 'A real business'
+        },
+        {
+          quote: [
+            "HI ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
             "Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.",
           ],
           author: 'Some Latin-major',
@@ -69,9 +100,11 @@ export default {
       let max = this.slides.length - 1;
       if (sum < 0) {
           this.currentSlide = max;
+          return;
       }
       if (sum > max) {
         this.currentSlide = 0;
+        return;
       }
       this.currentSlide = sum;
     }
@@ -86,9 +119,9 @@ section {
   // @media($dark){background:$bg-d-5;}
   background-position:center;
   margin: 0 -30px;
-  overflow:hidden;
-  padding-top:3em;
-  padding-bottom:3em;
+  // overflow:hidden;
+  padding-top:2em;
+  padding-bottom:4em;
   position:relative;
 
   &::before { // shadow
@@ -114,39 +147,45 @@ section {
   i.control {
     @include FA;
     background-color:var(--bg);
+    border:2px solid var(--text);
     border-radius:50px; // arbitrary
     box-shadow:0 0 0 0 rgba(0,0,0,0);
-    color:var(--gold-light);
+    color:var(--text);
     cursor:pointer;
     font-size:42px;
-    font-weight:lighter;
-    letter-spacing:-1px;
+    font-weight:500;
     line-height:1em;
+    width:1.1em;
     text-align: center;
     transition:all .15s;
     &:hover {
       @include shadow;
-      color:var(--text);
+      background-color:var(--text);
+      color:var(--bg);
     }
     @media($md) {
       position:absolute;
-      top:53%;
+      top:calc(50% - 16px);
     }
 
     &.prev {
       left:5.5vw;
-
       &::before {
-          content:'\f137';
+        content:'\f104';
+        position:relative;
+        left:-.05em;
       }
+      @media($xl) {left:-3vw;}
     }
 
     &.next {
       right:5.5vw;
-
       &::before {
-          content:'\f138';
+        content:'\f105';
+        position:relative;
+        right:-.05em;
       }
+      @media($xl) {right:-3vw;}
     }
   }
 
@@ -156,16 +195,19 @@ section {
 
     i {
       @include FA;
+      border:1px solid var(--bg);
+      border-radius:50px; // arbitrary
       margin:0 12px;
 
       &:hover {
-        color:var(--text);
+        color:var(--bg-intense);
         font-weight:bold;
         transition:all .15s;
       }
 
       &.active {
-        font-weight:bold;
+        font-weight: bold;
+        color: var(--bg-intense);
       }
 
       &::before {
@@ -178,7 +220,6 @@ section {
     display:flex;
     flex-flow:column;
     justify-content:space-between;
-    min-height:280px;
   }
 }
 </style>
