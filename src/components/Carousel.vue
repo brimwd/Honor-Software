@@ -193,15 +193,17 @@ section {
 
     i {
       @include FA;
+      border:1px solid var(--bg);
+      border-radius:50px; // arbitrary
       margin:0 12px;
       &:hover {
-        color:var(--text);
+        color:var(--bg-intense);
         font-weight:bold;
         transition:all .15s;
       }
       &.active {
         font-weight: bold;
-        color: var(--text);
+        color: var(--bg-intense);
       }
 
       &::before {content:'\f111';}
