@@ -2,40 +2,41 @@
   <div class="about-page honor-page">
     <div class="row">
         <div class="col">
-            <h1 class="purpose">Why Honor.Software?</h1>
-            <p>Honor helps businesses conserve resources. We help smooth out the “snags” in your process through our expert analysis of incorporated tools and resources, and can dramatically accelerate the effectiveness of your business.</p>
-            <p>We provide software solutions to help people work smarter and achieve more. We solve problems by eliminating redundant work and menial tasks. We free the most valuable asset which is the people, and bring them to work on the things that need their attention most.</p>
-            <p>Honor.Software consists of a passionate team of designers, developers, engineers, BSA, product managers, writers, editors, and other specialists.</p>
-            <p>Our team specializes in building websites, software services, modernizing user interfaces, optimizing application workflows, producing documentation, and design consultation.</p>
-            <p>Honor is a multicultural company, based in Silicon Valley. We offer service in English and Chinese. We’re invested in continuous education, employees are encouraged to mentor others in tech, participate in the creative commons, and to volunteer their talents in ways which support their personal philanthropic aims.</p>
+            <h1 class="purpose">About Us</h1>
+            <p class="px-3">At Honor, we provide software solutions to help people work smarter and achieve more.</p>
+            <p class="px-3">By automating redundant work and menial tasks, we can free your employees to focus on the things that need their attention most.</p>
+            <p class="px-3"><router-link class="btn btn-gold" to="/about/why-honor" v-text="'Why Honor?'" /></p>
         </div>
+
     </div>
 
-    <div class="row">
+    <div class="row px-3 py-5 my-5">
         <ServiceOverview
-            class="col-4"
+            class="col-12 col-md-4"
             v-for="service in threeServices"
             :key="service.title"
             :service="service"
         />
     </div>
     <div class="row">
+        <h1 class="col-12 mb-5">Leadership</h1>
         <ServiceOverview
-            class="col-4"
+            class="col-12 col-md-8 offset-md-2 mb-5"
             v-for="associate in threeLeaders"
             :key="associate.title"
             :service="associate"
         />
     </div>
     <div class="row">
+        <h1 class="col-12 my-5">Advisors</h1>
         <ServiceOverview
-            class="col-4"
+            class="col-12 col-md-4"
             v-for="associate in threeAdvisors"
             :key="associate.title"
             :service="associate"
         />
     </div>
-    <Partners />
+    <Partners class="my-5" />
   </div>
 </template>
 
@@ -117,6 +118,8 @@ export default {
 </script>
 
 <style lang="scss" scoped>
+h1 {text-align:center;}
+
 .purpose {
     text-align: center;
     margin-top: 60px;
