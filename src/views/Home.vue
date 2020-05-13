@@ -60,7 +60,7 @@ export default {
     return {
       blurbs: [
        {
-          title: "Why Honor?",
+          title: "Get To Know Us",
           imageUrl: "",
           text: [
             "At Honor.Software we create solutions to help people work smarter and achieve more.",
@@ -70,7 +70,7 @@ export default {
           url: "/about",
         },
         {
-          title: "ScheduleUX Hits Another Milestone",
+          title: "Customer Highlight",
           imageUrl: "",
           text: [
             // "We worked with ScheduleUX to take their scheduling service's complicated user flow and turn it into a delightful and intuitive user experience."
