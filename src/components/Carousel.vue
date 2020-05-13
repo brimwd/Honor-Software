@@ -5,9 +5,23 @@
         <h2>What our customers are saying</h2>
         <p>(Even though we think our work speaks for itself)</p>
       </div>
-
+    </div>
+    <div class="col-2 d-none d-lg-block" v-if="showControls">
+      <i
+        class="control prev"
+        aria-label="previous testimonial"
+        @click="changeSlide(-1)"
+      />
+    </div>
+    <div class="col-8"> <!-- only 'col-8' if="showControls" -->
       <Quote :content="slides[currentSlide]" />
-
+    </div>
+    <div class="col-2 d-none d-lg-block" v-if="showControls">
+      <i
+        class="control next"
+        aria-label="next testimonial"
+        @click="changeSlide(1)"
+      />
     </div>
 
     <div
@@ -15,7 +29,7 @@
       class="controls col-12 d-flex d-md-block"
     >
       <i
-        class="control prev"
+        class="control prev d-lg-none"
         aria-label="previous testimonial"
         @click="changeSlide(-1)"
       />
@@ -28,7 +42,7 @@
         />
       </div>
       <i
-        class="control next"
+        class="control next d-lg-none"
         aria-label="next testimonial"
         @click="changeSlide(1)"
       />
@@ -105,9 +119,9 @@ section {
   // @media($dark){background:$bg-d-5;}
   background-position:center;
   margin: 0 -30px;
-  overflow:hidden;
-  padding-top:3em;
-  padding-bottom:3em;
+  // overflow:hidden;
+  padding-top:2em;
+  padding-bottom:4em;
   position:relative;
 
   &::before { // shadow
@@ -132,6 +146,7 @@ section {
   i.control {
     @include FA;
     background-color:var(--bg);
+    border:2px solid var(--text);
     border-radius:50px; // arbitrary
     box-shadow:0 0 0 0 rgba(0,0,0,0);
     color:var(--text);
@@ -139,7 +154,7 @@ section {
     font-size:42px;
     font-weight:500;
     line-height:1em;
-    width:1em;
+    width:1.1em;
     text-align: center;
     transition:all .15s;
     &:hover {
@@ -149,7 +164,7 @@ section {
     }
     @media($md) {
       position:absolute;
-      top:53%;
+      top:calc(50% - 16px);
     }
 
     &.prev {
@@ -159,6 +174,7 @@ section {
         position:relative;
         left:-.05em;
       }
+      @media($xl) {left:-3vw;}
     }
     &.next {
       right:5.5vw;
@@ -167,6 +183,7 @@ section {
         position:relative;
         right:-.05em;
       }
+      @media($xl) {right:-3vw;}
     }
   }
 
@@ -195,7 +212,6 @@ section {
     display:flex;
     flex-flow:column;
     justify-content:space-between;
-    min-height:280px;
   }
 }
 </style>
