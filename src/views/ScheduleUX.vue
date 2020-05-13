@@ -7,7 +7,7 @@
 
   <div class="row my-5 py-5">
     <div class="col">
-      <p class="px-3">ScheduleUX streamlines User Research, which is an important part of the software-design process. For over three years, ScheduleUX has relied on our Virtual Scheduling product to power their platform.</p>
+      <p class="px-3"><a href="http://scheduleux.com" target="_blank">ScheduleUX</a> streamlines User Research, which is an important part of the software-design process. For over three years, ScheduleUX has relied on our Virtual Scheduling product to power their platform.</p>
       <p class="px-3">Coordinating scheduling with research participants is one of the most arduous aspects of conducting research; it can take hours of schedule-negotiation and follow-up communications to coordinate with each participant.</p>
       <p class="px-3">With ScheduleUX, researchers can dynamically generate schedules, track and engage with users, and manage registrations and notifications with fully automated workflows. Additionally, each study generates with ScheduleUX produces a private, self-service portal where research participants can sign up, get information, and change or cancel their registrations without needing any attention or support from the researchers.</p>
       <p class="px-3 pb-5">The ScheduleUX Support Team also uses a bespoke administrative portal from our Virtual Scheduling product to manage users, access records, and to process refunds or credits.</p>
