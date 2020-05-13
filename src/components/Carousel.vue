@@ -110,6 +110,7 @@ section {
     position:unset;
     text-align:center;
   }
+
   i.control {
     @include FA;
     background-color:var(--bg);
@@ -134,11 +135,18 @@ section {
 
     &.prev {
       left:5.5vw;
-      &::before {content:'\f137';}
+
+      &::before {
+          content:'\f137';
+      }
     }
+
     &.next {
       right:5.5vw;
-      &::before {content:'\f138';}
+
+      &::before {
+          content:'\f138';
+      }
     }
   }
 
@@ -149,16 +157,20 @@ section {
     i {
       @include FA;
       margin:0 12px;
+
       &:hover {
         color:var(--text);
         font-weight:bold;
         transition:all .15s;
       }
+
       &.active {
         font-weight:bold;
       }
 
-      &::before {content:'\f111';}
+      &::before {
+          content:'\f111';
+      }
     }
   }
 
