@@ -1,13 +1,13 @@
 <template>
 <footer id="global-footer">
-    <h4>
-      <router-link to="/">
-        Honor.Software
-      </router-link>
-    </h4>
   <div class="row">
-
-
+    <div class="col-12">
+      <h4>
+        <router-link to="/">
+          Honor.Software
+        </router-link>
+      </h4>
+    </div>
 
     <div class="col-6 col-md-4 col-lg-3">
       <p>
