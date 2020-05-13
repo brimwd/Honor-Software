@@ -105,7 +105,6 @@ export default {
       promos: [
         {
           text: "Latest Updates",
-          path: "/news",
           isHeader: true,
         },
         {

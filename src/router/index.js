@@ -4,7 +4,7 @@ import Home from '../views/Home.vue'
 import About from '../views/About.vue'
 import Contact from '../views/Contact.vue'
 import Customers from '../views/Customers.vue'
-import News from '../views/News.vue'
+import PressRoom from '../views/PressRoom.vue'
 import Privacy from '../views/Privacy.vue'
 import Terms from '../views/Terms.vue'
 
@@ -33,8 +33,8 @@ const routes = [
     },
     {
         path: '/news',
-        name: 'News',
-        component: News
+        name: 'PressRoom',
+        component: PressRoom
     },
     {
         path: '/legal/privacy',
