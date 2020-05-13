@@ -1,9 +1,12 @@
 <template>
-  <blockquote>
+  <blockquote :class="{'text-center': content.centered}">
     <p v-for="paragraph in quote">{{ paragraph }}</p>
     <h5>
-      <strong>{{ content.author || "Industry Expert" }}</strong>,
-      <b>{{ content.company || "Tech Consulting Firm" }}</b>
+      <strong>{{ content.author || "Industry Expert" }}</strong>
+      <b
+        v-if="content.company"
+        v-text="', ' + content.company"
+      />
     </h5>
   </blockquote>
 </template>
