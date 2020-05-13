@@ -38,8 +38,6 @@ nav {
   padding:0;
   @media($sm) {
     padding:1em 0;
-    margin-top:1em;
-    margin-bottom:1em;
   }
 }
 
