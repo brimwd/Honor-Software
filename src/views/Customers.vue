@@ -9,6 +9,7 @@
     </div>
   </div>
 
+  <Partners class="mb-5" />
   <ContactSection />
 
 </article>
@@ -17,11 +18,13 @@
 <script>
 import Carousel from '@/components/Carousel.vue'
 import ContactSection from '@/components/ContactSection.vue'
+import Partners from '@/components/Partners.vue'
 export default {
   name: 'Customers',
   components: {
     Carousel,
     ContactSection,
+    Partners,
   },
   // data() {
   //   return {
