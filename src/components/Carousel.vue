@@ -168,15 +168,15 @@ section {
       color:var(--bg);
     }
 
-        left:-.05em;
     &.prev::before {
       content:'\f104';
       position:relative;
+      left:-.05em;
     }
-        right:-.05em;
     &.next::before {
       content:'\f105';
       position:relative;
+      right:-.05em;
     }
   }
 
