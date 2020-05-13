@@ -10,14 +10,14 @@
     >{{ paragraph }}</p>
     <router-link
       class="btn btn-gold"
-      to="/news/"
+      :to="content.url"
     >
       {{ content.buttonText || "Read the article" }}
     </router-link>
 
   </div>
   <div class="col-12 col-md-6">
-    <!-- {{ info.imageUrl }} -->
+    <!-- {{ content.imageUrl }} -->
   </div>
 </section>
 </template>
