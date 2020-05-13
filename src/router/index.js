@@ -4,9 +4,11 @@ import Home from '../views/Home.vue'
 import About from '../views/About.vue'
 import Contact from '../views/Contact.vue'
 import Customers from '../views/Customers.vue'
+import ScheduleUX from '../views/ScheduleUX.vue'
 import PressRoom from '../views/PressRoom.vue'
 import Privacy from '../views/Privacy.vue'
 import Terms from '../views/Terms.vue'
+import WhyHonor from '../views/WhyHonor.vue'
 
 Vue.use(VueRouter)
 
@@ -30,6 +32,10 @@ const routes = [
         path: '/customers',
         name: 'Customers',
         component: Customers
+    },{
+        path: '/customers/scheduleux',
+        name: 'ScheduleUX',
+        component: ScheduleUX
     },
     {
         path: '/news',
@@ -45,6 +51,11 @@ const routes = [
         path: '/legal/tos',
         name: 'Terms',
         component: Terms
+    },
+    {
+        path: '/about/why-honor',
+        name: 'WhyHonor',
+        component: WhyHonor
     },
 ]
 
