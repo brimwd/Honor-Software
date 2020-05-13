@@ -1,7 +1,7 @@
 <template>
 <article class="about-page honor-page">
   <div class="row">
-    <div class="col">
+    <div class="col mb-5 pb-5">
       <h1 class="purpose">Open-Source Expertise</h1>
 
       <p class="px-3">We take mature open-source software (OSS) and embed it into commercial products that you can trust. We leverage many of the most trusted libraries, including: Node, Underscore, MongoDB, jQuery, Vue, and Express.</p>
