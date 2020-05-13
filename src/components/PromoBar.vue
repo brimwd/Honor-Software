@@ -1,8 +1,8 @@
 <template>
-<section class="row promo-bar py-5">
+<section class="row promo-bar py-5 justify-content-center">
   <div
     v-for="(promo, index) in promosSliced"
-    class="col-6 mb-5 col-md-3 mb-md-0"
+    class="col-6 col-md-3 mb-md-0"
   >
     <strong
       v-if="promo.strong"

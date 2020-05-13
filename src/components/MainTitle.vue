@@ -30,14 +30,15 @@ export default {
 
   background:var(--bg);
   border-radius:unset;
-  margin:0 -30px 8vw;
+  margin:0 -30px 5em;
   padding:4rem 80px 4rem 2rem;
   overflow:hidden;
 
   @media($sm) {
     border-radius:.3rem;
-    margin:3vw 0 8vw;
+    margin:3vw 0 6vw;
   }
+  @media($sm) {margin-bottom:9vw;}
 
   &::before {
     background:url('../../images/bg/ring-gold-tilted.png') center no-repeat;

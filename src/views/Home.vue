@@ -10,10 +10,11 @@
           flipped
       />
       <ArticleBlurb
+        class="my-5"
         :content="blurbs[1]"
       />
 
-      <PromoBar :promos="promos"/>
+      <!-- <PromoBar :promos="promos"/> -->
 
       <Partners />
 
@@ -21,7 +22,7 @@
           :content="blurbs[2]"
       />
       <ArticleBlurb
-          class="mb-5 pb-5"
+          class="my-5 pb-5"
           :content="blurbs[3]"
           flipped
       />
