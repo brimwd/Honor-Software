@@ -99,8 +99,8 @@ export default {
             "We take pride in modernizing workflows, producing documentation, and our expert consultations.",
             "Find out how we can help you.",
           ],
-          buttonText: "Get in touch",
-          url: "/contact",
+          buttonText: "Our services",
+          url: "/about",
         },
       ],
       promos: [
