@@ -19,10 +19,10 @@
 
       <ArticleBlurb
           :content="blurbs[2]"
-          flipped
       />
       <ArticleBlurb
           :content="blurbs[3]"
+          flipped
       />
 
   <!-- <section class="headline row">
