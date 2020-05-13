@@ -74,7 +74,7 @@ aside {
 }
 .alert {margin-bottom:0;}
 .close {
-    position: absolute;
-    right: 15px;
+    position:absolute;
+    right:15px;
 }
 </style>
