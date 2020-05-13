@@ -1,8 +1,8 @@
 <template>
 <section class="row partners-box">
   <div class="col-12">
-      <h5>Our team has worked with</h5>
-      <div class="row row-cols-1 row-cols-sm-2 row-cols-md-3 row-cols-lg-4">
+      <h4>Our team has worked with</h4>
+      <div class="row row-cols-1 row-cols-sm-2 row-cols-md-3">
         <div
           v-for="partnerName in partners"
           :key="partnerName"
@@ -10,12 +10,10 @@
         >
           {{ partnerName }}
         </div>
-
-        <div class="partner col col-sm-6 col-md col-lg-6">
-            Bob Books
-        </div>
-        <div class="partner col col-sm-6 col-md col-lg-6">
-            <router-link to="/contact/">Work With Us</router-link>
+      </div>
+      <div class="row mt-4 justify-content-end">
+        <div class="col-12, col-sm-6, col-md-3">
+            <router-link to="/contact" class="btn btn-gold">Work With Us</router-link>
         </div>
       </div>
   </div>
@@ -28,14 +26,15 @@ export default {
   data() {
     return {
       partners: [
-        "U.S. Government",
         "Amazon",
         "Apple",
         "Bluetooth",
+        "Bob Books",
         "Microsoft",
-        "Walmart",
-        "T-Mobile",
         "Seattle Pride",
+        "T-Mobile",
+        "U.S. Government",
+        "Walmart",
       ]
     };
   },
@@ -53,7 +52,8 @@ export default {
   }
 
   .partner {
-    margin: 10px 0;
+    margin:10px 0;
+    text-align:center;
   }
 }
 </style>
