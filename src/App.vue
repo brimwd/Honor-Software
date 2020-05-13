@@ -25,7 +25,6 @@ export default {
       toast: {
         headline: "Our response to Covid-19",
         message: "Honor.Software is dedicated to investing in continuous education and giving back to the community.\n\nBy hiring out tasks that we typically handle in-house, Honor is creating temporary jobs and opportunities to replace income for individuals who have lost income due to COVID-19.\n\nAdditionally, Honor is proud to continue supporting our community-education partners during this difficult time.\n\nIf you have job opportunities we can share or if you would like to inquire about partnership, you can reach us by email at Team@Honor.Software.",
-        path: "/news/covid-19",
       },
       navLinks: [
         { label: "News", path: "/news", },
