@@ -21,6 +21,7 @@
           :content="blurbs[2]"
       />
       <ArticleBlurb
+          class="mb-5 pb-5"
           :content="blurbs[3]"
           flipped
       />
