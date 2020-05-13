@@ -56,7 +56,7 @@ blockquote {
   margin:2em auto;
   padding:6vw 8vw;
 
-  @media($md) {max-width:70vw;}
+  @media($lg) {max-width:70vw;}
 
   h5 {margin:2em 0 0;}
 }

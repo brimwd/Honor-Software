@@ -8,7 +8,7 @@
         </div>
       </div>
     </div>
-    <div class="row">
+    <div class="row m-auto">
       <div class="col-auto d-none d-lg-flex align-items-center" v-if="showControls">
         <i
           class="control prev"
