@@ -27,15 +27,6 @@
             :service="associate"
         />
     </div>
-    <div class="row">
-        <h1 class="col-12 my-5">Advisors</h1>
-        <ServiceOverview
-            class="col-12 col-md-4"
-            v-for="associate in threeAdvisors"
-            :key="associate.title"
-            :service="associate"
-        />
-    </div>
     <Partners class="my-5" />
   </div>
 </template>
@@ -70,26 +61,6 @@ export default {
                     imageUrl: "",
                     text: "We build top-of-the-line native apps",
                     title: "Mac Native Apps",
-                },
-            ],
-            threeAdvisors: [
-                {
-                    imageAlt: "Picture of Advisor",
-                    imageUrl: "",
-                    text: "Investment and public relations",
-                    title: "Jessie Wang",
-                },
-                {
-                    imageAlt: "Picture of Advisor",
-                    imageUrl: "",
-                    text: "Legal Counsel (US)",
-                    title: "Hindley & Henderson Law Offices",
-                },
-                {
-                    imageAlt: "Picture of Advisor",
-                    imageUrl: "",
-                    text: "Legal Counsel (China)",
-                    title: "Zhen Zhang (Jingshi Law Offices)",
                 },
             ],
             threeLeaders: [
