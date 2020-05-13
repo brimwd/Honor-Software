@@ -17,7 +17,7 @@
 import Carousel from '@/components/Carousel.vue'
 import ContactSection from '@/components/ContactSection.vue'
 export default {
-  name: 'SiteNav',
+  name: 'Customers',
   components: {
     Carousel,
     ContactSection,

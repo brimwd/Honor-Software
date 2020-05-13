@@ -26,7 +26,7 @@
 <script>
 import ContactSection from '@/components/ContactSection.vue'
 export default {
-  name: "ScheduleUX",
+  name: "Press Room",
   components: {
     ContactSection,
   },
