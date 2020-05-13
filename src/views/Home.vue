@@ -110,7 +110,7 @@ export default {
         },
         {
           text: "Transforming software research",
-          path: "/stories/scheduleux.html",
+          path: "/stories/scheduleux",
         },
         {
           text: "Learn how",
