@@ -105,20 +105,21 @@ export default {
       promos: [
         {
           text: "Latest Updates",
+          // path: "/news",
           isHeader: true,
         },
         {
           text: "Transforming software research",
           path: "/stories/scheduleux",
         },
-        {
-          text: "Learn how",
-          path: "/news",
-        },
-        {
-          text: "Customer Story: Hyperdrive Engineering",
-          path: "/news",
-        }
+        // {
+        //   text: "Learn how",
+        //   path: "/news",
+        // },
+        // {
+        //   text: "Customer Story: Hyperdrive Engineering",
+        //   path: "/news",
+        // }
       ],
       promos2: [
         {
