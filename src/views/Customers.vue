@@ -1,8 +1,9 @@
 <template>
-  <div class="customers-page honor-page">
-    <h1>What our customers are saying</h1>
-    <h3>Our work supports causes including literacy, equality, agriculture, education, economic-empowerment, and government environmental initiatives.</h3>
-  </div>
+  <article class="customers-page honor-page">
+
+    <Carousel />
+
+  </article>
 </template>
 
 <script>

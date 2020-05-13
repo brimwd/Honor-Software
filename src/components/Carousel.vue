@@ -4,7 +4,7 @@
       <div class="quote-container col-12">
         <div class="text-center">
           <h2>What our customers are saying</h2>
-          <p>(Even though we think our work speaks for itself)</p>
+          <p>We like to think our work speaks for itself</p>
         </div>
       </div>
     </div>
