@@ -2,6 +2,7 @@ import Vue from 'vue'
 import VueRouter from 'vue-router'
 import Home from '../views/Home.vue'
 import About from '../views/About.vue'
+import OpenSource from '../views/OpenSource.vue'
 import Contact from '../views/Contact.vue'
 import Customers from '../views/Customers.vue'
 import ScheduleUX from '../views/ScheduleUX.vue'
@@ -22,6 +23,11 @@ const routes = [
         path: '/about',
         name: 'About',
         component: About
+    },
+    {
+        path: '/about/open-source',
+        name: 'OpenSource',
+        component: OpenSource
     },
     {
         path: '/about/team',
@@ -56,11 +62,6 @@ const routes = [
         path: '/legal/tos',
         name: 'Terms',
         component: Terms
-    },
-    {
-        path: '/about/why-honor',
-        name: 'WhyHonor',
-        component: WhyHonor
     },
 ]
 

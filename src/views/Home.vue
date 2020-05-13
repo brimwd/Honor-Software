@@ -89,7 +89,7 @@ export default {
             "Learn more about how open-source makes the difference in our report.",
           ],
           buttonText: "Read the report",
-          url: "/contact",
+          url: "/about/open-source",
         },
         {
           title: "Accelerate your business",
