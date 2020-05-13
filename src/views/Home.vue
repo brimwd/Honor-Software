@@ -59,49 +59,47 @@ export default {
   data() {
     return {
       blurbs: [
-        {
-            buttonText: "Get to know us",
-            imageUrl: "",
-            url: "/about/",
-            text: [
-                "At Honor.Software we create solutions to help people work smarter and achieve more.",
-                "By automating redundant work and menial tasks, we can free your employees to focus on the things that need their attention most."
-            ],
-            title: "Why Honor?",
+       {
+          title: "Why Honor?",
+          imageUrl: "",
+          text: [
+            "At Honor.Software we create solutions to help people work smarter and achieve more.",
+            "By automating redundant work and menial tasks, we can free your employees to focus on the things that need their attention most."
+          ],
+          buttonText: "Get to know us",
+          url: "/about",
         },
         {
-            buttonText: "See the outcome",
-            imageUrl: "",
-            url: "/stories/scheduleux.html",
-            text: [
-              // "We worked with ScheduleUX to take their scheduling service's complicated user flow and turn it into a delightful and intuitive user experience."
-              "From scrappy beginnings, ScheduleUX has matured into a robust tool for scheduling sessions, managing participants, and (newly as of last month) coordinating remote interviews and follow-ups over videoconferencing services.",
-              "We're proud to announce that we've recently launched a new dashboard to support the ScheduleUX Team in managing their growing user-base."
-            ],
-            title: "ScheduleUX Hits Another Milestone"
-              // "Mastering User Flow with ScheduleUX"
-            ,
+          title: "ScheduleUX Hits Another Milestone",
+          imageUrl: "",
+          text: [
+            // "We worked with ScheduleUX to take their scheduling service's complicated user flow and turn it into a delightful and intuitive user experience."
+            "From scrappy beginnings, ScheduleUX has matured into a robust tool for scheduling sessions, managing participants, and (newly as of last month) coordinating remote interviews and follow-ups over videoconferencing services.",
+            "We're proud to announce that we've recently launched a new dashboard to support the ScheduleUX Team in managing their growing user-base."
+          ],
+          buttonText: "See the outcome",
+          url: "/customers/scheduleux",
         },
         {
-            buttonText: "Read the report",
-            url: "/contact/",
-            imageUrl: "",
-            text: [
-                "Open-source technologies power incredible projects around the world, from Google's Chrome browser and Android OS to Twitter and a majority of the world's websites.",
-                "Learn more about how open-source makes the difference in our report.",
-            ],
-            title: "Better Together",
+          title: "Better Together",
+          imageUrl: "",
+          text: [
+            "Open-source technologies power incredible projects around the world, from Google's Chrome browser and Android OS to Twitter and a majority of the world's websites.",
+            "Learn more about how open-source makes the difference in our report.",
+          ],
+          buttonText: "Read the report",
+          url: "/contact",
         },
         {
-            buttonText: "Get in touch",
-            url: "/contact/",
-            imageUrl: "",
-            text: [
-                "Honor specializes in building  websites, software services, and apps.",
-                "We take pride in modernizing workflows, producing documentation, and our expert consultations.",
-                "Find out how we can help you.",
-            ],
-            title: "Accelerate your business",
+          title: "Accelerate your business",
+          imageUrl: "",
+          text: [
+            "Honor specializes in building  websites, software services, and apps.",
+            "We take pride in modernizing workflows, producing documentation, and our expert consultations.",
+            "Find out how we can help you.",
+          ],
+          buttonText: "Get in touch",
+          url: "/contact",
         },
       ],
       promos: [
