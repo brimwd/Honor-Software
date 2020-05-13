@@ -1,51 +1,56 @@
 <template>
-  <section class="row">
-    <div class="quote-container col-12">
-      <div class="text-center">
-        <h2>What our customers are saying</h2>
-        <p>(Even though we think our work speaks for itself)</p>
+  <section>
+    <div class="row">
+      <div class="quote-container col-12">
+        <div class="text-center">
+          <h2>What our customers are saying</h2>
+          <p>(Even though we think our work speaks for itself)</p>
+        </div>
       </div>
     </div>
-    <div class="col-2 d-none d-lg-block" v-if="showControls">
-      <i
-        class="control prev"
-        aria-label="previous testimonial"
-        @click="changeSlide(-1)"
-      />
-    </div>
-    <div class="col-8"> <!-- only 'col-8' if="showControls" -->
-      <Quote :content="slides[currentSlide]" />
-    </div>
-    <div class="col-2 d-none d-lg-block" v-if="showControls">
-      <i
-        class="control next"
-        aria-label="next testimonial"
-        @click="changeSlide(1)"
-      />
-    </div>
-
-    <div
-      v-if="showControls"
-      class="controls col-12 d-flex d-md-block"
-    >
-      <i
-        class="control prev d-lg-none"
-        aria-label="previous testimonial"
-        @click="changeSlide(-1)"
-      />
-      <div class="indicator">
+    <div class="row">
+      <div class="col-auto d-none d-lg-flex align-items-center" v-if="showControls">
         <i
-          v-for="(slide, index) in slides"
-          class="fas fa-quote-left"
-          :class="{'active': index === currentSlide}"
-          @click="currentSlide = index"
+          class="control prev"
+          aria-label="previous testimonial"
+          @click="changeSlide(-1)"
         />
       </div>
-      <i
-        class="control next d-lg-none"
-        aria-label="next testimonial"
-        @click="changeSlide(1)"
-      />
+      <div class="col"> <!-- only 'col-8' if="showControls" -->
+        <Quote :content="slides[currentSlide]" />
+      </div>
+      <div class="col-auto d-none d-lg-flex align-items-center" v-if="showControls">
+        <i
+          class="control next"
+          aria-label="next testimonial"
+          @click="changeSlide(1)"
+        />
+      </div>
+    </div>
+    <div class="row">
+      <div
+        v-if="showControls"
+        class="controls col-12 d-flex d-md-block"
+      >
+        <i
+          class="control prev d-lg-none"
+          aria-label="previous testimonial"
+          @click="changeSlide(-1)"
+        />
+        <div class="indicator">
+          <i
+            v-for="(slide, index) in slides"
+            class="fas fa-quote-left"
+            :class="{'active': index === currentSlide}"
+            @click="currentSlide = index"
+          />
+        </div>
+        <i
+          class="control next d-lg-none"
+          aria-label="next testimonial"
+          @click="changeSlide(1)"
+        />
+      </div>
     </div>
   </section>
 </template>
@@ -162,28 +167,16 @@ section {
       background-color:var(--text);
       color:var(--bg);
     }
-    @media($md) {
-      position:absolute;
-      top:calc(50% - 16px);
-    }
 
-    &.prev {
-      left:5.5vw;
-      &::before {
-        content:'\f104';
-        position:relative;
         left:-.05em;
-      }
-      @media($xl) {left:-3vw;}
+    &.prev::before {
+      content:'\f104';
+      position:relative;
     }
-    &.next {
-      right:5.5vw;
-      &::before {
-        content:'\f105';
-        position:relative;
         right:-.05em;
-      }
-      @media($xl) {right:-3vw;}
+    &.next::before {
+      content:'\f105';
+      position:relative;
     }
   }
 
