@@ -8,7 +8,7 @@ import ScheduleUX from '../views/ScheduleUX.vue'
 import PressRoom from '../views/PressRoom.vue'
 import Privacy from '../views/Privacy.vue'
 import Terms from '../views/Terms.vue'
-import WhyHonor from '../views/WhyHonor.vue'
+import Team from '../views/Team.vue'
 
 Vue.use(VueRouter)
 
@@ -22,6 +22,11 @@ const routes = [
         path: '/about',
         name: 'About',
         component: About
+    },
+    {
+        path: '/about/team',
+        name: 'Team',
+        component: Team
     },
     {
         path: '/contact',

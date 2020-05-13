@@ -31,6 +31,7 @@ export default {
         { label: "Customers", path: "/customers", },
         { label: "Contact", path: "/contact", },
         { label: "About", path: "/about", },
+        { label: "Team", path: "/about/team", },
         // { label: "Products", path: "/products/", },
         // { label: "Services", path: "/services/", },
         // { label: "Resources", path: "/resources/", },
