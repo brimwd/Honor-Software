@@ -30,7 +30,7 @@
     <div class="row">
       <div
         v-if="showControls"
-        class="controls col-12 d-flex d-md-block"
+        class="controls col-12 d-flex d-lg-block mt-lg-3"
       >
         <i
           class="control prev d-lg-none"
