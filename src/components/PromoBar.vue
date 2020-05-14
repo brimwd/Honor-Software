@@ -1,20 +1,21 @@
 <template>
-<section class="row promo-bar py-5">
-    <div
-        v-for="(promo, index) in promosSliced"
-        class="col-3 col-med-6"
+<section class="row promo-bar py-5 justify-content-center">
+  <div
+    v-for="(promo, index) in promosSliced"
+    class="col-6 col-md-3 mb-md-0"
+  >
+    <strong
+      v-if="promo.strong"
+      v-text="promo.strong"
+    />
+    <span :class="{'h5': promo.isHeader}"> {{ promo.text }}</span>
+    <!-- <router-link
+      v-if="promo.path"
+      :key="promo+index"
+      :to="promo.path"
     >
-      <router-link
-        :key="promo+index"
-        :to="promo.path"
-      >
-        <strong
-            v-if="promo.strong"
-            v-text="promo.strong"
-        />
-        <span :class="{'h5': promo.isHeader}"> {{ promo.text }}</span>
-      </router-link>
-    </div>
+    </router-link> -->
+  </div>
 </section>
 </template>
 
@@ -36,11 +37,20 @@ export default {
 </script>
 
 <style scoped lang="scss">
+* {
+  text-align:center;
+  font-size:26px;
+}
+strong {
+  font-size:3em;
+  display:block;
+}
+
 .h5 {
-    font-size: 1.25rem;
+    font-size: 1.4em;
     margin-bottom: .5rem;
     font-weight: 500;
     line-height: 1.2;
-    padding-left: 15px;
 }
+
 </style>
