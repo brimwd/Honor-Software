@@ -11,7 +11,7 @@
             Home
           </span>
           <span class="icon">
-              <i class="fas fa-fw" />
+            <i class="fas fa-fw" />
           </span>
         </router-link>
       </li>
@@ -21,7 +21,7 @@
             {{ link.label }}
           </span>
           <span class="icon">
-              <i class="fas fa-fw" />
+            <i class="fas fa-fw" />
           </span>
         </router-link>
       </li>
@@ -32,8 +32,9 @@
       @click="isOpen = !isOpen"
     >
       <i class="fas fa-fw"
-         :class="{ 'fa-bars' : !isOpen, 'fa-plus' : isOpen }"
-         aria-label="toggle navigation" />
+        :class="{ 'fa-bars' : !isOpen, 'fa-plus' : isOpen }"
+        aria-label="toggle navigation"
+      />
     </div>
   </div>
 
