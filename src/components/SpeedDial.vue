@@ -4,16 +4,20 @@
     id="speedDial"
     :class="{'open': isOpen}"
   >
-    <ul class="links">
-      <li>
-        <span class="label">
-          <router-link to="/">Home</router-link>
-        </span>
-        <span class="icon">
-            <i class="fas fa-fw" />
-        </span>
-      </li>
-      <li v-for="link in navLinks">
+    <transition-group
+      name="staggered-fade"
+      class="links"
+      tag="ul"
+      v-bind:css="false"
+      v-on:before-enter="beforeEnter"
+      v-on:enter="enter"
+      v-on:leave="leave"
+    >
+      <li
+        v-for="(link, index) in allNavLinks"
+        :key="link.label"
+        v-bind:data-index="index"
+      >
         <span class="label">
           <router-link :to="link.path">
             {{ link.label }}
@@ -23,7 +27,7 @@
             <i class="fas fa-fw" />
         </span>
       </li>
-    </ul>
+    </transition-group>
 
     <div
       id="speedDialTrigger"
@@ -51,15 +55,40 @@ export default {
   },
   data() {
     return {
+      homeLinkData: {
+          label: "Home",
+          path: "/",
+      },
       isOpen: false,
     };
   },
   computed: {
+      allNavLinks() {
+          return this.navLinks.concat(this.homeLinkData);
+      },
       linkIcon() {
           return this.isOpen ? 'fa-times' : 'fa-plus';
       },
   },
   methods: {
+    beforeEnter: function (el) {
+      el.style.opacity = 0
+      el.style.height = 0
+    },
+    enter: function (el, done) {
+      const delay = 1000 - (el.dataset.index * 150)
+      setTimeout(function () {
+            el.opacity = 1
+            el.height = '58px'
+      }, delay)
+    },
+    leave: function (el, done) {
+      var delay = el.dataset.index * 150
+      setTimeout(function () {
+          el.opacity = 0
+          el.height = 0
+      }, delay)
+    },
   },
 }
 
