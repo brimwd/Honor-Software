@@ -31,7 +31,9 @@
       id="speedDialTrigger"
       @click="isOpen = !isOpen"
     >
-      <i class="fas fa-fw fa-bars fa-plus" />
+      <i class="fas fa-fw"
+         :class="{ 'fa-bars' : !isOpen, 'fa-plus' : isOpen }"
+         aria-label="toggle navigation" />
     </div>
   </div>
 
