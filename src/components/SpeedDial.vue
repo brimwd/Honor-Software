@@ -6,22 +6,24 @@
   >
     <ul class="links">
       <li>
-        <span class="label">
-          <router-link to="/">Home</router-link>
-        </span>
-        <span class="icon">
-            <i class="fas fa-fw" />
-        </span>
+        <router-link to="/">
+          <span class="label">
+            Home
+          </span>
+          <span class="icon">
+              <i class="fas fa-fw" />
+          </span>
+        </router-link>
       </li>
       <li v-for="link in navLinks">
-        <span class="label">
-          <router-link :to="link.path">
+        <router-link :to="link.path">
+          <span class="label">
             {{ link.label }}
-          </router-link>
-        </span>
-        <span class="icon">
-            <i class="fas fa-fw" />
-        </span>
+          </span>
+          <span class="icon">
+              <i class="fas fa-fw" />
+          </span>
+        </router-link>
       </li>
     </ul>
 
@@ -78,13 +80,11 @@ export default {
     margin-bottom: 8px;
 
     li {
-        display: flex;
-        align-items: center;
         cursor: pointer;
         list-style: none;
         margin-left: auto;
         max-width: -webkit-fit-content;
-        max-width: fit-content;
+        max-width: max-content;
         opacity: 0;
         transform: translateY(4px);
         transition: all 300ms;
