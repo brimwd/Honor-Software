@@ -78,6 +78,8 @@ export default {
     margin-bottom: 8px;
 
     li {
+        display: flex;
+        align-items: center;
         cursor: pointer;
         list-style: none;
         margin-left: auto;
