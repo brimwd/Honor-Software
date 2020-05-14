@@ -203,28 +203,26 @@ export default {
 }
 
 .staggered-fade {
-    &-move {
-        transition: opacity .5s linear, transform .5s ease-in-out;
-      }
+    &-leave-active {
+      transition: opacity .4s linear, transform .4s cubic-bezier(.5,0,.7,.4); //cubic-bezier(.7,0,.7,1);
+      transition-delay: calc( 0.1s * (var(--total) - var(--i)) );
+    }
 
-      &-leave-active {
-        transition: opacity .4s linear, transform .4s cubic-bezier(.5,0,.7,.4); //cubic-bezier(.7,0,.7,1);
-        transition-delay: calc( 0.1s * (var(--total) - var(--i)) );
-      }
+    &-enter-active {
+      transition: opacity .5s linear, transform .5s cubic-bezier(.2,.5,.1,1);
+      transition-delay: calc( 0.1s * var(--i) );
+    }
 
-      &-enter-active {
-        transition: opacity .5s linear, transform .5s cubic-bezier(.2,.5,.1,1);
-        transition-delay: calc( 0.1s * var(--i) );
-      }
+    &-enter,
+    &-leave-to {
+      transform: translateY(58px);
+      opacity: 0;
+    }
 
-      &-enter {
-          transform: translateY(-58px);
-          opacity: 0;
-      }
-
-      &-leave-to {
-          transform: translateY(58px);
-          opacity: 0;
-      }
+    &-enter-to,
+    &-leave {
+      transform: translateY(0);
+      opacity: 0;
+    }
   }
 </style>
