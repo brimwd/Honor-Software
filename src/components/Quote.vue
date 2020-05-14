@@ -1,9 +1,12 @@
 <template>
-  <blockquote>
+  <blockquote :class="{'text-center': content.centered}">
     <p v-for="paragraph in quote">{{ paragraph }}</p>
     <h5>
-      <strong>{{ content.author || "Industry Expert" }}</strong>,
-      <b>{{ content.company || "Tech Consulting Firm" }}</b>
+      <strong>{{ content.author || "Industry Expert" }}</strong>
+      <b
+        v-if="content.company"
+        v-text="', ' + content.company"
+      />
     </h5>
   </blockquote>
 </template>
@@ -23,8 +26,8 @@ export default {
               "Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
               "Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.",
           ],
-          author: 'Some Latin-major',
-          company: 'A real business'
+          author: 'Author',
+          company: 'Company'
       };
   },
   computed: {
@@ -53,7 +56,7 @@ blockquote {
   margin:2em auto;
   padding:6vw 8vw;
 
-  @media($md) {max-width:70vw;}
+  @media($lg) {max-width:70vw;}
 
   h5 {margin:2em 0 0;}
 }

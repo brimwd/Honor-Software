@@ -56,7 +56,7 @@ a {
   }
 
   &.router-link-exact-active {
-    color: #0056b3;
+    color: var(--link-hover);
   }
 }
 

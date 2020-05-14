@@ -29,7 +29,7 @@
     <div class="col-6 col-md-4 col-lg-3">
       <p>
         <router-link to="/news">
-          Honor News
+          Press Room
         </router-link>
       </p>
       <p>
