@@ -1,5 +1,5 @@
 <template>
-<div class="">
+<nav class="d-block d-sm-none">
   <div
     id="speedDial"
     :class="{'open': isOpen}"
@@ -39,7 +39,7 @@
     id="overlay"
     @click="isOpen = false"
   />
-</div>
+</nav>
 </template>
 
 <script>
@@ -57,9 +57,9 @@ export default {
     };
   },
   computed: {
-      linkIcon() {
-          return this.isOpen ? 'fa-times' : 'fa-plus';
-      },
+    linkIcon() {
+      return this.isOpen ? 'fa-times' : 'fa-bars';
+    },
   },
   methods: {
   },
