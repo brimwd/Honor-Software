@@ -5,7 +5,7 @@
     :class="{'open': isOpen}"
   >
     <ul class="links">
-      <li>
+      <li @click="isOpen = false">
         <router-link to="/">
           <span class="label">
             Home
@@ -15,7 +15,7 @@
           </span>
         </router-link>
       </li>
-      <li v-for="link in navLinks">
+      <li v-for="link in navLinks" @click="isOpen = false">
         <router-link :to="link.path">
           <span class="label">
             {{ link.label }}
