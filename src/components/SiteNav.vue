@@ -1,11 +1,11 @@
 <template>
 <nav class="global-nav row">
-  <div class="col-12 d-none d-sm-flex justify-content-between">
-    <router-link to="/" type="logo" class="d-none d-sm-inline-block">
-      <img src="../../images/honor-logo.png" alt="Honor.Software" />
+  <div class="col-12 d-none d-sm-block d-md-flex justify-content-between">
+    <router-link to="/" type="logo">
+      <img src="../../images/honor-logo-long.png" alt="Honor.Software" class="d-block d-md-none"/>
+      <img src="../../images/honor-logo.png" alt="Honor.Software" class="d-none d-md-block"/>
     </router-link>
-    <ul>
-      <li class="d-sm-none"><router-link to="/">Home</router-link></li>
+    <ul class="d-sm-flex justify-content-center align-items-center">
       <li v-for="link in navLinks">
         <router-link :to="link.path">
           {{ link.label }}
@@ -42,9 +42,12 @@ nav {
 }
 
 img {
-  max-height:3em;
-  margin-left:15px;
-  @media($md) {margin-left:15px;}
+  max-width:70vw;
+  margin:1em auto;
+  @media($md) {
+    margin-left:15px;
+    max-height:3em;
+  }
 }
 
 a {
@@ -60,8 +63,18 @@ a {
   }
 }
 
-.router-link-exact-active[type="logo"] {
-  visibility:hidden;
+[type="logo"] {
+  display:none;
+  @media($sm) {display:block;}
+  @media($md) {display:inline-block;}
+
+  &.router-link-exact-active {
+    display:none;
+    @media($md) {
+      display:inline-block;
+      visibility:hidden;
+    }
+  }
 }
 
 ul {
