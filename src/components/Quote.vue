@@ -68,9 +68,7 @@ blockquote {
 
   @media($lg) {max-width:70vw;}
 
-  h5 {
-      margin: 2em 0 0;
-  }
+  h5 {margin: 2em 0 0;}
 }
 
 .slide-enter,
