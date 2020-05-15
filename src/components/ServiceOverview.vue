@@ -1,6 +1,6 @@
 <template>
 <div class="service-box">
-  <div class="image-box">
+  <div class="image-box" v-if="service.imageUrl">
     <img
       :src="service.imageUrl"
       :alt="service.alt"

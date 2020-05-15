@@ -66,7 +66,7 @@ $shadow-gold:0 12px 36px -6px #d69e00;
 /* CSS VARIABLES */
 :root {
 	--text:#333;
-    --link-hover: #555;
+    --link-hover:#555;
 	--bg:#fff;
 	--bg-intense:#000;
 	--bg-soft:#f9f8f5;
@@ -78,9 +78,9 @@ $shadow-gold:0 12px 36px -6px #d69e00;
 @media ($dark){
 /*DARK MODE STYLES*/
 :root {
-	--text: #eee;
-    --link-hover: #ccc;
-	--bg: #000;
+	--text:#eee;
+    --link-hover:#ccc;
+	--bg:#000;
     --bg-intense:#fff;
 	--bg-soft:#333;
 	--bg-text:#eee;
@@ -108,14 +108,14 @@ body {
 	}
 }
 
-p {font-size:1.2em;}
+p, li {font-size:1.2rem;}
 
 a, .link {
 	color:var(--text);
 	font-weight:bolder;
 
 	&:hover {
-        color:#F92472;
+        // color:#F92472;
     }
 
     &.btn {

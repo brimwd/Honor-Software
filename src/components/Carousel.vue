@@ -1,53 +1,56 @@
 <template>
-  <section class="row">
-    <div class="quote-container col-12">
-      <div class="text-center">
-        <h2>What our customers are saying</h2>
-        <p>(Even though we think our work speaks for itself)</p>
+  <section>
+    <div class="row">
+      <div class="quote-container col-12">
+        <div class="text-center">
+          <h2>What our customers are saying</h2>
+          <p>We like to think our work speaks for itself</p>
+        </div>
       </div>
     </div>
-    <div class="col-2 d-none d-lg-block" v-if="showControls">
-      <i
-        class="control prev"
-        aria-label="previous testimonial"
-        @click="changeSlide(-1)"
-      />
-    </div>
-    <div class="col-8"> <!-- only 'col-8' if="showControls" -->
-          <Quote
-            :content="slides[currentSlide]"
-          />
-    </div>
-    <div class="col-2 d-none d-lg-block" v-if="showControls">
-      <i
-        class="control next"
-        aria-label="next testimonial"
-        @click="changeSlide(1)"
-      />
-    </div>
-
-    <div
-      v-if="showControls"
-      class="controls col-12 d-flex d-md-block"
-    >
-      <i
-        class="control prev d-lg-none"
-        aria-label="previous testimonial"
-        @click="changeSlide(-1)"
-      />
-      <div class="indicator">
+    <div class="row m-auto">
+      <div class="col-auto d-none d-lg-flex align-items-center" v-if="showControls">
         <i
-          v-for="(slide, index) in slides"
-          class="fas fa-quote-left"
-          :class="{'active': index === currentSlide}"
-          @click="currentSlide = index"
+          class="control prev"
+          aria-label="previous testimonial"
+          @click="changeSlide(-1)"
         />
       </div>
-      <i
-        class="control next d-lg-none"
-        aria-label="next testimonial"
-        @click="changeSlide(1)"
-      />
+      <div class="col"> <!-- only 'col-8' if="showControls" -->
+        <Quote :content="slides[currentSlide]" />
+      </div>
+      <div class="col-auto d-none d-lg-flex align-items-center" v-if="showControls">
+        <i
+          class="control next"
+          aria-label="next testimonial"
+          @click="changeSlide(1)"
+        />
+      </div>
+    </div>
+    <div class="row">
+      <div
+        v-if="showControls"
+        class="controls col-12 d-flex d-lg-block mt-lg-3"
+      >
+        <i
+          class="control prev d-lg-none"
+          aria-label="previous testimonial"
+          @click="changeSlide(-1)"
+        />
+        <div class="indicator">
+          <i
+            v-for="(slide, index) in slides"
+            class="fas fa-quote-left"
+            :class="{'active': index === currentSlide}"
+            @click="currentSlide = index"
+          />
+        </div>
+        <i
+          class="control next d-lg-none"
+          aria-label="next testimonial"
+          @click="changeSlide(1)"
+        />
+      </div>
     </div>
   </section>
 </template>
@@ -66,27 +69,25 @@ export default {
       slides: [
         {
           quote: [
-            "Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
-            "Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.",
+            "At scheduleUX we had a dream of making scheduling simple. In our case, 'simple' turned out to be really tricky.",
+            "Partnering with the brilliant (and dapper) team at Honor.Software helped make our dream a reality. Honor has built a scheduling service that was perfect for our needs. Even as we worked through iterations, Honor was able to keep us on track and delivered our platform within the original timeline.",
+            "The positive feedback from our customers and the ongoing maintenance and support we receive from Honor exceeds all of our expectations.",
+            "Our results have been phenomenal with Honor's Virtual Scheduling platform. Leveraging their digital services has freed us to transform our business model and focus our efforts on solving new problems for our customers.",
           ],
-          author: 'Some Latin-major',
-          company: 'A real business'
+          author: 'ScheduleUX Product Team',
         },
         {
           quote: [
-            "HEYYY ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
-            "Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.",
-          ],
-          author: 'Some Latin-major',
-          company: 'A real business'
+            "With well earned respect, I confidently recommend Honor.Software for future software projects, and programming services. The tech team's exceptional work was impressive and their hard work and dedication to the job was an integral part of the successful completion of the project.",
+            "I had the good fortune of working with the tech team in January 2020, with the project on the system upgrade. With a number of requirements we've identified at that time, involving multiple confined access, detailed planning, implementation, and communication with the tech team members and contractors was critical. The key to our success was Honor's ability to work with one vision. Honor's efforts and talents were a significant contribution to the entire team in accomplishing great results considering some of the project setbacks."
+            ],
+          author: 'Private Client',
         },
         {
           quote: [
-            "HI ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
-            "Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.",
+            "Micheal, Cameron, and the rest of the crew supported each other seamlessly, worked diligently, and communicated well together to successfully complete the system transformation. The product team managed their portion of the job planning process / procedures exceptionally well and were always prepared to proactively identify options and solutions to challenges that occurred during the project. The requirements were managed with prioritization, and Michael smoothly made those adjustments to enhance the flow of progress. The satisfying product was the result of the team's ability to communicate and work collaboratively and unselfishly towards the common goal."
           ],
-          author: 'Some Latin-major',
-          company: 'A real business'
+          author: 'Non Profit Client',
         },
       ],
     };
@@ -166,29 +167,16 @@ section {
       background-color:var(--text);
       color:var(--bg);
     }
-    @media($md) {
-      position:absolute;
-      top:calc(50% - 16px);
-    }
 
-    &.prev {
-      left:5.5vw;
-      &::before {
-        content:'\f104';
-        position:relative;
-        left:-.05em;
-      }
-      @media($xl) {left:-3vw;}
+    &.prev::before {
+      content:'\f104';
+      position:relative;
+      left:-.05em;
     }
-
-    &.next {
-      right:5.5vw;
-      &::before {
-        content:'\f105';
-        position:relative;
-        right:-.05em;
-      }
-      @media($xl) {right:-3vw;}
+    &.next::before {
+      content:'\f105';
+      position:relative;
+      right:-.05em;
     }
   }
 

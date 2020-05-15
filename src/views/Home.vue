@@ -10,19 +10,21 @@
           flipped
       />
       <ArticleBlurb
+        class="my-5"
         :content="blurbs[1]"
       />
 
-      <PromoBar :promos="promos"/>
+      <!-- <PromoBar :promos="promos"/> -->
 
       <Partners />
 
       <ArticleBlurb
           :content="blurbs[2]"
-          flipped
       />
       <ArticleBlurb
+          class="my-5 pb-5"
           :content="blurbs[3]"
+          flipped
       />
 
   <!-- <section class="headline row">
@@ -60,17 +62,17 @@ export default {
     return {
       blurbs: [
        {
-          title: "Why Honor?",
+          title: "Get To Know Us",
           imageUrl: "",
           text: [
             "At Honor.Software we create solutions to help people work smarter and achieve more.",
             "By automating redundant work and menial tasks, we can free your employees to focus on the things that need their attention most."
           ],
           buttonText: "Get to know us",
-          url: "/about",
+          url: "/about/why-honor",
         },
         {
-          title: "ScheduleUX Hits Another Milestone",
+          title: "Customer Highlight",
           imageUrl: "",
           text: [
             // "We worked with ScheduleUX to take their scheduling service's complicated user flow and turn it into a delightful and intuitive user experience."
@@ -88,7 +90,7 @@ export default {
             "Learn more about how open-source makes the difference in our report.",
           ],
           buttonText: "Read the report",
-          url: "/contact",
+          url: "/about/open-source",
         },
         {
           title: "Accelerate your business",
@@ -98,28 +100,28 @@ export default {
             "We take pride in modernizing workflows, producing documentation, and our expert consultations.",
             "Find out how we can help you.",
           ],
-          buttonText: "Get in touch",
-          url: "/contact",
+          buttonText: "Our services",
+          url: "/about",
         },
       ],
       promos: [
         {
           text: "Latest Updates",
-          path: "/news",
+          // path: "/news",
           isHeader: true,
         },
         {
           text: "Transforming software research",
-          path: "/stories/scheduleux.html",
+          path: "/stories/scheduleux",
         },
-        {
-          text: "Learn how",
-          path: "/news",
-        },
-        {
-          text: "Customer Story: Hyperdrive Engineering",
-          path: "/news",
-        }
+        // {
+        //   text: "Learn how",
+        //   path: "/news",
+        // },
+        // {
+        //   text: "Customer Story: Hyperdrive Engineering",
+        //   path: "/news",
+        // }
       ],
       promos2: [
         {
