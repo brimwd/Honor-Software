@@ -74,13 +74,13 @@ blockquote {
 
 .slide-enter,
 .slide-leave-to {
-  transform: translateX(-50vw);
+  // transform: translateX(-50vw);
   opacity: 0;
 }
 
 .slide-enter-to,
 .slide-leave {
-  transform: translateX(0);
+  // transform: translateX(0);
   opacity: 1;
 }
 
