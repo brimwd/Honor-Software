@@ -1,5 +1,6 @@
 <template>
 <article class="customers-page honor-page">
+  <h1 class="pt-3 mt-5 text-center">Customer Stories</h1>
 
   <Carousel />
 

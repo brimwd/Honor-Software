@@ -96,6 +96,7 @@ export default {
     showControls() {
       return this.slides.length > 1;
     },
+
   },
   methods: {
     changeSlide(addend) {
@@ -180,7 +181,7 @@ section {
   }
 
   .indicator {
-    color:var(--gold-light);
+    color:var(--text);
     cursor:pointer;
 
     i {
@@ -188,21 +189,22 @@ section {
       border:1px solid var(--bg);
       border-radius:50px; // arbitrary
       margin:0 12px;
+      opacity:.5;
 
       &:hover {
         color:var(--bg-intense);
         font-weight:bold;
+        opacity:1;
         transition:all .15s;
       }
 
       &.active {
-        font-weight: bold;
-        color: var(--bg-intense);
+        font-weight:bold;
+        color:var(--bg-intense);
+        opacity:1;
       }
 
-      &::before {
-          content:'\f111';
-      }
+      &::before {content:'\f111';}
     }
   }
 
