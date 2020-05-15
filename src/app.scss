@@ -44,7 +44,8 @@ $bg-d-10: url('../../images/bg/dark/oriental-tiles.png');
 /* HONOR FONTS */
 $f7: "'Marcellus', serif";
 
-$shadow-gold:0 12px 36px -6px #d69e00;
+$shadow-gold:0 12px 36px -6px var(--gold);
+$shadow-text:0 0 20px var(--gold);
 
 @mixin shadow {
 	box-shadow:0 12px 36px -6px #906a00;
@@ -72,6 +73,7 @@ $shadow-gold:0 12px 36px -6px #d69e00;
 	--bg-soft:#f9f8f5;
 	--bg-text:#333;
 	--gold-light:#C0BBB5;
+	--gold:#d69e00;
 	--mid-gray:#888;
 }
 
