@@ -3,6 +3,7 @@
     <transition
       appear
       name="slide"
+      mode="out-in"
     >
       <div
         class="quote"
