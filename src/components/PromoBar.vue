@@ -4,6 +4,10 @@
     v-for="(promo, index) in promosSliced"
     class="col-6 col-md-3 mb-md-0"
   >
+    <i
+      v-if="promo.icon"
+      v-class="promo.icon"
+    />
     <strong
       v-if="promo.strong"
       v-text="promo.strong"
@@ -41,7 +45,7 @@ export default {
   text-align:center;
   font-size:26px;
 }
-strong {
+strong, i {
   font-size:3em;
   display:block;
 }
