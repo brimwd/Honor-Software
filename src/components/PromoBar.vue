@@ -48,7 +48,7 @@ export default {
 strong, i {
   display:block;
   font-size:2.4em;
-  margin-bottom:.2em;
+  margin:.4em auto .1em;
   &::after{
     opacity:.6;
     color:var(--gold);
