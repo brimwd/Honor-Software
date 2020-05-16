@@ -16,7 +16,7 @@
 
   <div class="row mb-5 pb-5">
     <div class="col">
-      <h2 class="purpose px-3">Six reasons leading enterprises work with Honor</h2>
+      <h2 class="purpose px-3">Four reasons leading enterprises work with Honor</h2>
       <ol>
         <li>
           <b>Successful outcomes</b>
