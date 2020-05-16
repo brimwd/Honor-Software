@@ -14,7 +14,7 @@
         :content="blurbs[1]"
       />
 
-      <!-- <PromoBar :promos="promos"/> -->
+      <PromoBar :promos="promos2"/>
 
       <Partners />
 
@@ -125,25 +125,20 @@ export default {
       ],
       promos2: [
         {
-          text: "detail",
-          path: "/",
-          strong: "##%",
+          icon: 'fad fa-user-chart',
+          text:"Operational Efficiency",
         },
         {
-
-          text: "detail",
-          path: "/",
-          strong: "##%",
+          icon: 'fad fa-cogs',
+          text:"Streamlined Workflows",
         },
         {
-          text: "detail",
-          path: "/",
-          strong: "##%",
+          icon: 'fad fa-tachometer-fast',
+          text:"Accelerated Onboarding",
         },
         {
-          text: "detail",
-          path: "/",
-          strong: "##%",
+          icon: 'fad fa-users-crown',
+          text:"Improved Productivity",
         }
       ],
     };
