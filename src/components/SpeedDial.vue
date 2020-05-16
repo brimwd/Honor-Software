@@ -7,12 +7,13 @@
     <transition-group
       name="staggered-fade"
       tag="ul"
-      :style="{ '--total': allNavLinks.length }"
+      :style="{ '--total': allNavLinks.length - 1 }"
     >
       <li
         v-for="(link, index) in allNavLinks"
+        v-if="isOpen"
         :key="link.label"
-        :style="{'--i': index}"
+        :style="{ '--i': index }"
         @click="isOpen = false"
       >
         <router-link :to="link.path">
@@ -71,24 +72,6 @@ export default {
       },
   },
   methods: {
-    beforeEnter: function (el) {
-      el.style.opacity = 0
-      el.style.height = 0
-    },
-    enter: function (el, done) {
-      const delay = 1000 - (el.dataset.index * 150)
-      setTimeout(function () {
-            el.opacity = 1
-            el.height = '58px'
-      }, delay)
-    },
-    leave: function (el, done) {
-      var delay = el.dataset.index * 150
-      setTimeout(function () {
-          el.opacity = 0
-          el.height = 0
-      }, delay)
-    },
   },
 }
 
@@ -102,64 +85,41 @@ export default {
   right:10px;
   z-index:5;
 
-  ul {
-    display:none;
-    margin-bottom:8px;
+  li {
+    cursor:pointer;
+    list-style:none;
+    margin-left:auto;
+    max-width:-webkit-fit-content;
+    max-width:max-content;
+  }
 
-    li {
+  #speedDialTrigger {
+      background-color:var(--text);
+      border:2px solid black;
+      border-color:#ceae74 #bb9b61 #bb9b61 #ceae74;
+      border-radius:30px;
+      color:var(--bg);
       cursor:pointer;
-      list-style:none;
-      margin-left:auto;
-      max-width:-webkit-fit-content;
-      max-width:max-content;
-      opacity:0;
-      transform:translateY(4px);
-      transition:all 300ms;
-      transition-delay:100ms;
-    }
-  }
-  &.open {
-    ul {
-      display:block;
+      display:inline-block;
+      font-size:22px;
+      padding:11px 12px 7px 13px;
 
-      li {
-        opacity:1;
-        transform:translateY(0);
+      i {
+          transform:rotateZ(0);
+          transition:.2s transform ease-out;
       }
-    }
+
+      &:hover {
+          background-color:var(--bg-intense);
+          @include shadow;
+      }
+
   }
-}
-
-#speedDialTrigger {
-  background-color:var(--text);
-  border:2px solid black;
-  border-color:#ceae74 #bb9b61 #bb9b61 #ceae74;
-  border-radius:30px;
-  color:var(--bg);
-  cursor:pointer;
-  display:inline-block;
-  font-size:22px;
-  padding:11px 12px 7px 13px;
-
-  i {
-    transform:rotateY(0);
-    transition:.2s transform ease-out;
-  }
-
-  &:hover {
-    background-color:var(--bg-intense);
-    @include shadow;
-  }
-
-  .open & {
-    background-color:var(--bg-intense);
-    @include shadow;
-
-    i {
+  &.open #speedDialTrigger i {
       transform:rotateZ(45deg);
-    }
   }
 }
+
 
 span {
   &.label {
@@ -174,7 +134,6 @@ span {
   }
 
   &.icon {
-    // background-color:#E8A679;
     border-radius:30px;
     color:white;
     display:inline-block;
@@ -213,26 +172,20 @@ span {
 }
 
 .staggered-fade {
-    &-leave-active {
-      transition: opacity .4s linear, transform .4s cubic-bezier(.5,0,.7,.4); //cubic-bezier(.7,0,.7,1);
-      transition-delay: calc( 0.1s * (var(--total) - var(--i)) );
-    }
-
-    &-enter-active {
-      transition: opacity .5s linear, transform .5s cubic-bezier(.2,.5,.1,1);
-      transition-delay: calc( 0.1s * var(--i) );
-    }
-
-    &-enter,
-    &-leave-to {
-      transform: translateY(58px);
-      opacity: 0;
-    }
-
-    &-enter-to,
-    &-leave {
-      transform: translateY(0);
-      opacity: 0;
-    }
+  &-leave-active {
+    transition: opacity 0.2s linear, transform 0.2s cubic-bezier(.5,0,.7,.4); //cubic-bezier(.7,0,.7,1);
+    transition-delay: calc( 0.04s * var(--i) );
   }
+
+  &-enter-active {
+    transition: opacity .3s linear, transform .3s cubic-bezier(.2,.5,.1,1);
+    transition-delay: calc( 0.1s * (var(--total) - var(--i)) );
+  }
+
+  &-enter,
+  &-leave-to {
+    opacity: 0;
+    transform: translateX(100px);
+  }
+}
 </style>

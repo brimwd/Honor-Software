@@ -26,7 +26,13 @@
           :content="blurbs[3]"
           flipped
       />
+      <button @click="showItems = !showItems">Show/Hide Items</button>
 
+      <button @click="limit = (limit < 6 ? 10 : 5)">Toggle Length</button>
+
+      <transition-group tag="ul" name="slide-in" :style="{ '--totl': list.length }">
+        <li v-for="l,i in list" key="i" :style="{'--ind': i}" v-if="showItems && i < limit">Item {{ l }}</li>
+      </transition-group>
   <!-- <section class="headline row">
     <div class="col-12 col-md-6">
       // background graphic
