@@ -6,7 +6,7 @@
   >
     <i
       v-if="promo.icon"
-      v-class="promo.icon"
+      :class="promo.icon"
     />
     <strong
       v-if="promo.strong"
@@ -46,8 +46,13 @@ export default {
   font-size:26px;
 }
 strong, i {
-  font-size:3em;
   display:block;
+  font-size:2.4em;
+  margin-bottom:.2em;
+  &::after{
+    opacity:.6;
+    color:var(--gold);
+  }
 }
 
 .h5 {

@@ -59,19 +59,19 @@ export default {
     return {
       promos: [
         {
-          // strong:"73%",
+          icon: 'fad fa-user-chart',
           text:"Operational Efficiency",
         },
         {
-          // strong:"52%",
+          icon: 'fad fa-cogs',
           text:"Streamlined Workflows",
         },
         {
-          // strong:"86%",
+          icon: 'fad fa-tachometer-fast',
           text:"Accelerated Onboarding",
         },
         {
-          // strong:"47%",
+          icon: 'fad fa-users-crown',
           text:"Improved Productivity",
         }
       ],
