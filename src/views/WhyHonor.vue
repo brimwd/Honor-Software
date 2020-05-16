@@ -16,27 +16,19 @@
 
   <div class="row mb-5 pb-5">
     <div class="col">
-      <h2 class="purpose px-3">Six reasons leading enterprises work with Honor</h2>
+      <h2 class="purpose px-3">Four reasons leading enterprises work with Honor</h2>
       <ol>
         <li>
           <b>Successful outcomes</b>
           <p class="pr-3">Our cloud native technologies and modern practices have sparked major improvements in how companies design, develop, deliver, and operate software—and in how they run their business.</p>
         </li>
         <li>
-          <b>A trusted partnership</b>
-          <p class="pr-3">Honor has supported the leading companies in virtualizing their data centers, and changing how they run their business. Now, we're leading these same organizations through the next stage of their transformation.</p>
-        </li>
-        <li>
           <b>Happy teams</b>
-          <p class="pr-3">We attract and keep top talent—and deliver better software, faster. Honor instills a culture of test-driven development, pair programming, user-centric design, and cloud native operations. Our friendly support staff would be happy to take on any manual workflows while we make the customizations.</p>
-        </li>
-        <li>
-          <b>Embedded security and automation</b>
-          <p class="pr-3">Achieve a 200:1 developer-to-operator ratio. Our products are highly automated and easy to use. Update components with no downtime, constantly rotate credentials, rebuild base infrastructure, and patch security.</p>
+          <p class="pr-3">We attract and keep top talent—and deliver better software, faster. Honor instills a culture of test-driven development, pair programming, user-centric design, and web-native operations.</p>
         </li>
         <li>
           <b>Cloud neutrality</b>
-          <p class="pr-3">Run your applications where you want and scale them across infrastructure targets. Whatever your chosen architecture, get a reliable and consistent operational experience.</p>
+          <p class="pr-3">Our independent web-stack can run on any public or private cloud-hosting or a private server of your choosing. By building fully-integrated applications, our platform-independence will never waver and our customers remain free to choose the hosting that works best for them.</p>
         </li>
         <li>
           <b>Open-source expertise</b>
@@ -67,19 +59,19 @@ export default {
     return {
       promos: [
         {
-          // strong:"73%",
+          icon: 'fad fa-user-chart',
           text:"Operational Efficiency",
         },
         {
-          // strong:"52%",
+          icon: 'fad fa-cogs',
           text:"Streamlined Workflows",
         },
         {
-          // strong:"86%",
+          icon: 'fad fa-tachometer-fast',
           text:"Accelerated Onboarding",
         },
         {
-          // strong:"47%",
+          icon: 'fad fa-users-crown',
           text:"Improved Productivity",
         }
       ],
