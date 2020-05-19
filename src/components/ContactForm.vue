@@ -1,26 +1,38 @@
 <template>
 <form class="col-12 col-md-6">
-  <div class="form-group">
+  <div
+    :class="{'invalid': fieldIsInvalid('name')}"
+    class="form-group"
+  >
     <label for="nameInput">Name</label>
     <input
+      v-bind="form.name"
       type="text"
       class="form-control"
       id="nameInput"
       autocomplete="name"
     >
   </div>
-  <div class="form-group">
+  <div
+    :class="{'invalid': fieldIsInvalid('company')}"
+    class="form-group"
+  >
     <label for="companyInput">Company</label>
     <input
+      v-bind="form.company"
       type="text"
       class="form-control"
       id="companyInput"
       autocomplete="company"
     >
   </div>
-  <div class="form-group">
+  <div
+    :class="{'invalid': fieldIsInvalid('email')}"
+    class="form-group"
+  >
     <label for="emailInput">Email</label>
     <input
+      v-bind="form.email"
       type="email"
       class="form-control"
       id="emailInput"
@@ -31,17 +43,22 @@
       We'll never share your email with anyone else.
     </small>
   </div>
-  <div class="form-group">
+  <div
+    :class="{'invalid': fieldIsInvalid('phone')}"
+    class="form-group"
+  >
     <label for="phoneInput">Phone</label>
     <input
+      v-bind="form.phone"
       type="tel"
       class="form-control"
       id="phoneInput"
-      autocomplete="mobile tel">
+      autocomplete="mobile tel"
+    >
   </div>
   <button
     class="send-btn btn btn-lg btn-outline-light mt-2"
-    type="submit"
+    @click="sendFormData()"
   >
     Send
     <i class="fas fa-paper-plane ml-1 d-inline-block" aria-hidden="true" />
@@ -53,20 +70,72 @@
 
 export default {
   name: 'ContactForm',
-  // props: {
-  // },
+  data() {
+    return {
+      form: {
+        name: "",
+        company: "",
+        email: "",
+        phone: "",
+      },
+      submitAttempts: 0,
+    };
+  },
+  computed: {
+    emptyFields() {
+      // TODO: more specific validation?
+      return this.formKeys.filter(key => this.form[key].trim() === "");
+    },
+    formIsInvalid() {
+      return !!this.submitAttempts && !!this.emptyFields.length;
+    },
+    formKeys() {
+        return Object.keys(this.form);
+    },
+  },
+  methods: {
+    fieldIsInvalid(key) {
+      return this.formIsInvalid && this.emptyFields.includes(key);
+    },
+    sendFormData() {
+      this.submitAttempts += 1;
+
+      if (this.formIsInvalid) {
+        return;
+      }
+
+      // TODO: send it
+      console.log("valid: ", !this.formIsInvalid, this.form)
+    },
+  },
 }
 </script>
 
 <style scoped lang="scss">
 label {
-  font-weight:bold;
+  font-weight: bold;
 }
-.send-btn {font-weight:bold;}
-.send-btn i {
-  @include FA;
-  font-weight:bold;
-  font-style:unset;
-  &::before {content:'\f1d8';}
+.send-btn {
+  font-weight: bold;
+
+  i {
+    @include FA;
+    font-weight: bold;
+    font-style: unset;
+
+    &::before {
+      content: '\f1d8';
+    }
+  }
+}
+
+.form-group.invalid {
+    label {
+
+    }
+
+    input {
+
+    }
 }
 </style>
