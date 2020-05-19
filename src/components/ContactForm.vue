@@ -1,69 +1,71 @@
 <template>
-<form class="col-12 col-md-6">
-  <div
-    :class="{'invalid': fieldIsInvalid('name')}"
-    class="form-group"
-  >
-    <label for="nameInput">Name</label>
-    <input
-      v-model="form.name"
-      type="text"
-      class="form-control"
-      id="nameInput"
-      autocomplete="name"
+  <div>
+    <form class="col-12 col-md-6">
+      <div
+        :class="{'invalid': fieldIsInvalid('name')}"
+        class="form-group"
+      >
+        <label for="nameInput">Name</label>
+        <input
+          v-model="form.name"
+          type="text"
+          class="form-control"
+          id="nameInput"
+          autocomplete="name"
+        >
+      </div>
+      <div
+        :class="{'invalid': fieldIsInvalid('company')}"
+        class="form-group"
+      >
+        <label for="companyInput">Company</label>
+        <input
+          v-model="form.company"
+          type="text"
+          class="form-control"
+          id="companyInput"
+          autocomplete="company"
+        >
+      </div>
+      <div
+        :class="{'invalid': fieldIsInvalid('email')}"
+        class="form-group"
+      >
+        <label for="emailInput">Email</label>
+        <input
+          v-model="form.email"
+          type="email"
+          class="form-control"
+          id="emailInput"
+          autocomplete="work email"
+          aria-describedby="emailHelp"
+        >
+        <small id="emailHelp" class="form-text">
+          We'll never share your email with anyone else.
+        </small>
+      </div>
+      <div
+        :class="{'invalid': fieldIsInvalid('phone')}"
+        class="form-group"
+      >
+        <label for="phoneInput">Phone</label>
+        <input
+          v-model="form.phone"
+          type="tel"
+          class="form-control"
+          id="phoneInput"
+          autocomplete="mobile tel"
+        >
+      </div>
+    </form>
+    <button
+      class="send-btn btn btn-lg btn-outline-light mt-2"
+      @click="sendFormData()"
     >
+      Send
+      <i class="fas fa-paper-plane ml-1 d-inline-block" aria-hidden="true" />
+    </button>
   </div>
-  <div
-    :class="{'invalid': fieldIsInvalid('company')}"
-    class="form-group"
-  >
-    <label for="companyInput">Company</label>
-    <input
-      v-model="form.company"
-      type="text"
-      class="form-control"
-      id="companyInput"
-      autocomplete="company"
-    >
-  </div>
-  <div
-    :class="{'invalid': fieldIsInvalid('email')}"
-    class="form-group"
-  >
-    <label for="emailInput">Email</label>
-    <input
-      v-model="form.email"
-      type="email"
-      class="form-control"
-      id="emailInput"
-      autocomplete="work email"
-      aria-describedby="emailHelp"
-    >
-    <small id="emailHelp" class="form-text">
-      We'll never share your email with anyone else.
-    </small>
-  </div>
-  <div
-    :class="{'invalid': fieldIsInvalid('phone')}"
-    class="form-group"
-  >
-    <label for="phoneInput">Phone</label>
-    <input
-      v-model="form.phone"
-      type="tel"
-      class="form-control"
-      id="phoneInput"
-      autocomplete="mobile tel"
-    >
-  </div>
-  <button
-    class="send-btn btn btn-lg btn-outline-light mt-2"
-    @click="sendFormData()"
-  >
-    Send
-    <i class="fas fa-paper-plane ml-1 d-inline-block" aria-hidden="true" />
-  </button>
-</form>
 </template>
 
 <script>
