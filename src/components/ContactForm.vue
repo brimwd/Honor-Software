@@ -6,7 +6,7 @@
   >
     <label for="nameInput">Name</label>
     <input
-      v-bind="form.name"
+      v-model="form.name"
       type="text"
       class="form-control"
       id="nameInput"
@@ -19,7 +19,7 @@
   >
     <label for="companyInput">Company</label>
     <input
-      v-bind="form.company"
+      v-model="form.company"
       type="text"
       class="form-control"
       id="companyInput"
@@ -32,7 +32,7 @@
   >
     <label for="emailInput">Email</label>
     <input
-      v-bind="form.email"
+      v-model="form.email"
       type="email"
       class="form-control"
       id="emailInput"
@@ -49,7 +49,7 @@
   >
     <label for="phoneInput">Phone</label>
     <input
-      v-bind="form.phone"
+      v-model="form.phone"
       type="tel"
       class="form-control"
       id="phoneInput"
