@@ -10,7 +10,7 @@
   </div>
   <div class="col-12 col-md-9 col-lg-10">
 
-    <h3>{{ content.title }}</h3>
+    <h3>{{ content.name }} <span>{{ content.title }}</span></h3>
     <p
         v-for="paragraph in content.text"
         :key="paragraph.slice(0,20)"
@@ -40,6 +40,10 @@ export default {
 </script>
 
 <style scoped lang="scss">
+h3 span {
+  font-weight:normal;
+  color:var(--gold);
+}
 .feature {
   margin-right:0;
   margin-left:0;
