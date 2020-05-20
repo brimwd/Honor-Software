@@ -173,13 +173,13 @@ span {
 
 .staggered-fade {
   &-leave-active {
-    transition: opacity 0.2s linear, transform 0.2s cubic-bezier(.5,0,.7,.4); //cubic-bezier(.7,0,.7,1);
+    transition: opacity 100ms linear, transform 100ms cubic-bezier(.5,0,.7,.4); //cubic-bezier(.7,0,.7,1);
     transition-delay: calc( 0.04s * var(--i) );
   }
 
   &-enter-active {
-    transition: opacity .3s linear, transform .3s cubic-bezier(.2,.5,.1,1);
-    transition-delay: calc( 0.1s * (var(--total) - var(--i)) );
+    transition: opacity 100ms linear, transform 100ms cubic-bezier(.2,.5,.1,1);
+    transition-delay: calc( 50ms * (var(--total) - var(--i)) );
   }
 
   &-enter,
