@@ -41,7 +41,7 @@ export default {
   @media($sm) {margin-bottom:9vw;}
 
   &::before {
-    background:url('../../images/bg/ring-gold-tilted.png') center no-repeat;
+    background:url('../assets/bg/ring-gold-tilted.png') center no-repeat;
     background-position:100% 50%;
     background-size:contain;
     content:'';
