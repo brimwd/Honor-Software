@@ -9,7 +9,6 @@
   <div class="row">
     <h1 class="col-12 my-5">Disciplines</h1>
     <ServiceOverview
-      class="col-12"
       v-for="team in teams"
       :key="team.title"
       :service="team"
