@@ -4,18 +4,18 @@
     id="speedDial"
     :class="{'open': isOpen}"
   >
-    <ul class="links">
-      <li @click="isOpen = false">
-        <router-link to="/">
-          <span class="label">
-            Home
-          </span>
-          <span class="icon">
-            <i class="fas fa-fw" />
-          </span>
-        </router-link>
-      </li>
-      <li v-for="link in navLinks" @click="isOpen = false">
+    <transition-group
+      name="staggered-fade"
+      tag="ul"
+      :style="{ '--total': allNavLinks.length - 1 }"
+    >
+      <li
+        v-for="(link, index) in allNavLinks"
+        v-if="isOpen"
+        :key="link.label"
+        :style="{ '--i': index }"
+        @click="isOpen = false"
+      >
         <router-link :to="link.path">
           <span class="label">
             {{ link.label }}
@@ -25,7 +25,7 @@
           </span>
         </router-link>
       </li>
-    </ul>
+    </transition-group>
 
     <div
       id="speedDialTrigger"
@@ -56,13 +56,20 @@ export default {
   },
   data() {
     return {
+      homeLinkData: {
+          label: "Home",
+          path: "/",
+      },
       isOpen: false,
     };
   },
   computed: {
-    linkIcon() {
-      return this.isOpen ? 'fa-times' : 'fa-bars';
-    },
+      allNavLinks() {
+          return this.navLinks.concat(this.homeLinkData);
+      },
+      linkIcon() {
+          return this.isOpen ? 'fa-times' : 'fa-bars';
+      },
   },
   methods: {
   },
@@ -78,64 +85,41 @@ export default {
   right:10px;
   z-index:5;
 
-  ul {
-    display:none;
-    margin-bottom:8px;
+  li {
+    cursor:pointer;
+    list-style:none;
+    margin-left:auto;
+    max-width:-webkit-fit-content;
+    max-width:max-content;
+  }
 
-    li {
+  #speedDialTrigger {
+      background-color:var(--text);
+      border:2px solid black;
+      border-color:#ceae74 #bb9b61 #bb9b61 #ceae74;
+      border-radius:30px;
+      color:var(--bg);
       cursor:pointer;
-      list-style:none;
-      margin-left:auto;
-      max-width:-webkit-fit-content;
-      max-width:max-content;
-      opacity:0;
-      transform:translateY(4px);
-      transition:all 300ms;
-      transition-delay:100ms;
-    }
-  }
-  &.open {
-    ul {
-      display:block;
+      display:inline-block;
+      font-size:22px;
+      padding:11px 12px 7px 13px;
 
-      li {
-        opacity:1;
-        transform:translateY(0);
+      i {
+          transform:rotateZ(0);
+          transition:.2s transform ease-out;
       }
-    }
+
+      &:hover {
+          background-color:var(--bg-intense);
+          @include shadow;
+      }
+
   }
-}
-
-#speedDialTrigger {
-  background-color:var(--text);
-  border:2px solid black;
-  border-color:#ceae74 #bb9b61 #bb9b61 #ceae74;
-  border-radius:30px;
-  color:var(--bg);
-  cursor:pointer;
-  display:inline-block;
-  font-size:22px;
-  padding:11px 12px 7px 13px;
-
-  i {
-    transform:rotateY(0);
-    transition:.2s transform ease-out;
-  }
-
-  &:hover {
-    background-color:var(--bg-intense);
-    @include shadow;
-  }
-
-  .open & {
-    background-color:var(--bg-intense);
-    @include shadow;
-
-    i {
+  &.open #speedDialTrigger i {
       transform:rotateZ(45deg);
-    }
   }
 }
+
 
 span {
   &.label {
@@ -150,7 +134,6 @@ span {
   }
 
   &.icon {
-    // background-color:#E8A679;
     border-radius:30px;
     color:white;
     display:inline-block;
@@ -185,6 +168,24 @@ span {
   #speedDial.open ~ & {
     opacity:0.5;
     z-index:3;
+  }
+}
+
+.staggered-fade {
+  &-leave-active {
+    transition: opacity 100ms linear, transform 100ms cubic-bezier(.5,0,.7,.4); //cubic-bezier(.7,0,.7,1);
+    transition-delay: calc( 0.04s * var(--i) );
+  }
+
+  &-enter-active {
+    transition: opacity 100ms linear, transform 100ms cubic-bezier(.2,.5,.1,1);
+    transition-delay: calc( 50ms * (var(--total) - var(--i)) );
+  }
+
+  &-enter,
+  &-leave-to {
+    opacity: 0;
+    transform: translateX(100px);
   }
 }
 </style>
