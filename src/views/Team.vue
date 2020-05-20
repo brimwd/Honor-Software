@@ -117,19 +117,19 @@ export default {
           ],
         },
         {
-          title: `Research Team`,
-          icon: `fad fa-analytics`,
-          text: [
-            `Research is core to our mission at Honor. We ask open-ended questions and approach our analysis with humility so that we can stay true to our goals. Our expert team relies on many industry-standard methodologies to produce comprehensive analyses accounting for both quantitative and qualitative factors. Our researchers frequently partner with design to deliver A/B tests and drive definitive conclusions.`
-          ],
-        },
-        {
           title: `Engineering Team`,
           icon: `fad fa-chart-network`,
           text: [
             `Our full-stack engineers carefully plan projects to maximize their utility while keeping each codebase light and flexible. We specialize in building versatile and easy-to-maintain ‘software as a service’ applications using standard JavaScript libraries. Our code is well-documented through code-comments and our diligent git-commit practices. Using GitHub, we can leverage Microsoft’s industry-leading security and enterprise-grade access controls to grant permission, control sharing, and transfer ownership.`,
             `Our core platform is built using modern standards on a Mongo-Express-Node stack, and utilizes AJAX, JSON, and either Vue or jQuery as appropriate.`,
           ]
+        },
+        {
+          title: `Research Team`,
+          icon: `fad fa-analytics`,
+          text: [
+            `Research is core to our mission at Honor. We ask open-ended questions and approach our analysis with humility so that we can stay true to our goals. Our expert team relies on many industry-standard methodologies to produce comprehensive analyses accounting for both quantitative and qualitative factors. Our researchers frequently partner with design to deliver A/B tests and drive definitive conclusions.`
+          ],
         },
       ],
     };
