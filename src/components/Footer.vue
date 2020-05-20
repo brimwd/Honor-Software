@@ -85,7 +85,7 @@ footer {
   position:relative;
 
   &::before {
-    background: url(../../images/bg/ring.svg) center no-repeat;
+    background: url(../assets/bg/ring.svg) center no-repeat;
     background-position: 30% 50%;
     background-size: 240vw;
     content: '';

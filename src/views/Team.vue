@@ -9,7 +9,6 @@
   <div class="row">
     <h1 class="col-12 my-5">Disciplines</h1>
     <ServiceOverview
-      class="col-12"
       v-for="team in teams"
       :key="team.title"
       :service="team"
@@ -54,10 +53,10 @@ export default {
     return {
       employeeSpotlight: [
         {
-          name: `Brian`,
+          name: `Brian D.`,
           title: `Product Design Lead`,
           imageAlt: `Photo of Brian`,
-          imageUrl: ``,
+          imageUrl: `../assets/team/brian.jpg`,
           text: [
             `Honor.Software is Brian's fourth startup as a product designer. With over 15 years of experience in software design and development, Brian's passion for accessibility, economic-empowerment, and conservation-of-resources are evident in everything he does.`,
             `Brian is a seasoned leader and has worked for major brands including Amazon, Microsoft, Bluetooth, T-Mobile, Walmart, and ServiceNow, and many non-profit organizations.`,
@@ -65,10 +64,10 @@ export default {
           personalStatement: `I believe that technology can change the world, but only well-designed technology will make it better. At Honor.Software we believe we can harness technology to solve problems and make the world better – one project at a time.`,
         },
         {
-          name: `Victoria`,
+          name: `Victoria 蔡金秋`,
           title: `Product Manager`,
           imageAlt: `Photo of Victoria`,
-          imageUrl: ``,
+          imageUrl: `../assets/team/victoria.jpg`,
           text: [
             `Fluent in Mandarin and English, Victoria has experience managing multi-million dollar initiatives spanning months and oceans; conception through delivery.`,
             `Victoria leverages her logistics-background and business-acumen to guide our product strategy; Her unwavering focus and next-level work ethic carry us to success in every project she tackles.`,
@@ -77,10 +76,10 @@ export default {
           personalStatement: `Honor.Software is more than a product or a timeline; This company represents not-only the opportunity to make an impact at a global scale, but also the possibility of reaching individuals - making lives easier in a real and tangible way.`,
         },
         {
-          name: `Cameron`,
+          name: `Cameron D.`,
           title: `Senior UI Engineer`,
           imageAlt: `Photo of Cameron`,
-          imageUrl: ``,
+          imageUrl: `../assets/team/cameron.jpg`,
           text: [
             `With 11 years of experience as a software developer, Cameron has dedicated himself to engineering responsive, intuitive user interfaces and to writing scalable, maintainable code.`,
             `Having worked as a UI Engineer for organizations including Apple and the US Geological Survey, Cameron is an expert in crafting unparalleled experiences with industry-leading performance, modern design-principles, and extensible-systems.`,
@@ -118,19 +117,19 @@ export default {
           ],
         },
         {
-          title: `Research Team`,
-          icon: `fad fa-analytics`,
-          text: [
-            `Research is core to our mission at Honor. We ask open-ended questions and approach our analysis with humility so that we can stay true to our goals. Our expert team relies on many industry-standard methodologies to produce comprehensive analyses accounting for both quantitative and qualitative factors. Our researchers frequently partner with design to deliver A/B tests and drive definitive conclusions.`
-          ],
-        },
-        {
           title: `Engineering Team`,
           icon: `fad fa-chart-network`,
           text: [
             `Our full-stack engineers carefully plan projects to maximize their utility while keeping each codebase light and flexible. We specialize in building versatile and easy-to-maintain ‘software as a service’ applications using standard JavaScript libraries. Our code is well-documented through code-comments and our diligent git-commit practices. Using GitHub, we can leverage Microsoft’s industry-leading security and enterprise-grade access controls to grant permission, control sharing, and transfer ownership.`,
             `Our core platform is built using modern standards on a Mongo-Express-Node stack, and utilizes AJAX, JSON, and either Vue or jQuery as appropriate.`,
           ]
+        },
+        {
+          title: `Research Team`,
+          icon: `fad fa-analytics`,
+          text: [
+            `Research is core to our mission at Honor. We ask open-ended questions and approach our analysis with humility so that we can stay true to our goals. Our expert team relies on many industry-standard methodologies to produce comprehensive analyses accounting for both quantitative and qualitative factors. Our researchers frequently partner with design to deliver A/B tests and drive definitive conclusions.`
+          ],
         },
       ],
     };

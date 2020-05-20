@@ -2,8 +2,8 @@
 <nav class="global-nav row">
   <div class="col-12 d-none d-sm-block d-md-flex justify-content-between">
     <router-link to="/" type="logo">
-      <img src="../../images/honor-logo-long.png" alt="Honor.Software" class="d-block d-md-none"/>
-      <img src="../../images/honor-logo.png" alt="Honor.Software" class="d-none d-md-block"/>
+      <img src="../assets/honor-logo-long.png" alt="Honor.Software" class="d-block d-md-none"/>
+      <img src="../assets/honor-logo.png" alt="Honor.Software" class="d-none d-md-block"/>
     </router-link>
     <ul class="d-sm-flex justify-content-center align-items-center">
       <li v-for="link in navLinks">
