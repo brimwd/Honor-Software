@@ -13,7 +13,7 @@
         v-for="(link, index) in allNavLinks"
         v-if="isOpen"
         :key="link.label"
-        :style="{ '--i': index }"
+        :style="{ '--i': allNavLinks.length - index }"
         @click="isOpen = false"
       >
         <router-link :to="link.path">
@@ -174,7 +174,7 @@ span {
 .staggered-fade {
   &-leave-active {
     transition: opacity 100ms linear, transform 100ms cubic-bezier(.5,0,.7,.4); //cubic-bezier(.7,0,.7,1);
-    transition-delay: calc( 0.04s * var(--i) );
+    transition-delay: calc( 40ms * (var(--total) - var(--i) );
   }
 
   &-enter-active {
