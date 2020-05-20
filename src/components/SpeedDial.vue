@@ -56,16 +56,16 @@ export default {
   },
   data() {
     return {
-      homeLinkData: {
+      homeLinkData: [{
           label: "Home",
           path: "/",
-      },
+      }],
       isOpen: false,
     };
   },
   computed: {
       allNavLinks() {
-          return this.navLinks.concat(this.homeLinkData);
+          return this.homeLinkData.concat(this.navLinks);
       },
       linkIcon() {
           return this.isOpen ? 'fa-times' : 'fa-bars';
