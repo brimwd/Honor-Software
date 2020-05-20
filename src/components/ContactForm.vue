@@ -1,6 +1,6 @@
 <template>
-  <div>
-    <form class="col-12 col-md-6">
+  <div class="col-12 col-md-6">
+    <form>
       <div
         :class="{'invalid': fieldIsInvalid('name')}"
         class="form-group"
@@ -103,11 +103,12 @@ export default {
       this.submitAttempts += 1;
 
       if (this.formIsInvalid) {
+        console.log("valid: ", !this.formIsInvalid);
         return;
       }
 
       // TODO: send it
-      console.log("valid: ", !this.formIsInvalid, this.form)
+      console.log("valid: ", !this.formIsInvalid, this.form);
     },
   },
 }
