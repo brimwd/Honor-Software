@@ -33,17 +33,6 @@
       <transition-group tag="ul" name="slide-in" :style="{ '--totl': list.length }">
         <li v-for="l,i in list" key="i" :style="{'--ind': i}" v-if="showItems && i < limit">Item {{ l }}</li>
       </transition-group> -->
-  <!-- <section class="headline row">
-    <div class="col-12 col-md-6">
-      // background graphic
-    </div>
-    <div class="col-12 col-md-6">
-      <h3>Better Together</h3>
-      <p>Open-source technologies power incredible projects around the world, from Google's Chrome browser and Android OS to Twitter and a majority of the world's websites.</p>
-      <p>Learn more about how open-source makes the difference in our report.</p>
-      <a class="btn btn-gold" href="">Read the report</a>
-    </div>
-</section> -->
   </div>
 </template>
 
@@ -81,7 +70,6 @@ export default {
           title: "Customer Highlight",
           imageUrl: "",
           text: [
-            // "We worked with ScheduleUX to take their scheduling service's complicated user flow and turn it into a delightful and intuitive user experience."
             "From scrappy beginnings, ScheduleUX has matured into a robust tool for scheduling sessions, managing participants, and (newly as of last month) coordinating remote interviews and follow-ups over videoconferencing services.",
             "We're proud to announce that we've recently launched a new dashboard to support the ScheduleUX Team in managing their growing user-base."
           ],
