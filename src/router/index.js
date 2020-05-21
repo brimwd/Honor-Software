@@ -3,7 +3,6 @@ import VueRouter from 'vue-router'
 import Home from '../views/Home.vue'
 import About from '../views/About.vue'
 import OpenSource from '../views/OpenSource.vue'
-import WhyHonor from '../views/WhyHonor.vue'
 import Contact from '../views/Contact.vue'
 import Customers from '../views/Customers.vue'
 import ScheduleUX from '../views/ScheduleUX.vue'
@@ -34,11 +33,6 @@ const routes = [
         path: '/about/team',
         name: 'Team',
         component: Team
-    },
-    {
-        path: '/about/why-honor',
-        name: 'WhyHonor',
-        component: WhyHonor
     },
     {
         path: '/contact',

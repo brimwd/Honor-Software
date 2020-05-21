@@ -64,7 +64,7 @@ export default {
             "By automating redundant work and menial tasks, we can free your employees to focus on the things that need their attention most."
           ],
           buttonText: "Get to know us",
-          url: "/about/why-honor",
+          url: "/about",
         },
         {
           title: "Customer Highlight",
