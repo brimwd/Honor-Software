@@ -116,19 +116,17 @@ export default {
 
 <style scoped lang="scss">
 label {
-  font-weight: bold;
+  font-weight:bold;
 }
 .send-btn {
-  font-weight: bold;
+  font-weight:bold;
 
   i {
     @include FA;
-    font-weight: bold;
-    font-style: unset;
+    font-weight:bold;
+    font-style:unset;
 
-    &::before {
-      content: '\f1d8';
-    }
+    &::before {content:'\f1d8';}
   }
 }
 </style>
