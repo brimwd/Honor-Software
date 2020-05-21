@@ -12,7 +12,7 @@
     />
   </div>
 
-  <div class="col-12 mb-5 col-md-8">
+  <div class="col-12" :class="{'mb-5 col-md-8' : (service.imageUrl !== undefined) || (service.icon !== undefined)}">
     <h2 class="px-3">{{ service.title }}</h2>
     <p v-for="paragraph in service.text"
       class="px-3"
