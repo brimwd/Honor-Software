@@ -12,6 +12,7 @@
           class="form-control"
           id="nameInput"
           autocomplete="name"
+          required
         >
       </div>
       <div
@@ -39,6 +40,7 @@
           id="emailInput"
           autocomplete="work email"
           aria-describedby="emailHelp"
+          required
         >
         <small id="emailHelp" class="form-text">
           We'll never share your email with anyone else.
@@ -55,6 +57,7 @@
           class="form-control"
           id="phoneInput"
           autocomplete="mobile tel"
+          required
         >
       </div>
     </form>
@@ -84,31 +87,10 @@ export default {
     };
   },
   computed: {
-    emptyFields() {
-      // TODO: more specific validation?
-      return this.formKeys.filter(key => this.form[key].trim() === "");
-    },
-    formIsInvalid() {
-      return !!this.submitAttempts && !!this.emptyFields.length;
-    },
-    formKeys() {
-        return Object.keys(this.form);
-    },
   },
   methods: {
-    fieldIsInvalid(key) {
-      return this.formIsInvalid && this.emptyFields.includes(key);
-    },
     sendFormData() {
-      this.submitAttempts += 1;
-
-      if (this.formIsInvalid) {
-        console.log("valid: ", !this.formIsInvalid);
-        return;
-      }
-
-      // TODO: send it
-      console.log("valid: ", !this.formIsInvalid, this.form);
+      console.log("valid: ", !this.formIsInvalid);
     },
   },
 }
