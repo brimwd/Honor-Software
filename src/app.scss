@@ -47,21 +47,22 @@ $f7: "'Marcellus', serif";
 $shadow-gold:0 12px 36px -6px var(--gold);
 $shadow-text:0 0 20px var(--gold);
 
-@mixin shadow {
-	box-shadow:0 12px 36px -6px #906a00;
-	@media ($dark){
-		box-shadow:0 12px 36px -6px #000;
-	}
-}
 
 /* MIXINS */
 @mixin pseudo {
-	position:relative;
+  position:relative;
 }
 @mixin FA {
-	font-family:'Font Awesome 5 Pro';
-	font-style:normal;
-	display:inline-block;
+  font-family:'Font Awesome 5 Pro';
+  font-style:normal;
+  display:inline-block;
+}
+@mixin shadow {
+  box-shadow:0 12px 36px -6px #906a00;
+  @media ($dark){
+    box-shadow:0 12px 36px -6px #000;
+  }
+}
 @mixin gold-ring($width : 2px) {
   border-color:#ceae74 #bb9b61 #bb9b61 #ceae74;
   border-radius:1000px;
