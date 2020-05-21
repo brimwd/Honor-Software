@@ -72,57 +72,57 @@ $shadow-text:0 0 20px var(--gold);
 
 /* CSS VARIABLES */
 :root {
-	--text:#333;
+  --text:#333;
     --link-hover:#555;
-	--bg:#fff;
-	--bg-intense:#000;
-	--bg-soft:#f9f8f5;
-	--bg-text:#333;
-	--gold-light:#C0BBB5;
-	--gold:#d69e00;
-	--mid-gray:#888;
+  --bg:#fff;
+  --bg-intense:#000;
+  --bg-soft:#f9f8f5;
+  --bg-text:#333;
+  --gold-light:#C0BBB5;
+  --gold:#d69e00;
+  --mid-gray:#888;
 }
 
 @media ($dark){
 /*DARK MODE STYLES*/
 :root {
-	--text:#eee;
+  --text:#eee;
     --link-hover:#ccc;
-	--bg:#000;
+  --bg:#000;
     --bg-intense:#fff;
-	--bg-soft:#333;
-	--bg-text:#eee;
+  --bg-soft:#333;
+  --bg-text:#eee;
 }}
 
 body {
-	background-color:var(--bg);
-	color:var(--text);
-	font-family: Avenir, Helvetica, Arial, sans-serif;
+  background-color:var(--bg);
+  color:var(--text);
+  font-family: Avenir, Helvetica, Arial, sans-serif;
 }
 
 .row {
-	max-width:962px;
-	@media($lg) {margin-right:auto;margin-left:auto;}
+  max-width:962px;
+  @media($lg) {margin-right:auto;margin-left:auto;}
 }
 
 .btn-gold {
-	background:linear-gradient(170deg, #efe3bc, #d4b43f);
-	border-color:#6d4c00;
-	color:#332100;
-	&:hover {
-		background:linear-gradient(170deg, #efe3bc, #d4b43f);
-		border-color:black;
-		color:black;
-	}
+  background:linear-gradient(170deg, #efe3bc, #d4b43f);
+  border-color:#6d4c00;
+  color:#332100;
+  &:hover {
+    background:linear-gradient(170deg, #efe3bc, #d4b43f);
+    border-color:black;
+    color:black;
+  }
 }
 
 p, li {font-size:1.2rem;}
 
 a, .link {
-	color:var(--text);
-	font-weight:bolder;
+  color:var(--text);
+  font-weight:bolder;
 
-	&:hover {
+  &:hover {
         // color:#F92472;
     }
 
