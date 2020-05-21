@@ -56,7 +56,7 @@ export default {
           name: `Brian D.`,
           title: `Product Design Lead`,
           imageAlt: `Photo of Brian`,
-          imageUrl: `../assets/team/brian.jpg`,
+          imageUrl: require(`../assets/team/brian.jpg`),
           text: [
             `Honor.Software is Brian's fourth startup as a product designer. With over 15 years of experience in software design and development, Brian's passion for accessibility, economic-empowerment, and conservation-of-resources are evident in everything he does.`,
             `Brian is a seasoned leader and has worked for major brands including Amazon, Microsoft, Bluetooth, T-Mobile, Walmart, and ServiceNow, and many non-profit organizations.`,
@@ -67,7 +67,7 @@ export default {
           name: `Victoria 蔡金秋`,
           title: `Product Manager`,
           imageAlt: `Photo of Victoria`,
-          imageUrl: `../assets/team/victoria.jpg`,
+          imageUrl: require(`../assets/team/victoria.jpg`),
           text: [
             `Fluent in Mandarin and English, Victoria has experience managing multi-million dollar initiatives spanning months and oceans; conception through delivery.`,
             `Victoria leverages her logistics-background and business-acumen to guide our product strategy; Her unwavering focus and next-level work ethic carry us to success in every project she tackles.`,
@@ -79,7 +79,7 @@ export default {
           name: `Cameron D.`,
           title: `Senior UI Engineer`,
           imageAlt: `Photo of Cameron`,
-          imageUrl: `../assets/team/cameron.jpg`,
+          imageUrl: require(`../assets/team/cameron.jpg`),
           text: [
             `With 11 years of experience as a software developer, Cameron has dedicated himself to engineering responsive, intuitive user interfaces and to writing scalable, maintainable code.`,
             `Having worked as a UI Engineer for organizations including Apple and the US Geological Survey, Cameron is an expert in crafting unparalleled experiences with industry-leading performance, modern design-principles, and extensible-systems.`,
