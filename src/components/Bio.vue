@@ -48,6 +48,11 @@ h3 span {
   margin-right:0;
   margin-left:0;
 }
+
+img {
+    width: 100%;
+}
+
 blockquote {
   &::before {
     content:'Personal Statement:';
