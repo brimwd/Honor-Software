@@ -1,10 +1,7 @@
 <template>
   <div class="col-12 col-md-6">
-    <form>
-      <div
-        :class="{'invalid': fieldIsInvalid('name')}"
-        class="form-group"
-      >
+    <form @submit.prevent="handleSubmit">
+      <div class="form-group">
         <label for="nameInput">Name</label>
         <input
           v-model="form.name"
@@ -15,10 +12,7 @@
           required
         >
       </div>
-      <div
-        :class="{'invalid': fieldIsInvalid('company')}"
-        class="form-group"
-      >
+      <div class="form-group">
         <label for="companyInput">Company</label>
         <input
           v-model="form.company"
@@ -28,10 +22,7 @@
           autocomplete="company"
         >
       </div>
-      <div
-        :class="{'invalid': fieldIsInvalid('email')}"
-        class="form-group"
-      >
+      <div class="form-group">
         <label for="emailInput">Email</label>
         <input
           v-model="form.email"
@@ -46,10 +37,7 @@
           We'll never share your email with anyone else.
         </small>
       </div>
-      <div
-        :class="{'invalid': fieldIsInvalid('phone')}"
-        class="form-group"
-      >
+      <div class="form-group">
         <label for="phoneInput">Phone</label>
         <input
           v-model="form.phone"
@@ -60,14 +48,14 @@
           required
         >
       </div>
+      <button
+          class="send-btn btn btn-lg btn-outline-light mt-2"
+          type="submit"
+      >
+          Send
+          <i class="fas fa-paper-plane ml-1 d-inline-block" aria-hidden="true" />
+      </button>
     </form>
-    <button
-      class="send-btn btn btn-lg btn-outline-light mt-2"
-      @click="sendFormData()"
-    >
-      Send
-      <i class="fas fa-paper-plane ml-1 d-inline-block" aria-hidden="true" />
-    </button>
   </div>
 </template>
 
@@ -89,8 +77,18 @@ export default {
   computed: {
   },
   methods: {
-    sendFormData() {
-      console.log("valid: ", !this.formIsInvalid);
+    clearForm() {
+        let formKeys = Object.keys(this.form);
+        for (let i = 0; i < formKeys.length; i++) {
+            this.form[formKeys[i]] = ""
+        }
+    },
+    handleSubmit() {
+      console.log("form submitted: ", this.form.name, ", ", this.form.company, ", ", this.form.email, ", ", this.form.phone);
+      // if (success) {
+      // this.clearForm();
+      // this.showConfirmation();
+      // }
     },
   },
 }
