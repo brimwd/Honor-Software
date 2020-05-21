@@ -129,14 +129,4 @@ label {
     }
   }
 }
-
-.form-group.invalid {
-    label {
-
-    }
-
-    input {
-
-    }
-}
 </style>
