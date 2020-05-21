@@ -94,9 +94,7 @@ export default {
   }
 
   #speedDialTrigger {
-      border:2px solid black;
-      border-color:#ceae74 #bb9b61 #bb9b61 #ceae74;
-      border-radius:30px;
+    @include gold-ring;
     background-color:var(--text);
     color:var(--bg);
     cursor:pointer;

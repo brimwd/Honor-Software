@@ -62,6 +62,11 @@ $shadow-text:0 0 20px var(--gold);
 	font-family:'Font Awesome 5 Pro';
 	font-style:normal;
 	display:inline-block;
+@mixin gold-ring($width : 2px) {
+  border-color:#ceae74 #bb9b61 #bb9b61 #ceae74;
+  border-radius:1000px;
+  border-style:solid;
+  border-width:$width;
 }
 
 /* CSS VARIABLES */
