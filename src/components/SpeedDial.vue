@@ -94,29 +94,29 @@ export default {
   }
 
   #speedDialTrigger {
-      background-color:var(--text);
       border:2px solid black;
       border-color:#ceae74 #bb9b61 #bb9b61 #ceae74;
       border-radius:30px;
-      color:var(--bg);
-      cursor:pointer;
-      display:inline-block;
-      font-size:22px;
-      padding:11px 12px 7px 13px;
+    background-color:var(--text);
+    color:var(--bg);
+    cursor:pointer;
+    display:inline-block;
+    font-size:22px;
+    padding:11px 12px 7px 13px;
 
-      i {
-          transform:rotateZ(0);
-          transition:.2s transform ease-out;
-      }
+    i {
+      transform:rotateZ(0);
+      transition:.2s transform ease-out;
+    }
 
-      &:hover {
-          background-color:var(--bg-intense);
-          @include shadow;
-      }
+    &:hover {
+      background-color:var(--bg-intense);
+      @include shadow;
+    }
 
   }
   &.open #speedDialTrigger i {
-      transform:rotateZ(45deg);
+    transform:rotateZ(45deg);
   }
 }
 
