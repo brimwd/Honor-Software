@@ -1,60 +1,116 @@
 <template>
-<form class="col-12 col-md-6">
-  <div class="form-group">
-    <label for="nameInput">Name</label>
-    <input
-      type="text"
-      class="form-control"
-      id="nameInput"
-      autocomplete="name"
-    >
+  <div class="col-12 col-md-6">
+    <form @submit.prevent="handleSubmit">
+      <div class="form-group">
+        <label for="nameInput">Name</label>
+        <input
+          v-model="form.name"
+          type="text"
+          class="form-control"
+          id="nameInput"
+          autocomplete="name"
+          required
+        >
+      </div>
+      <div class="form-group">
+        <label for="companyInput">Company</label>
+        <input
+          v-model="form.company"
+          type="text"
+          class="form-control"
+          id="companyInput"
+          autocomplete="company"
+        >
+      </div>
+      <div class="form-group">
+        <label for="emailInput">Email</label>
+        <input
+          v-model="form.email"
+          type="email"
+          class="form-control"
+          id="emailInput"
+          autocomplete="work email"
+          aria-describedby="emailHelp"
+          required
+        >
+        <small id="emailHelp" class="form-text">
+          We'll never share your email with anyone else.
+        </small>
+      </div>
+      <div class="form-group">
+        <label for="phoneInput">Phone</label>
+        <input
+          v-model="form.phone"
+          type="tel"
+          class="form-control"
+          id="phoneInput"
+          autocomplete="mobile tel"
+          required
+        >
+      </div>
+      <div class="form-group">
+        <label for="messageInput">Message</label>
+        <textarea
+          v-model="form.message"
+          type="tel"
+          class="form-control"
+          id="messageInput"
+          required
+        />
+      </div>
+      <button
+          class="send-btn btn btn-lg btn-outline-light mt-2"
+          type="submit"
+      >
+          Send
+          <i class="fas fa-paper-plane ml-1 d-inline-block" aria-hidden="true" />
+      </button>
+    </form>
   </div>
-  <div class="form-group">
-    <label for="companyInput">Company</label>
-    <input
-      type="text"
-      class="form-control"
-      id="companyInput"
-      autocomplete="company"
-    >
-  </div>
-  <div class="form-group">
-    <label for="emailInput">Email</label>
-    <input
-      type="email"
-      class="form-control"
-      id="emailInput"
-      autocomplete="work email"
-      aria-describedby="emailHelp"
-    >
-    <small id="emailHelp" class="form-text">
-      We'll never share your email with anyone else.
-    </small>
-  </div>
-  <div class="form-group">
-    <label for="phoneInput">Phone</label>
-    <input
-      type="tel"
-      class="form-control"
-      id="phoneInput"
-      autocomplete="mobile tel">
-  </div>
-  <button
-    class="send-btn btn btn-lg btn-outline-light mt-2"
-    type="submit"
-  >
-    Send
-    <i class="fas fa-paper-plane ml-1 d-inline-block" aria-hidden="true" />
-  </button>
-</form>
 </template>
 
 <script>
-
 export default {
   name: 'ContactForm',
-  // props: {
-  // },
+  data() {
+    return {
+      form: {
+        name: "",
+        company: "",
+        email: "",
+        phone: "",
+        message: "",
+      },
+      submitAttempts: 0,
+    };
+  },
+  computed: {
+  },
+  methods: {
+    clearForm() {
+      let formKeys = Object.keys(this.form);
+      for (let i = 0; i < formKeys.length; i++) {
+          this.form[formKeys[i]] = ""
+      }
+    },
+    handleSubmit() {
+      const clear = () => {
+        this.clearForm();
+      }
+      this.axios.post('https://cors-anywhere.herokuapp.com/https://scheduleux.herokuapp.com/api/contact/mailer', this.form, {crossdomain: true})
+      .then(function (response) {
+        console.log(response.data);
+        clear();
+        // this.showConfirmation();
+      })
+      .catch(function (error) {
+        console.error(error);
+      });
+    },
+    showConfirmation() {
+        // TODO: tell user you got their message in UI... toast?
+    }
+  },
 }
 </script>
 
@@ -62,11 +118,15 @@ export default {
 label {
   font-weight:bold;
 }
-.send-btn {font-weight:bold;}
-.send-btn i {
-  @include FA;
+.send-btn {
   font-weight:bold;
-  font-style:unset;
-  &::before {content:'\f1d8';}
+
+  i {
+    @include FA;
+    font-weight:bold;
+    font-style:unset;
+
+    &::before {content:'\f1d8';}
+  }
 }
 </style>
