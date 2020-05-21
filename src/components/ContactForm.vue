@@ -70,7 +70,6 @@
 </template>
 
 <script>
-
 export default {
   name: 'ContactForm',
   data() {
@@ -95,10 +94,13 @@ export default {
       }
     },
     handleSubmit() {
+      const clear = () => {
+        this.clearForm();
+      }
       this.axios.post('https://cors-anywhere.herokuapp.com/https://scheduleux.herokuapp.com/api/contact/mailer', this.form, {crossdomain: true})
       .then(function (response) {
         console.log(response.data);
-        this.clearForm();
+        clear();
         // this.showConfirmation();
       })
       .catch(function (error) {
