@@ -14,6 +14,8 @@
     </div>
   </div>
 
+  <Quote :content="purposeStatement"/>
+
   <div class="reasons row mb-5 pb-5">
     <div class="col">
       <h2 class="px-3">Four reasons leading enterprises work with Honor</h2>
@@ -44,42 +46,28 @@
 
 <script>
 import Partners from '@/components/Partners.vue'
-import ServiceOverview from '@/components/ServiceOverview'
+import ServiceOverview from '@/components/ServiceOverview.vue'
+import Quote from '@/components/Quote.vue'
 
 export default {
   name: "About",
   components: {
     Partners,
     ServiceOverview,
+    Quote,
   },
   data() {
     return {
-      services: [
-        {
-          imageAlt: ``,
-          imageUrl: ``,
-          title: `Mobile Applications`,
-          text: [
-            `We build top-of-the-line mobile apps`
-          ],
-        },
-        {
-          imageAlt: ``,
-          imageUrl: ``,
-          title: `Web Applications`,
-          text: [
-            `We build top-of-the-line web apps`
-          ],
-        },
-        {
-          imageAlt: ``,
-          imageUrl: ``,
-          title: `Mac Native Apps`,
-          text: [
-            `We build top-of-the-line native apps`
-          ],
-        },
-      ],
+      purposeStatement: {
+        quote: [
+          "We make great products.",
+          "We solve the right problems by asking the right questions.",
+          "We believe software should be easy.",
+          "We make systems work.",
+        ],
+        author: 'Honor.Software',
+        centered: true,
+      },
     };
   },
 }
