@@ -64,7 +64,7 @@ export default {
           personalStatement: `I believe that technology can change the world, but only well-designed technology will make it better. At Honor.Software we believe we can harness technology to solve problems and make the world better – one project at a time.`,
         },
         {
-          name: `Victoria 蔡金秋`,
+          name: `蔡金秋 "Victoria"`,
           title: `Product Manager`,
           imageAlt: `Photo of Victoria`,
           imageUrl: require(`../assets/team/victoria.jpg`),
