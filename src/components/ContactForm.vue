@@ -48,6 +48,16 @@
           required
         >
       </div>
+      <div class="form-group">
+        <label for="messageInput">Message</label>
+        <textarea
+          v-model="form.message"
+          type="tel"
+          class="form-control"
+          id="messageInput"
+          required
+        />
+      </div>
       <button
           class="send-btn btn btn-lg btn-outline-light mt-2"
           type="submit"
@@ -70,6 +80,7 @@ export default {
         company: "",
         email: "",
         phone: "",
+        message: "",
       },
       submitAttempts: 0,
     };
@@ -78,18 +89,25 @@ export default {
   },
   methods: {
     clearForm() {
-        let formKeys = Object.keys(this.form);
-        for (let i = 0; i < formKeys.length; i++) {
-            this.form[formKeys[i]] = ""
-        }
+      let formKeys = Object.keys(this.form);
+      for (let i = 0; i < formKeys.length; i++) {
+          this.form[formKeys[i]] = ""
+      }
     },
     handleSubmit() {
-      console.log("form submitted: ", this.form.name, ", ", this.form.company, ", ", this.form.email, ", ", this.form.phone);
-      // if (success) {
-      // this.clearForm();
-      // this.showConfirmation();
-      // }
+      this.axios.post('https://cors-anywhere.herokuapp.com/https://scheduleux.herokuapp.com/api/contact/mailer', this.form, {crossdomain: true})
+      .then(function (response) {
+        console.log(response.data);
+        this.clearForm();
+        // this.showConfirmation();
+      })
+      .catch(function (error) {
+        console.error(error);
+      });
     },
+    showConfirmation() {
+        // TODO: tell user you got their message in UI... toast?
+    }
   },
 }
 </script>
