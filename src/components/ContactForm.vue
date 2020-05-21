@@ -94,22 +94,21 @@ export default {
       }
     },
     handleSubmit() {
-      const clear = () => {
+      const success = () => {
         this.clearForm();
+        this.$emit('show-success-message');
+      }
+      const failure = () => {
+        this.$emit('show-error-message');
       }
       this.axios.post('https://cors-anywhere.herokuapp.com/https://scheduleux.herokuapp.com/api/contact/mailer', this.form, {crossdomain: true})
       .then(function (response) {
-        console.log(response.data);
-        clear();
-        // this.showConfirmation();
+        success(true);
       })
       .catch(function (error) {
-        console.error(error);
+        failure();
       });
     },
-    showConfirmation() {
-        // TODO: tell user you got their message in UI... toast?
-    }
   },
 }
 </script>
