@@ -9,8 +9,7 @@
       <ContactForm
         v-if="!success"
         :class="{'hide': formSubmitted && !success}"
-        @show-success-message="showSubmissionMessage(true)"
-        @show-error-message="showSubmissionMessage(false)"
+        @show-submission-message="showSubmissionMessage($event)"
       />
     </transition>
 

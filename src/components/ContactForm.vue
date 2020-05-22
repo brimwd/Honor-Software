@@ -94,10 +94,10 @@ export default {
     handleSubmit() {
       const success = () => {
         this.clearForm();
-        this.$emit('show-success-message');
+        this.$emit('show-submission-message', true);
       }
       const failure = () => {
-        this.$emit('show-error-message');
+        this.$emit('show-submission-message', false);
       }
       this.axios.post('https://cors-anywhere.herokuapp.com/https://scheduleux.herokuapp.com/api/contact/mailer', this.form, {crossdomain: true})
       .then(function (response) {
