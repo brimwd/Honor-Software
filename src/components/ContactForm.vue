@@ -1,7 +1,4 @@
 <template>
-        <small id="emailHelp" class="form-text">
-          We'll never share your email with anyone else.
-        </small>
 <form @submit.prevent="handleSubmit">
   <div class="form-group">
     <label for="nameInput">Name</label>
@@ -57,6 +54,7 @@
       required
     />
   </div>
+  <p class="no-share my-3">We'll never share your information with anyone.</p>
   <button
       class="send-btn btn btn-lg btn-outline-light"
       type="submit"
@@ -112,6 +110,9 @@ export default {
 </script>
 
 <style scoped lang="scss">
+.no-share {
+  font-size:.9em;
+}
 label {
   font-weight:bold;
 }
