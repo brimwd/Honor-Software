@@ -56,11 +56,11 @@
   </div>
   <p class="no-share my-3">We'll never share your information with anyone.</p>
   <button
-      class="send-btn btn btn-lg btn-outline-light"
-      type="submit"
+    class="send-btn btn btn-lg btn-outline-light"
+    type="submit"
   >
-      Send
-      <i class="fas fa-paper-plane ml-1 d-inline-block" aria-hidden="true" />
+    Send
+    <i class="fas fa-paper-plane ml-1 d-inline-block" aria-hidden="true" />
   </button>
 </form>
 </template>
