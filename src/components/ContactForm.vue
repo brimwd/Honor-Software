@@ -76,6 +76,7 @@ export default {
         email: "",
         phone: "",
         message: "",
+        language: "",
       },
       submitAttempts: 0,
     };
