@@ -1,70 +1,70 @@
 <template>
-    <form @submit.prevent="handleSubmit">
-      <div class="form-group">
-        <label for="nameInput">Name</label>
-        <input
-          v-model="form.name"
-          type="text"
-          class="form-control"
-          id="nameInput"
-          autocomplete="name"
-          required
-        >
-      </div>
-      <div class="form-group">
-        <label for="companyInput">Company</label>
-        <input
-          v-model="form.company"
-          type="text"
-          class="form-control"
-          id="companyInput"
-          autocomplete="company"
-        >
-      </div>
-      <div class="form-group">
-        <label for="emailInput">Email</label>
-        <input
-          v-model="form.email"
-          type="email"
-          class="form-control"
-          id="emailInput"
-          autocomplete="work email"
-          aria-describedby="emailHelp"
-          required
-        >
         <small id="emailHelp" class="form-text">
           We'll never share your email with anyone else.
         </small>
-      </div>
-      <div class="form-group">
-        <label for="phoneInput">Phone</label>
-        <input
-          v-model="form.phone"
-          type="tel"
-          class="form-control"
-          id="phoneInput"
-          autocomplete="mobile tel"
-          required
-        >
-      </div>
-      <div class="form-group">
-        <label for="messageInput">Message</label>
-        <textarea
-          v-model="form.message"
-          type="tel"
-          class="form-control"
-          id="messageInput"
-          required
-        />
-      </div>
-      <button
-          class="send-btn btn btn-lg btn-outline-light mt-2"
-          type="submit"
-      >
-          Send
-          <i class="fas fa-paper-plane ml-1 d-inline-block" aria-hidden="true" />
-      </button>
-    </form>
+<form @submit.prevent="handleSubmit">
+  <div class="form-group">
+    <label for="nameInput">Name</label>
+    <input
+      v-model="form.name"
+      type="text"
+      class="form-control"
+      id="nameInput"
+      autocomplete="name"
+      required
+    >
+  </div>
+  <div class="form-group">
+    <label for="companyInput">Company</label>
+    <input
+      v-model="form.company"
+      type="text"
+      class="form-control"
+      id="companyInput"
+      autocomplete="company"
+      required
+    >
+  </div>
+  <div class="form-group">
+    <label for="emailInput">Email</label>
+    <input
+      v-model="form.email"
+      type="email"
+      class="form-control"
+      id="emailInput"
+      autocomplete="work email"
+      required
+    >
+  </div>
+  <div class="form-group">
+    <label for="phoneInput">Phone</label>
+    <input
+      v-model="form.phone"
+      type="tel"
+      class="form-control"
+      id="phoneInput"
+      autocomplete="mobile tel"
+      required
+    >
+  </div>
+  <div class="form-group">
+    <label for="messageInput">Message</label>
+    <textarea
+      v-model="form.message"
+      type="tel"
+      class="form-control"
+      id="messageInput"
+      required
+    />
+  </div>
+  <button
+      class="send-btn btn btn-lg btn-outline-light"
+      type="submit"
+  >
+      Send
+      <i class="fas fa-paper-plane ml-1 d-inline-block" aria-hidden="true" />
+  </button>
+</form>
 </template>
 
 <script>
