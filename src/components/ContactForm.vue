@@ -1,72 +1,68 @@
 <template>
-  <div class="col-12 col-md-6">
-    <form @submit.prevent="handleSubmit">
-      <div class="form-group">
-        <label for="nameInput">Name</label>
-        <input
-          v-model="form.name"
-          type="text"
-          class="form-control"
-          id="nameInput"
-          autocomplete="name"
-          required
-        >
-      </div>
-      <div class="form-group">
-        <label for="companyInput">Company</label>
-        <input
-          v-model="form.company"
-          type="text"
-          class="form-control"
-          id="companyInput"
-          autocomplete="company"
-        >
-      </div>
-      <div class="form-group">
-        <label for="emailInput">Email</label>
-        <input
-          v-model="form.email"
-          type="email"
-          class="form-control"
-          id="emailInput"
-          autocomplete="work email"
-          aria-describedby="emailHelp"
-          required
-        >
-        <small id="emailHelp" class="form-text">
-          We'll never share your email with anyone else.
-        </small>
-      </div>
-      <div class="form-group">
-        <label for="phoneInput">Phone</label>
-        <input
-          v-model="form.phone"
-          type="tel"
-          class="form-control"
-          id="phoneInput"
-          autocomplete="mobile tel"
-          required
-        >
-      </div>
-      <div class="form-group">
-        <label for="messageInput">Message</label>
-        <textarea
-          v-model="form.message"
-          type="tel"
-          class="form-control"
-          id="messageInput"
-          required
-        />
-      </div>
-      <button
-          class="send-btn btn btn-lg btn-outline-light mt-2"
-          type="submit"
-      >
-          Send
-          <i class="fas fa-paper-plane ml-1 d-inline-block" aria-hidden="true" />
-      </button>
-    </form>
+<form @submit.prevent="handleSubmit">
+  <div class="form-group">
+    <label for="nameInput">Name</label>
+    <input
+      v-model="form.name"
+      type="text"
+      class="form-control"
+      id="nameInput"
+      autocomplete="name"
+      required
+    >
   </div>
+  <div class="form-group">
+    <label for="companyInput">Company</label>
+    <input
+      v-model="form.company"
+      type="text"
+      class="form-control"
+      id="companyInput"
+      autocomplete="company"
+      required
+    >
+  </div>
+  <div class="form-group">
+    <label for="emailInput">Email</label>
+    <input
+      v-model="form.email"
+      type="email"
+      class="form-control"
+      id="emailInput"
+      autocomplete="work email"
+      required
+    >
+  </div>
+  <div class="form-group">
+    <label for="phoneInput">Phone</label>
+    <input
+      v-model="form.phone"
+      type="tel"
+      class="form-control"
+      id="phoneInput"
+      autocomplete="mobile tel"
+      required
+    >
+  </div>
+  <div class="form-group">
+    <label for="messageInput">Message</label>
+    <textarea
+      v-model="form.message"
+      type="tel"
+      class="form-control"
+      id="messageInput"
+      required
+    />
+  </div>
+  <p class="no-share my-3">We'll never share your information with anyone.</p>
+  <button
+      class="send-btn btn btn-lg btn-outline-light"
+      type="submit"
+  >
+      Send
+      <i class="fas fa-paper-plane ml-1 d-inline-block" aria-hidden="true" />
+  </button>
+</form>
 </template>
 
 <script>
@@ -80,6 +76,7 @@ export default {
         email: "",
         phone: "",
         message: "",
+        language: "",
       },
       submitAttempts: 0,
     };
@@ -94,27 +91,29 @@ export default {
       }
     },
     handleSubmit() {
-      const clear = () => {
+      const success = () => {
         this.clearForm();
+        this.$emit('show-submission-message', true);
+      }
+      const failure = () => {
+        this.$emit('show-submission-message', false);
       }
       this.axios.post('https://cors-anywhere.herokuapp.com/https://scheduleux.herokuapp.com/api/contact/mailer', this.form, {crossdomain: true})
       .then(function (response) {
-        console.log(response.data);
-        clear();
-        // this.showConfirmation();
+        success();
       })
       .catch(function (error) {
-        console.error(error);
+        failure();
       });
     },
-    showConfirmation() {
-        // TODO: tell user you got their message in UI... toast?
-    }
   },
 }
 </script>
 
 <style scoped lang="scss">
+.no-share {
+  font-size:.9em;
+}
 label {
   font-weight:bold;
 }
