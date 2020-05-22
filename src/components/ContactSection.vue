@@ -9,8 +9,8 @@
       <ContactForm
         v-if="!success"
         :class="{'hide': formSubmitted && !success}"
-        @show-success-message="showSuccessMessage()"
-        @show-error-message="showErrorMessage($event)"
+        @show-success-message="showSubmissionMessage(true)"
+        @show-error-message="showSubmissionMessage(false)"
       />
     </transition>
 
@@ -18,7 +18,7 @@
       <FormSubmissionMessage
         v-if="formSubmitted"
         :success="success"
-        @show-form="showForm()"
+        @show-form="bringBackForm()"
       />
     </transition>
   </div>
@@ -45,16 +45,12 @@ export default {
   computed: {
   },
   methods: {
-    showForm() {
+    bringBackForm() {
       this.formSubmitted = false;
       this.success = false;
     },
-    showErrorMessage() {
-      this.success = false;
-      this.formSubmitted = true;
-    },
-    showSuccessMessage() {
-      this.success = true;
+    showSubmissionMessage(bool) {
+      this.success = bool;
       this.formSubmitted = true;
     },
   },
