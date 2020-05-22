@@ -1,5 +1,4 @@
 <template>
-  <div class="col-12 col-md-6">
     <form @submit.prevent="handleSubmit">
       <div class="form-group">
         <label for="nameInput">Name</label>
@@ -66,7 +65,6 @@
           <i class="fas fa-paper-plane ml-1 d-inline-block" aria-hidden="true" />
       </button>
     </form>
-  </div>
 </template>
 
 <script>
@@ -103,7 +101,7 @@ export default {
       }
       this.axios.post('https://cors-anywhere.herokuapp.com/https://scheduleux.herokuapp.com/api/contact/mailer', this.form, {crossdomain: true})
       .then(function (response) {
-        success(true);
+        success();
       })
       .catch(function (error) {
         failure();

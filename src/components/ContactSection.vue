@@ -4,23 +4,24 @@
     <h2>From conversation to collaboration</h2>
     <h4>Our first project starts here</h4>
   </div>
-
-  <transition name="fadeInOut">
+  <div class="col-12 col-md-6">
+    <transition name="fadeInOut">
       <ContactForm
         v-if="!success"
         :class="{'hide': formSubmitted && !success}"
-        @show-success-message="showSubmissionMessage()"
-        @show-error-message="showSubmissionMessage($event)"
+        @show-success-message="showSuccessMessage()"
+        @show-error-message="showErrorMessage($event)"
       />
-  </transition>
+    </transition>
 
-  <transition name="fadeInOut">
+    <transition name="fadeUp">
       <FormSubmissionMessage
         v-if="formSubmitted"
         :success="success"
-        @clear-message="clearMessage()"
+        @show-form="showForm()"
       />
-  </transition>
+    </transition>
+  </div>
 
 </div></section>
 </template>
@@ -44,14 +45,17 @@ export default {
   computed: {
   },
   methods: {
-    clearMessage() {
-        this.formSubmitted = false;
-        this.success = false;
+    showForm() {
+      this.formSubmitted = false;
+      this.success = false;
     },
-    showSubmissionMessage(successBool) {
-      this.success = successBool;
+    showErrorMessage() {
+      this.success = false;
       this.formSubmitted = true;
-
+    },
+    showSuccessMessage() {
+      this.success = true;
+      this.formSubmitted = true;
     },
   },
 }
@@ -63,6 +67,7 @@ section {
   color: var(--bg);
   margin: 0 -15px;
   padding: 0 15px;
+  min-height: 400px;
 
   @media($dark){
       background-color: var(--bg-soft);
@@ -76,5 +81,26 @@ section {
 h3 {
     margin: 1em 0 2em;
     font-weight: normal;
+}
+
+.hide {
+  display: none;
+}
+
+.fadeUp-enter,
+.fadeUp-leave-to {
+    transform: translateY(160px);
+    opacity: 0;
+}
+.fadeUp-enter-to,
+.fadeUp-leave {
+    transform: translateY(0);
+    opacity: 1;
+}
+
+.fadeUp-enter-active,
+.fadeUp-leave-active {
+    position: absolute;
+    transition: all 0.3s ease-out;
 }
 </style>

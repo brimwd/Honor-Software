@@ -1,35 +1,43 @@
 <template>
-  <div class="col-12 col-md-6">
-    <h3>{{ message.heading }}</h3>
+  <div>
+    <h2>{{ message.heading }}</h2>
     <p
       v-for="paragraph in messageBody"
+      v-html="paragraph"
     />
+    <button
+        v-if="!success"
+        class="send-btn btn btn-lg btn-outline-light mt-2"
+        @click="$emit('show-form')"
+    >
+        Try Again
+    </button>
   </div>
 </template>
 
 <script>
 export default {
-  name: 'ContactForm',
+  name: 'FormSubmissionMessage',
   props: {
     success: {
-      required: true,
+      default: true,
       type: Boolean,
     },
   },
   data() {
       return {
-          errorMessage = {
-              heading: "Something's wrong on our end",
+          errorMessage: {
+              heading: "We're so sorry!",
               body: [
                   "There was an error submitting your message.",
-                  "Please feel free to try sending your message again or email us directly mailto:team@honor.software",
+                  "Please feel free to try sending your message again or email us directly at <a href='mailto:team@honor.software'>team@honor.software</a>",
               ],
           },
-          successMessage = {
+          successMessage: {
               heading: "Message received",
               body: [
                   "We’ll be in touch soon. You should receive a confirmation shortly.",
-                  "If you need to provide additional information, you can reply to the confirmation email",
+                  "If you need to provide additional information, you can reply to the confirmation email.",
               ],
           },
       };
@@ -46,5 +54,7 @@ export default {
 </script>
 
 <style scoped lang="scss">
-
+h2 {
+  margin-bottom: 1.25rem;
+}
 </style>
