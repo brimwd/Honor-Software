@@ -204,7 +204,7 @@ function sendMessage() {
     message: $('#messageInput').val().trim()
   };
 
-  if ($('#language .language').text === '中文') { inquiry.language = 'chinese'; }
+  if ($('#language .language').text() === '中文') { inquiry.language = 'chinese'; }
 
   var alert = $($('<div class="status" />')).appendTo($('#contact'));
   alert.append($('<a class="dismiss btn btn-dark mt-3">Dismiss</a>'));
