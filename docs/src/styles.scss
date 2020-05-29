@@ -780,10 +780,16 @@ nav#language {
       .language {display:none;}
       .expand-string {display:inline;}
     }
+    @media($md) {
+      border-color:transparent;
+      min-width:unset;
+      &:hover {border-color:var(--mid-gray)}
+    }
     @at-root {
       #language.open a {
         background-color:var(--bg);
         border-radius:0 0 4px 4px;
+        border-color:var(--mid-gray);
         .language {display:none;}
         .expand-string {display:inline;visibility:hidden;}
         .collapse-string {
@@ -793,12 +799,6 @@ nav#language {
           left:.75em;
         }
       }
-    }
-
-    @media($md) {
-      border-color:transparent;
-      min-width:unset;
-      &:hover, .open & {border-color:var(--mid-gray)}
     }
 
     i {
