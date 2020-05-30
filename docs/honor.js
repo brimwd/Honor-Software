@@ -207,10 +207,17 @@ function sendMessage() {
     message: $('#messageInput').val().trim()
   };
 
-  if ($('#language .language').text() === '中文') { inquiry.language = 'chinese'; }
+  var dismissText;
+
+  if ($('#language .language').text() === '中文') {
+    inquiry.language = 'chinese';
+    dismissText = `<i class="fas fa-times-square mr-2"></i>关闭`;
+  } else {
+    dismissText = `Dismiss`;
+  }
 
   var alert = $($('<div class="status" />')).appendTo($('#contact'));
-  alert.append($('<a class="dismiss btn btn-dark mt-3">Dismiss</a>'));
+  alert.append($('<a class="dismiss btn btn-dark mt-3" />').html(dismissText));
 
   $.ajax({
     url: 'https://cors-anywhere.herokuapp.com/https://scheduleux.herokuapp.com/api/contact/mailer',
@@ -222,10 +229,21 @@ function sendMessage() {
       window.response = response;
 
       var message = $('<div/>');
+      switch (inquiry.language) {
+        case 'chinese':
+          message.append($('<h3 class="mb-4" />').text(`您的消息已发送。`))
+            .append($('<p/>').text(`感谢您的来信！我们会尽快与您联系。 方便您的备份和查询，您会收到一封记录您留言内容的电子邮件。`))
+            .append($('<p/>').text(`您可以通过直接回复此邮件，来跟进或提供其他信息。`));
+          message.prependTo(alert);
+          break;
+
+        default: // english
           message.append($('<h3 class="mb-4" />').text(`Message received`))
             .append($('<p/>').text(`We'll be in touch soon. You should receive a confirmation shortly.`))
             .append($('<p/>').text(`If you need to provide additional information, you can reply to the confirmation email.`));
           message.prependTo(alert);
+          break;
+      }
 
       window.submitting = false;
       alert.slideDown();
@@ -234,10 +252,21 @@ function sendMessage() {
       console.log(xhr, status, error);
 
       var message = $('<div/>');
+      switch (inquiry.language) {
+        case 'chinese':
+          message.append($('<h3 class="mb-4" />').text(`出问题了，向您致歉`))
+            .append($('<p/>').text(`提交您的消息时出错。`))
+            .append($('<p/>').html(`您可以尝试再次提交消息，或直接发送电子邮件至<a href="mailto:team@honor.software" target="_blank">team@honor.software</a>.`));
+          message.prependTo(alert);
+          break;
+
+        default: // english
           message.append($('<h3 class="mb-4" />').text(`Something went wrong`))
             .append($('<p/>').text(`There was an error submitting your message.`))
             .append($('<p/>').html(`You can try submitting the message again or email us directly at <a href="mailto:team@honor.software" target="_blank">team@honor.software</a>.`));
           message.prependTo(alert);
+          break;
+      }
 
       window.submitting = false;
       alert.slideDown();
