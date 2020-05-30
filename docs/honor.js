@@ -211,7 +211,7 @@ function sendMessage() {
 
   if ($(`#language .language`).text() === `中文`) {
     inquiry.language = `chinese`;
-    dismissText = `<i class="fas fa-times-square mr-2"></i>关闭`;
+    dismissText = `<i class="fas fa-times-square mr-2" aria-hidden="true"></i>关闭`;
   } else {
     dismissText = `Dismiss`;
   }
