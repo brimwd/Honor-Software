@@ -319,6 +319,10 @@ nav.global-nav {
     margin:-12px -20px; // margin-top overridden by bootstrap class
     text-align:center;
     &:hover {background-color:var(--bg-intense);}
+    i {
+      background-color:var(--bg-soft);
+      color:var(--bg-intense);
+    }
   }
 }
 
