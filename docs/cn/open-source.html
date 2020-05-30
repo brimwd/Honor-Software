@@ -1,0 +1,145 @@
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+
+  <title>荣耀软件</title>
+  <link rel="icon" href="../favicon.ico">
+
+  <link href="https://fonts.googleapis.com/css2?family=Marcellus&amp;display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://pro.fontawesome.com/releases/v5.13.0/css/all.css" integrity="sha384-IIED/eyOkM6ihtOiQsX2zizxFBphgnv1zbe1bKA+njdFzkr6cDNy16jfIKWu4FNH" crossorigin="anonymous">
+  <link rel="stylesheet" href="../src/bootstrap-4.5.0-dist/css/bootstrap.min.css">
+  <link rel="stylesheet" href="../styles.css">
+
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+  <script src="../honor.js"></script>
+</head>
+
+<body>
+  <article class="container-fluid">
+    <aside class="alert">
+      <p class="dismiss">我们对新冠病毒肺炎 (COVID-19)的回应</p>
+      <div class="message text-left row">
+        <div class="col-12">
+          <p class="mt-3">COVID-19公告</p>
+          <p class="mt-3">荣耀软件致力于投资于继续教育并回馈社区。</p>
+          <p class="mt-3">通过雇用我们通常在内部处理的任务，Honor为因COVID-19而失去收入的个人创造了临时工作和机会来代替收入。</p>
+          <p class="mt-3">此外，Honor感到自豪的是在此困难时期继续支持我们的社区教育合作伙伴。</p>
+          <p class="mt-3">如果您有我们可以分享的工作机会，或者您想咨询合作伙伴关系，可以通过<a href="mailto:team@honor.software">Team@Honor.Software</a>的电子邮件与我们联系。</p>
+          <a class="dismiss py-3 mt-4">关闭</a>
+        </div>
+      </div>
+    </aside>
+    <nav class="global-nav row">
+      <header class="col-12 d-none d-sm-block d-md-flex justify-content-between">
+        <a href="index.html" type="logo">
+          <picture>
+            <source media="(min-width:768px)" srcset="../images/logo/honor-logo.png" alt="荣耀软件">
+            <img src="../images/logo/honor-logo-long.png" alt="荣耀软件" />
+          </picture>
+        </a>
+        <div class="d-sm-flex justify-content-center align-items-center">
+          <a href="news.html">新闻发布</a>
+          <a href="customers.html">客户反馈</a>
+          <a href="contact.html">联系方式</a>
+          <a href="about.html">关于我们</a>
+          <a href="team.html">团队展示</a>
+        </div>
+      </header>
+      <speeddial class="d-block d-sm-none" id="speedDial">
+        <ul>
+          <li><a href="index.html">主页</a></li>
+          <li><a href="news.html">新闻发布</a></li>
+          <li><a href="customers.html">客户反馈</a></li>
+          <li><a href="contact.html">联系方式</a></li>
+          <li><a href="about.html">关于我们</a></li>
+          <li><a href="team.html">团队展示</a></li>
+        </ul>
+        <div id="speedDialTrigger"><i aria-label="toggle navigation" class="fas fa-fw fa-bars"></i></div>
+        <div id="overlay"></div>
+      </speeddial>
+    </nav>
+    <div class="page-content mt-5">
+      <h1 clas="mb-5 text-center">开源专业知识</h1>
+      <div class="row">
+        <div class="col mb-5 pb-5">
+          <p class="px-md-3">我们采用成熟的开源软件（OSS），并将其嵌入您可以信任的商业产品中。 我们利用许多最受信任的库，包括：Node，Underscore，MongoDB，jQuery，Vue和Express。</p>
+          <p class="px-md-3">从开发人员的笔记本电脑到数据中心，开源是我们软件战略的重要组成部分。 在荣耀软件，我们致力于开放源代码及其社区，以便我们所有人都能提供更好的解决方案：更安全、可扩展、引领创新的软件。</p>
+          <p class="px-md-3">我们的荣耀软件产品团队以正确的方式解决了正确的问题。 从选择我们要利用的组件到评估我们如何管理数据，我们都以深思熟虑的方式构建软件。 我们的优势在于构建独立的Web应用程序，减少对操作系统和平台的依赖。</p>
+        </div>
+      </div>
+      <contact>
+       <div class="row justify-content-around">
+        <div class="col-12 col-md-5 text-md-right">
+          <h2>联系我们</h2>
+          <h4 class="mb-2 py-1">业务合作、产品咨询</h4>
+          <h4 class="mb-5 mb-md-0">技术支持、建议反馈</h4>
+        </div>
+        <form class="col-12 col-md-7" id="contact">
+          <aside>
+            <div class="form-group">
+              <label for="nameInput">姓名</label>
+              <input type="text" id="nameInput" autocomplete="name" required="required" class="form-control">
+            </div>
+            <div class="form-group">
+              <label for="companyInput">公司</label>
+              <input type="text" id="companyInput" autocomplete="company" required="required" class="form-control">
+            </div>
+            <div class="form-group">
+              <label for="emailInput">电子邮箱</label>
+              <input type="email" id="emailInput" autocomplete="work email" required="required" class="form-control">
+            </div>
+            <div class="form-group">
+              <label for="phoneInput">电话</label>
+              <input type="tel" id="phoneInput" autocomplete="mobile tel" required="required" class="form-control">
+            </div>
+            <div class="form-group">
+              <label for="messageInput">留言</label>
+              <textarea type="tel" id="messageInput" required="required" class="form-control"></textarea>
+            </div>
+            <p class="my-3">您的信息绝对安全，我们尊重并全力保护您的个人隐私。</p>
+            <button type="submit" class="send-btn btn btn-lg btn-dark">发送 <i aria-hidden="true" class="fas fa-paper-plane ml-2 d-inline-block"></i>
+            </button>
+          </aside>
+        </form>
+       </div>
+      </contact>
+    </div>
+    <footer id="global-footer" class="footer">
+      <div class="row">
+        <div class="col-12">
+          <h4><a href="index.html">荣耀软件</a></h4>
+        </div>
+        <div class="col-6 col-md-4 col-lg-3">
+          <p><a href="contact.html">联系方式</a></p>
+          <p><a href="privacy.html">隐私政策</a></p>
+          <p><a href="tos.html">使用条款</a></p>
+        </div>
+        <div class="col-6 col-md-4 col-lg-3">
+          <p><a href="news.html">新闻发布</a></p>
+          <p><a href="customers.html">客户反馈</a></p>
+          <p><a href="about.html">团队展示</a></p>
+        </div>
+      </div>
+      <div class="row justify-content-between align-content-center mt-4 mt-sm-5">
+        <div class="col-12 col-sm-auto">
+          <nav id="language" class="dropdown">
+            <ul>
+              <li data-language="en">English</li>
+              <li data-language="cn">中文</li>
+            </ul>
+            <a class="d-flex justify-content-between align-content-center">
+              <span class="language">中文</span>
+              <span class="expand-string">选择语言</span>
+              <span class="collapse-string">关闭</span>
+              <i aria-label="language selector" class="far fa-fw fa-angle-down"></i>
+            </a>
+          </nav>
+        </div>
+        <p class="col-12 col-sm-auto mt-3 mt-sm-0 copyright order-sm-first">&copy;2020 &mdash; 版权所有</p>
+      </div>
+    </footer>
+  </article>
+</body>
+</html>
