@@ -689,10 +689,19 @@ blockquote.quote {
   overflow:hidden;
 
   max-width:85vw;
-  margin:2em auto;
-  padding:6vw 8vw;
+  margin:2em -20px;
+  padding:20px;
 
   &.missionStatement {max-width:700px;}
+
+  @media($sm) {
+    margin:2em -10px;
+    padding:6vw;
+  }
+  @media($md) {
+    margin:2em auto;
+    padding:6vw 8vw;
+  }
   @media($lg) {
     padding:50px 80px;
     max-width:70vw;
