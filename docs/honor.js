@@ -236,7 +236,7 @@ function sendMessage() {
       var message = $('<div/>');
           message.append($('<h3 class="mb-4" />').text(`Something went wrong`))
             .append($('<p/>').text(`There was an error submitting your message.`))
-            .append($('<p/>').html(`You can try submitting the message again or email us directly at <a href="mailto:team@scheduleux.com" target="_blank">team@scheduleux.com</a>.`))
+            .append($('<p/>').html(`You can try submitting the message again or email us directly at <a href="mailto:team@honor.software" target="_blank">team@honor.software</a>.`))
             .append($('<p/>').text(`error message: `+ xhr.responseJSON.message));
           message.prependTo(alert);
 
