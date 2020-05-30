@@ -698,7 +698,14 @@ blockquote.quote {
     max-width:70vw;
   }
 
-  h5 {margin:2em 0 0;}
+  h5 {
+    margin:2em 0 0;
+    i.translated {
+      font-size:initial;
+      font-weight:initial;
+      color:var(--mid-gray);
+    }
+  }
 }
 
 
