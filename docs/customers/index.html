@@ -9,20 +9,18 @@
 var path = window.location.pathname.split('/');
 path = '../'+path[path.length-2]+'.html';
 window.location.replace = path;
+window.location = path;
+
+// fallback
+document.getElementById('redirect').href = path;
 </script>
-<!-- FALLBACK -->
-<!-- <meta http-equiv="refresh" content="0;url=http://honor.software/customers.html" /> -->
 </head>
 <body>
+  <noscript>
+    <meta http-equiv="refresh" content="0;url=http://honor.software/customers.html" />
+  </noscript>
+
   <h1>This is a redirect page.</h1>
   <p>If you are not redirected automatically, please <a id="redirect" href="">click here</a> to go where we think you were heading or <a href="https://honor.software">go to the home page</a>.</p>
-<script type="text/javascript">
-window.onload = function() {
-  var path = window.location.pathname.split('/');
-  path = '../'+path[path.length-2]+'.html';
-  document.getElementById('redirect').href = path;
-  window.location.replace = path;
-}
-</script>
 </body>
 </html>
