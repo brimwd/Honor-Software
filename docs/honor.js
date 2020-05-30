@@ -1,6 +1,9 @@
 $(document).ready(function() {
   /* SPEED DIAL */
   $('#speedDialTrigger').on('click', function(){
+    // prevent conflict with both open
+    $('#language').removeClass('open');
+
     if ($(this).parent().hasClass('open')) {
       // close speed dial
       $('#speedDial').removeClass('open');

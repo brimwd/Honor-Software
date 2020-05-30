@@ -758,7 +758,7 @@ nav#language {
     right:0;
     bottom:calc(3em + 2px);
     left:0;
-    z-index:10;
+    z-index:4;
 
     @at-root {
       #language.open ul {display:block;}
