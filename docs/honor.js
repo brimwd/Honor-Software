@@ -256,14 +256,14 @@ function sendMessage() {
         case `chinese`:
           message.append($(`<h3 class="mb-4" />`).text(`出问题了，向您致歉`))
             .append($(`<p/>`).text(`提交您的消息时出错。`))
-            .append($(`<p/>`).html(`您可以尝试再次提交消息，或直接发送电子邮件至<a href="mailto:team@honor.software" target="_blank">team@honor.software</a>.`));
+            .append($(`<p/>`).html(`您可以尝试再次提交消息，或直接发送电子邮件至<a href="mailto:team@honor.software" target="_blank">team@honor.software</a>`));
           message.prependTo(alert);
           break;
 
         default: // english
           message.append($(`<h3 class="mb-4" />`).text(`Something went wrong`))
             .append($(`<p/>`).text(`There was an error submitting your message.`))
-            .append($(`<p/>`).html(`You can try submitting the message again or email us directly at <a href="mailto:team@honor.software" target="_blank">team@honor.software</a>.`));
+            .append($(`<p/>`).html(`You can try submitting the message again or email us directly at <a href="mailto:team@honor.software" target="_blank">team@honor.software</a>`));
           message.prependTo(alert);
           break;
       }
