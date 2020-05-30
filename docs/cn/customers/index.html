@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>荣耀软件 : Redirect</title>
+<link rel="canonical" href="http://honor.software/cn/customers.html" />
+<meta http-equiv="CACHE-CONTROL" content="NO-CACHE">
+<meta name="ROBOTS" content="NONE">
+<script type="text/javascript">
+var path = window.location.pathname.split('/');
+path = '../'+path[path.length-2]+'.html';
+window.location.replace = path;
+window.location = path;
+
+// fallback
+document.getElementById('redirect').href = path;
+</script>
+</head>
+<body>
+  <noscript>
+    <meta http-equiv="refresh" content="0;url=http://honor.software/cn/customers.html" />
+  </noscript>
+
+  <h1>This is a redirect page.</h1>
+  <p>If you are not redirected automatically, please <a id="redirect" href="">click here</a> to go where we think you were heading or <a href="https://honor.software">go to the home page</a>.</p>
+</body>
+</html>
