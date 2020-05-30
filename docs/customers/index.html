@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Honor.Software : Redirect</title>
+<meta http-equiv="CACHE-CONTROL" content="NO-CACHE">
+<meta name="ROBOTS" content="NONE">
+<script type="text/javascript">
+window.onload = function() {
+  var path = window.location.pathname.split('/');
+  path = '../'+path[path.length-1]+'.html';
+  document.getElementById('redirect').href = path;
+  window.location.replace = path;
+}
+</script>
+</head>
+<body>
+  <h1>This is a redirect page.</h1>
+  <p>If you are not redirected automatically, please <a id="redirect" href="">click here</a> to go where we think you were heading or <a href="https://honor.software">go to the home page</a>.</p>
+</body>
+</html>
