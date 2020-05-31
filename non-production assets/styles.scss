@@ -9,10 +9,6 @@ $xl: 'min-width:1200px';
 $bg-l-2: url('images/bg/so-white.png');
 $bg-d-2: url('images/bg/ep_naturalblack.png');
 
-/* TYPOGRAPHY */
-$f7: "'Marcellus', serif";
-
-
 $shadow-gold:0 12px 36px -6px var(--gold);
 $shadow-text:0 0 20px var(--gold);
 
@@ -34,6 +30,8 @@ $shadow-text:0 0 20px var(--gold);
   border-style:solid;
   border-width:$width;
 }
+
+
 
 /* CSS VARIABLES */
 :root {
@@ -62,6 +60,18 @@ $shadow-text:0 0 20px var(--gold);
   --bg-soft:#333;
   --bg-text:#eee;
 }}
+/* TYPOGRAPHY */
+@import url('https://fonts.googleapis.com/css2?family=Marcellus&display=swap');
+
+$headings:Marcellus,serif;
+$bodytext:Avenir,Helvetica,Arial,sans-serif;
+h1, h2, h3, h4, h5, h6 {font-family:$bodytext;font-weight:500;}
+h1 {font-size:3rem;}
+h2 {font-size:2.5rem;}
+h3 {font-size:2.25rem;}
+h4 {font-size:2rem;}
+h5 {font-size:1.75rem;}
+h6 {font-size:1.5rem;}
 
 #error-page {
   align-content:center;
@@ -87,7 +97,7 @@ html {
 body {
   background-color:var(--bg);
   color:var(--text);
-  font-family:Avenir,Helvetica,Arial,sans-serif;
+  font-family:$bodytext;
   font-weight:400;
   line-height:1.5;
   margin:0;
@@ -105,7 +115,7 @@ body {
     border-right:13px solid var(--gold-dark);
     border-bottom:4px solid #bb9b61;
     @media($dark){
-      background-image:linear-gradient(110deg, #f5e9d300, #d4be96), $bg-d-2;
+      background-image:linear-gradient(110deg, #f5e9d300, #d4be96aa), $bg-d-2;
       background-blend-mode:hard-light;
     }
 
@@ -345,7 +355,7 @@ nav.global-nav {
 
 #honor {
   text-transform:uppercase;
-  font-family:'Marcellus', serif;
+  font-family:$headings;
 }
 .jumbotron {
   position:relative;
@@ -428,6 +438,7 @@ ol.news {
 }
 
 promos {
+  font-family:$headings;
   * {
     display:block;
     font-size:26px;
