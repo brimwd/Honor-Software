@@ -204,7 +204,8 @@ function sendMessage() {
     company: $(`#companyInput`).val().trim(),
     phone: $(`#phoneInput`).val().trim().replace(/\D/g,``),
     email: $(`#emailInput`).val().trim(),
-    message: $(`#messageInput`).val().trim()
+    message: $(`#messageInput`).val().trim(),
+    source: 'Honor'
   };
 
   var dismissText;
