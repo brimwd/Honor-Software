@@ -56,7 +56,7 @@
           <a href="team.html" class="active">团队展示</a>
         </div>
       </header>
-      <speeddial class="d-block d-sm-none" id="speedDial">
+      <speed-dial class="d-block d-sm-none" id="speedDial">
         <ul>
           <li><a href="index.html">主页</a></li>
           <li><a href="news.html">新闻发布</a></li>
@@ -67,12 +67,12 @@
         </ul>
         <div id="speedDialTrigger"><i aria-label="toggle navigation" class="fas fa-fw fa-bars"></i></div>
         <div id="overlay"></div>
-      </speeddial>
+      </speed-dial>
     </nav>
     <div class="page-content mt-5">
       <h1 class="mb-3 text-center">我们的团队</h1>
       <h2 class="mb-5 text-center">核心部门</h2>
-      <team class="row mb-3">
+      <team-group class="row mb-3">
         <div class="image-box col-12 col-md-4 text-center">
           <i aria-hidden="true" class="mb-4 fad fa-drafting-compass"></i>
         </div>
@@ -82,8 +82,8 @@
           <p class="px-md-2">通过与我们的研究和工程团队紧密合作，我们的设计师可以确保我们以可持续的方式解决正确的问题，为制作优等产品注入积极的影响力。</p>
           <p class="px-md-2">为了支持我们工作的长久性和实用性，我们的设计师将使用移动优先的响应式设计，来构建或扩展您的品牌系统。 我们使用行业标准的设计工具，包括Sketch，Photoshop，Illustrator和Balsamiq。</p>
         </div>
-      </team>
-      <team class="row mb-3">
+      </team-group>
+      <team-group class="row mb-3">
         <div class="image-box col-12 col-md-4 text-center">
           <i aria-hidden="true" class="mb-4 fad fa-chart-network"></i>
         </div>
@@ -92,8 +92,8 @@
           <p class="px-md-2">我们的全栈工程师精心计划项目，以最大程度地发挥其效用，同时保持每个代码库的轻巧和灵活。 我们专注于使用标准JavaScript库构建通用且易于维护的“软件即服务”应用程序。 我们的代码通过代码注释、和勤勉精准的代码提交(git-commit)实践得到了充分的文档记录。 使用GitHub，我们可以利用Microsoft行业领先的安全性和企业级访问控制来授予权限，控件共享，和转让所有权。</p>
           <p class="px-md-2">我们的核心平台在Mongo-Express-Node堆栈上使用现代标准构建，并且适当地利用了AJAX，JSON和Vue或jQuery。</p>
         </div>
-      </team>
-      <team class="row mb-3">
+      </team-group>
+      <team-group class="row mb-3">
         <div class="image-box col-12 col-md-4 text-center">
           <i aria-hidden="true" class="mb-4 fad fa-analytics"></i>
         </div>
@@ -101,10 +101,10 @@
           <h3 class="px-md-2">研究团队</h3>
           <p class="px-md-2">调究是我们荣耀软件使命的核心。 我们提出开放性问题，并谦虚地进行分析，以便忠于目标。 我们的专家团队依靠许多行业标准的方法来进行全面的分析，同时考虑到定量和定性因素。 我们的研究人员经常与设计合作，进行A /B测试，以便得出精准、量化、明确的结论。</p>
         </div>
-      </team>
+      </team-group>
 
       <h2 class="mb-5 text-center">员工风采展示</h2>
-      <bio class="row feature py-3 mb-3 justify-content-center">
+      <employee-bio class="row feature py-3 mb-3 justify-content-center">
         <div class="col-12 col-md-4 d-flex align-items-end">
           <img src="../images/team/brian.jpg" alt="Photo of Brian">
         </div>
@@ -116,8 +116,8 @@
             <p class="mb-0">我相信技术可以改变世界，但是只有精心设计的技术才能使世界变得更好。 在荣耀软件，我们相信我们可以利用技术来解决问题，并使世界变得更美好 ---- 一步一个脚印，步步通向未来。</p>
           </blockquote>
         </div>
-      </bio>
-      <bio class="row feature py-3 mb-3 justify-content-center">
+      </employee-bio>
+      <employee-bio class="row feature py-3 mb-3 justify-content-center">
         <div class="col-12 col-md-4 d-flex align-items-end">
           <img src="../images/team/victoria.jpg" alt="Photo of Victoria">
         </div>
@@ -129,8 +129,8 @@
             <p class="mb-0">荣耀软件不仅仅是软件产品或排程工具； 这家公司提供了让企业全球范围内通过软件优化产生影响的机会，还代表了让产品接触用户和开拓市场的可能性---- 荣耀软件，以真实和有形的方式，使生活更加轻松。</p>
           </blockquote>
         </div>
-      </bio>
-      <bio class="row feature py-3 mb-3 justify-content-center">
+      </employee-bio>
+      <employee-bio class="row feature py-3 mb-3 justify-content-center">
         <div class="col-12 col-md-4 d-flex align-items-end">
           <img src="../images/team/cameron.jpg" alt="Photo of Cameron">
         </div>
@@ -142,7 +142,7 @@
             <p class="mb-0">在确保跨平台性能和可靠性的同时，将引人入胜的新鲜因素带入新体验，是一项不懈的挑战。 在荣耀软件，我们用时间和行动证明，技术团队“毫不妥协的工程研发”水平。</p>
           </blockquote>
         </div>
-      </bio>
+      </employee-bio>
 
       <h2 class="my-5 text-center">顾问团队</h2>
       <div class="row">
@@ -156,7 +156,7 @@
         </div>
       </div>
 
-      <partners class="row partners-box">
+      <partner-group class="row partners-box">
         <div class="col-12">
           <h4 class="px-md-3">荣耀软件的项目合作单位：</h4>
           <div class="row row-cols-1 row-cols-md-3">
@@ -174,7 +174,7 @@
             <div class="col-12, col-sm-6, col-md-3"><a href="contact.html" class="btn btn-gold">与我们合作</a></div>
           </div>
         </div>
-      </partners>
+      </partner-group>
     </div>
     <footer id="global-footer" class="footer">
       <div class="row">

@@ -60,11 +60,11 @@ $(document).ready(function() {
   /* END LANGUAGE SELECTOR */
 
   /* CAROUSEL */
-  $(`carousel`).on(`click`, `.control`, function(e){
+  $(`carousel-group`).on(`click`, `.control`, function(e){
     var el = e.target;
     var str = Array.from(e.target.classList);
     var dots = $(`.indicator i`).toArray();
-    var quotes = $(el).parents(`carousel`).find(`blockquote`).toArray();
+    var quotes = $(el).parents(`carousel-group`).find(`blockquote`).toArray();
     var clickedIndex = Array.prototype.slice.call(el.parentElement.children).indexOf(el);
     var activeIndex;
 
@@ -277,9 +277,51 @@ function sendMessage() {
 /* END CONTACT FORM */
 
 /* CUSTOM DOM ELEMENTS */
+class speedDial extends HTMLElement {
+  connectedCallback() {
+    // this.innerHTML = ``;
+  }
+}
+customElements.define('speed-dial', speedDial);
+
 class bio extends HTMLElement {
   connectedCallback() {
     // this.innerHTML = ``;
   }
 }
 customElements.define('employee-bio', bio);
+
+class team extends HTMLElement {
+  connectedCallback() {
+    // this.innerHTML = ``;
+  }
+}
+customElements.define('team-group', team);
+
+class contact extends HTMLElement {
+  connectedCallback() {
+    // this.innerHTML = ``;
+  }
+}
+customElements.define('contact-group', contact);
+
+class carousel extends HTMLElement {
+  connectedCallback() {
+    // this.innerHTML = ``;
+  }
+}
+customElements.define('carousel-group', carousel);
+
+class promo extends HTMLElement {
+  connectedCallback() {
+    // this.innerHTML = ``;
+  }
+}
+customElements.define('promo-group', promo);
+
+class partner extends HTMLElement {
+  connectedCallback() {
+    // this.innerHTML = ``;
+  }
+}
+customElements.define('partner-group', partner);
