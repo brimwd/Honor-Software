@@ -275,3 +275,11 @@ function sendMessage() {
   });
 }
 /* END CONTACT FORM */
+
+/* CUSTOM DOM ELEMENTS */
+class bio extends HTMLElement {
+  connectedCallback() {
+    // this.innerHTML = ``;
+  }
+}
+customElements.define('employee-bio', bio);
