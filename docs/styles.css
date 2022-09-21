@@ -87,7 +87,7 @@ promo-group .h5{font-size:1.4em;margin-bottom:.5rem;font-weight:500;line-height:
 .reasons li{color:var(--gold-dark);font-size:1.75rem;font-weight:bold}
 .reasons h3{color:var(--text)}
 .reasons p{color:var(--text);font-size:1.2rem;font-weight:normal}
-@media (min-width: 576px) {.reasons ol{padding-left:20px;list-style:initial;}}
+@media (min-width: 576px) {.reasons ol{padding-left:50px;list-style:decimal;}}
 team-group{position:relative}
 team-group i.fad{font-size:14em;opacity:.2;position:absolute;top:0;right:0;bottom:0;left:0}
 team-group i.fad::after{opacity:1;color:var(--gold-dark)}
