@@ -171,4 +171,6 @@ address{padding-left:2em}
 address p{margin:0}
 ol.lettered{list-style-type:lower-latin}
 .updated{margin-bottom:5em}
+a[href="contact.html"]{display:none !important;}
+contact-group{display:none !important;}
 
